@@ -13,7 +13,7 @@
     "best_section": "adaptation",
     "section_scores": {
       "pretraining": 0.6882,
-      "utilization": 0.7916,
+      "utilization": 1.361,
       "evaluation": 0.6759,
       "adaptation": 2.8465
     }

@@ -21,6 +21,7 @@ def main() -> None:
         metrics={
             "task_success": result["task_success"],
             "grounded_reasoning_score": result["grounded_reasoning_score"],
+            "avg_trace_length": result["avg_trace_length"],
         },
         artifacts=result,
         notes=["Lite ReAct demo with explicit reason-act-observe-answer traces."],

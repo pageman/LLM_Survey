@@ -22,9 +22,12 @@ def main() -> None:
             "baseline_loss": result["baseline_loss"],
             "adapted_loss": result["adapted_loss"],
             "gain": result["gain"],
+            "mean_harmfulness_before": result["mean_harmfulness_before"],
+            "mean_harmfulness_after": result["mean_harmfulness_after"],
+            "critique_coverage": result["critique_coverage"],
         },
         artifacts=result,
-        notes=["Lite constitutional AI demo with critique-and-revision safety improvement."],
+        notes=["Constitutional AI demo with explicit principles, critique pass, revision pass, and safety/helpfulness traces."],
     )
     write_report(report, output_dir / "constitutional_ai_demo.json")
     print(json.dumps(report, indent=2))

@@ -5,17 +5,21 @@
   "status": "ok",
   "metrics": {
     "task_success": 1.0,
-    "grounded_reasoning_score": 0.75
+    "grounded_reasoning_score": 0.75,
+    "avg_trace_length": 6.0
   },
   "artifacts": {
     "task_success": 1.0,
     "grounded_reasoning_score": 0.75,
+    "avg_trace_length": 6.0,
     "runs": [
       {
         "query": "search for transformer architecture papers",
         "grounded": true,
         "success": true,
         "final_answer": "search_results(transformer architecture papers)",
+        "selected_tool": "search_api",
+        "requires_grounding": true,
         "trace": [
           {
             "step": "infer_goal",
@@ -48,7 +52,9 @@
           },
           {
             "step": "answer",
-            "content": "search_results(transformer architecture papers)"
+            "content": "search_results(transformer architecture papers)",
+            "grounded": true,
+            "mode": "tool_grounded_answer"
           }
         ]
       },
@@ -57,6 +63,8 @@
         "grounded": true,
         "success": true,
         "final_answer": "weather(manila)=sunny",
+        "selected_tool": "weather_api",
+        "requires_grounding": true,
         "trace": [
           {
             "step": "infer_goal",
@@ -89,7 +97,9 @@
           },
           {
             "step": "answer",
-            "content": "weather(manila)=sunny"
+            "content": "weather(manila)=sunny",
+            "grounded": true,
+            "mode": "tool_grounded_answer"
           }
         ]
       },
@@ -98,6 +108,8 @@
         "grounded": true,
         "success": true,
         "final_answer": "calculator_result=15",
+        "selected_tool": "calculator",
+        "requires_grounding": true,
         "trace": [
           {
             "step": "infer_goal",
@@ -134,7 +146,9 @@
           },
           {
             "step": "answer",
-            "content": "calculator_result=15"
+            "content": "calculator_result=15",
+            "grounded": true,
+            "mode": "tool_grounded_answer"
           }
         ]
       },
@@ -143,6 +157,8 @@
         "grounded": false,
         "success": true,
         "final_answer": "respond_directly",
+        "selected_tool": "none",
+        "requires_grounding": false,
         "trace": [
           {
             "step": "infer_goal",
@@ -175,7 +191,9 @@
           },
           {
             "step": "answer",
-            "content": "respond_directly"
+            "content": "respond_directly",
+            "grounded": false,
+            "mode": "direct_response"
           }
         ]
       }

@@ -4,14 +4,80 @@
   "module": "utilization.self_consistency_demo",
   "status": "ok",
   "metrics": {
-    "gain": 0.09000000000000008
+    "gain": 0.0033333333333334103,
+    "majority_vote_score": 0.8133333333333335,
+    "disagreement_rate": 0.4
   },
   "artifacts": {
-    "single_path_score": 0.72,
-    "majority_vote_score": 0.81,
-    "gain": 0.09000000000000008
+    "single_path_score": 0.81,
+    "majority_vote_score": 0.8133333333333335,
+    "gain": 0.0033333333333334103,
+    "majority_answer": "42",
+    "vote_counts": {
+      "42": 3,
+      "39": 1,
+      "41": 1
+    },
+    "confidence_mass": {
+      "42": 2.3200000000000003,
+      "39": 0.52,
+      "41": 0.49
+    },
+    "disagreement_rate": 0.4,
+    "paths": [
+      {
+        "path_id": 0,
+        "reasoning_trace": [
+          "identify operands",
+          "apply arithmetic rule",
+          "propose answer=42"
+        ],
+        "answer": "42",
+        "confidence": 0.81
+      },
+      {
+        "path_id": 1,
+        "reasoning_trace": [
+          "identify operands",
+          "estimate outcome",
+          "propose answer=42"
+        ],
+        "answer": "42",
+        "confidence": 0.74
+      },
+      {
+        "path_id": 2,
+        "reasoning_trace": [
+          "identify operands",
+          "misapply subtraction",
+          "propose answer=39"
+        ],
+        "answer": "39",
+        "confidence": 0.52
+      },
+      {
+        "path_id": 3,
+        "reasoning_trace": [
+          "identify operands",
+          "recheck arithmetic",
+          "propose answer=42"
+        ],
+        "answer": "42",
+        "confidence": 0.77
+      },
+      {
+        "path_id": 4,
+        "reasoning_trace": [
+          "identify operands",
+          "shortcut pattern guess",
+          "propose answer=41"
+        ],
+        "answer": "41",
+        "confidence": 0.49
+      }
+    ]
   },
   "notes": [
-    "Toy self-consistency majority-vote gain demo."
+    "Self-consistency demo with explicit sampled reasoning paths, vote counts, and disagreement tracking."
   ]
 }

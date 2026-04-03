@@ -5,16 +5,16 @@
   "status": "ok",
   "metrics": {
     "num_reports": 5,
-    "best_utilization_score": 3.0
+    "best_utilization_score": 7.75
   },
   "artifacts": {
     "num_reports": 5,
-    "best_utilization_demo": "retrieval",
-    "best_utilization_score": 3.0,
+    "best_utilization_demo": "react",
+    "best_utilization_score": 7.75,
     "bundle_rows": {
       "retrieval": 3.0,
       "rag": 0.4997,
-      "react": 1.75,
+      "react": 7.75,
       "toolformer_style": 0.885,
       "program_aided_reasoning": 1.2333
     }
