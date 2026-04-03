@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "retrieval_grounding_eval_demo",
+  "module": "retrieval_grounding_eval",
+  "status": "ok",
+  "metrics": {
+    "grounding_score": 0.8025,
+    "support_floor": 0.75
+  },
+  "artifacts": {
+    "support_rate": [
+      0.86,
+      0.81,
+      0.79,
+      0.75
+    ],
+    "hallucination_rate": [
+      0.14,
+      0.19,
+      0.21,
+      0.25
+    ],
+    "grounding_score": 0.8025,
+    "support_floor": 0.75
+  },
+  "notes": [
+    "Dedicated retrieval-grounding demo connecting support rate and hallucination pressure."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "benchmark_utilization_bundle_summary",
+  "module": "benchmark.utilization_bundle_summary",
+  "status": "ok",
+  "metrics": {
+    "bundle_score": 0.745,
+    "best_component": 0.81
+  },
+  "artifacts": {
+    "utilization_scores": [
+      0.76,
+      0.69,
+      0.72,
+      0.81
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite reporting/benchmark implementation summarizing the expanded survey surface."
+  ]
+}

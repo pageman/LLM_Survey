@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "training_optimizer_schedule_demo",
+  "module": "training.optimizer_schedule_demo",
+  "status": "ok",
+  "metrics": {
+    "final_loss": 1.05,
+    "schedule_gain": 0.37
+  },
+  "artifacts": {
+    "learning_rate": [
+      0.0003,
+      0.00025,
+      0.0002,
+      0.00012,
+      8e-05
+    ],
+    "loss_curve": [
+      1.42,
+      1.21,
+      1.1,
+      1.06,
+      1.05
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite training-algorithm implementation using toy optimization and systems probes."
+  ]
+}

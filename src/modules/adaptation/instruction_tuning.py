@@ -1,0 +1,58 @@
+"""Toy instruction-tuning experiment using serialized prompt-response templates."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+from src.core import ToyTokenizer, make_next_token_pairs
+from src.modules.foundations import RNNLanguageModel
+
+
+@dataclass
+class InstructionTuningExperiment:
+    tokenizer: ToyTokenizer
+    hidden_size: int = 16
+    learning_rate: float = 0.05
+    seed: int = 0
+
+    def __post_init__(self) -> None:
+        self.model = RNNLanguageModel(
+            vocab_size=len(self.tokenizer.vocab),
+            hidden_size=self.hidden_size,
+            learning_rate=self.learning_rate,
+            seed=self.seed,
+        )
+
+    @staticmethod
+    def serialize_example(instruction: str, response: str) -> str:
+        return f"instruction {instruction} response {response}"
+
+    def loss_on_example(self, instruction: str, response: str) -> float:
+        token_ids = self.tokenizer.encode(self.serialize_example(instruction, response))
+        inputs, targets = make_next_token_pairs(token_ids)
+        return self.model.evaluate_loss(inputs, targets)
+
+    def adapt(
+        self,
+        train_pairs: list[tuple[str, str]],
+        eval_pair: tuple[str, str],
+        epochs: int = 20,
+    ) -> dict[str, object]:
+        baseline_loss = self.loss_on_example(*eval_pair)
+        history = []
+
+        for _ in range(epochs):
+            epoch_loss = 0.0
+            for instruction, response in train_pairs:
+                token_ids = self.tokenizer.encode(self.serialize_example(instruction, response))
+                inputs, targets = make_next_token_pairs(token_ids)
+                epoch_loss += self.model.train_step(inputs, targets)
+            history.append(epoch_loss / max(len(train_pairs), 1))
+
+        adapted_loss = self.loss_on_example(*eval_pair)
+        return {
+            "baseline_loss": baseline_loss,
+            "adapted_loss": adapted_loss,
+            "gain": baseline_loss - adapted_loss,
+            "train_loss_history": history,
+        }

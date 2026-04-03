@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "code_pretraining_program_synthesis_demo",
+  "module": "code_pretraining.program_synthesis_demo",
+  "status": "ok",
+  "metrics": {
+    "exact_match": 0.75,
+    "execution_success": 0.75
+  },
+  "artifacts": {
+    "spec_success": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "program_success": [
+      1.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite code-pretraining implementation over executable toy code tasks."
+  ]
+}

@@ -1,0 +1,416 @@
+[
+  {
+    "experiment_id": "adaptation_alignment_data_filter_demo",
+    "module": "adaptation.alignment_data_filter_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_alignment_data_filter_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_alignment_data_filter_demo.json"
+  },
+  {
+    "experiment_id": "benchmark_adaptation_bundle_summary",
+    "module": "benchmark.adaptation_bundle_summary",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/benchmark_adaptation_bundle_summary.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/benchmark_adaptation_bundle_summary.json"
+  },
+  {
+    "experiment_id": "adaptation_constitutional_ai_demo",
+    "module": "adaptation.constitutional_ai_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_constitutional_ai_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_constitutional_ai_demo.json"
+  },
+  {
+    "experiment_id": "adaptation_dpo_toy",
+    "module": "adaptation.dpo_toy",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_dpo_toy.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_dpo_toy.json"
+  },
+  {
+    "experiment_id": "adaptation_instruction_data_construction_demo",
+    "module": "adaptation.instruction_data_construction_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_instruction_data_construction_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_instruction_data_construction_demo.json"
+  },
+  {
+    "experiment_id": "adaptation_memory_efficient_adaptation_demo",
+    "module": "adaptation.memory_efficient_adaptation_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_memory_efficient_adaptation_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_memory_efficient_adaptation_demo.json"
+  },
+  {
+    "experiment_id": "adaptation_ppo_rlhf_toy",
+    "module": "adaptation.ppo_rlhf_toy",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_ppo_rlhf_toy.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_ppo_rlhf_toy.json"
+  },
+  {
+    "experiment_id": "adaptation_preference_data_quality_demo",
+    "module": "adaptation.preference_data_quality_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_preference_data_quality_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_preference_data_quality_demo.json"
+  },
+  {
+    "experiment_id": "adaptation_red_teaming_demo",
+    "module": "adaptation.red_teaming_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_red_teaming_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_red_teaming_demo.json"
+  },
+  {
+    "experiment_id": "adaptation_rejection_sampling_demo",
+    "module": "adaptation.rejection_sampling_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_rejection_sampling_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/adaptation_rejection_sampling_demo.json"
+  },
+  {
+    "experiment_id": "architecture_bidirectional_encoder_demo",
+    "module": "architecture.bidirectional_encoder_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_bidirectional_encoder_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_bidirectional_encoder_demo.json"
+  },
+  {
+    "experiment_id": "architecture_code_model_architecture_demo",
+    "module": "architecture.code_model_architecture_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_code_model_architecture_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_code_model_architecture_demo.json"
+  },
+  {
+    "experiment_id": "architecture_configuration_scaling_demo",
+    "module": "architecture.configuration_scaling_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_configuration_scaling_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_configuration_scaling_demo.json"
+  },
+  {
+    "experiment_id": "architecture_encoder_decoder_demo",
+    "module": "architecture.encoder_decoder_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_encoder_decoder_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_encoder_decoder_demo.json"
+  },
+  {
+    "experiment_id": "architecture_moe_demo",
+    "module": "architecture.moe_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_moe_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_moe_demo.json"
+  },
+  {
+    "experiment_id": "architecture_multilingual_architecture_demo",
+    "module": "architecture.multilingual_architecture_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_multilingual_architecture_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_multilingual_architecture_demo.json"
+  },
+  {
+    "experiment_id": "architecture_prefix_lm_demo",
+    "module": "architecture.prefix_lm_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/architecture_prefix_lm_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/architecture_prefix_lm_demo.json"
+  },
+  {
+    "experiment_id": "training_batch_scaling_demo",
+    "module": "training.batch_scaling_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/training_batch_scaling_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/training_batch_scaling_demo.json"
+  },
+  {
+    "experiment_id": "benchmark_cross_section_summary",
+    "module": "benchmark.cross_section_summary",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/benchmark_cross_section_summary.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/benchmark_cross_section_summary.json"
+  },
+  {
+    "experiment_id": "benchmark_risk_bundle_summary",
+    "module": "benchmark.risk_bundle_summary",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/benchmark_risk_bundle_summary.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/benchmark_risk_bundle_summary.json"
+  },
+  {
+    "experiment_id": "benchmark_utilization_bundle_summary",
+    "module": "benchmark.utilization_bundle_summary",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/benchmark_utilization_bundle_summary.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/benchmark_utilization_bundle_summary.json"
+  },
+  {
+    "experiment_id": "evaluation_capability_suite_demo",
+    "module": "evaluation.capability_suite_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_capability_suite_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_capability_suite_demo.json"
+  },
+  {
+    "experiment_id": "resources_closed_model_registry",
+    "module": "resources.closed_model_registry",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/resources_closed_model_registry.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/resources_closed_model_registry.json"
+  },
+  {
+    "experiment_id": "pretraining_code_corpus_demo",
+    "module": "pretraining.code_corpus_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/pretraining_code_corpus_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/pretraining_code_corpus_demo.json"
+  },
+  {
+    "experiment_id": "evaluation_code_eval_demo",
+    "module": "evaluation.code_eval_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_code_eval_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_code_eval_demo.json"
+  },
+  {
+    "experiment_id": "code_generation_risk_eval_demo",
+    "module": "code_generation_risk_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/code_generation_risk_eval_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/code_generation_risk_eval_demo.json"
+  },
+  {
+    "experiment_id": "code_pretraining_nlp_as_code_demo",
+    "module": "code_pretraining.nlp_as_code_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/code_pretraining_nlp_as_code_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/code_pretraining_nlp_as_code_demo.json"
+  },
+  {
+    "experiment_id": "code_pretraining_program_synthesis_demo",
+    "module": "code_pretraining.program_synthesis_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/code_pretraining_program_synthesis_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/code_pretraining_program_synthesis_demo.json"
+  },
+  {
+    "experiment_id": "resources_corpus_profile_demo",
+    "module": "resources.corpus_profile_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/resources_corpus_profile_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/resources_corpus_profile_demo.json"
+  },
+  {
+    "experiment_id": "pretraining_data_age_demo",
+    "module": "pretraining.data_age_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/pretraining_data_age_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/pretraining_data_age_demo.json"
+  },
+  {
+    "experiment_id": "pretraining_domain_coverage_demo",
+    "module": "pretraining.domain_coverage_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/pretraining_domain_coverage_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/pretraining_domain_coverage_demo.json"
+  },
+  {
+    "experiment_id": "evaluation_embodied_planning_eval",
+    "module": "evaluation.embodied_planning_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_embodied_planning_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_embodied_planning_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_formal_reasoning_eval",
+    "module": "evaluation.formal_reasoning_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_formal_reasoning_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_formal_reasoning_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_long_tail_behavior_eval",
+    "module": "evaluation.long_tail_behavior_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_long_tail_behavior_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_long_tail_behavior_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_math_reasoning_eval",
+    "module": "evaluation.math_reasoning_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_math_reasoning_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_math_reasoning_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_multi_task_eval",
+    "module": "evaluation.multi_task_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_multi_task_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_multi_task_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_out_of_distribution_eval",
+    "module": "evaluation.out_of_distribution_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_out_of_distribution_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_out_of_distribution_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_privacy_leakage_eval",
+    "module": "evaluation.privacy_leakage_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_privacy_leakage_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_privacy_leakage_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_reward_model_overoptimization_demo",
+    "module": "evaluation.reward_model_overoptimization_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_reward_model_overoptimization_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_reward_model_overoptimization_demo.json"
+  },
+  {
+    "experiment_id": "evaluation_robustness_eval",
+    "module": "evaluation.robustness_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_robustness_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_robustness_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_truthfulness_eval",
+    "module": "evaluation.truthfulness_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_truthfulness_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_truthfulness_eval.json"
+  },
+  {
+    "experiment_id": "evaluation_verifier_eval",
+    "module": "evaluation.verifier_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/evaluation_verifier_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/evaluation_verifier_eval.json"
+  },
+  {
+    "experiment_id": "utilization_example_selection_demo",
+    "module": "utilization.example_selection_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_example_selection_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_example_selection_demo.json"
+  },
+  {
+    "experiment_id": "resources_framework_stack_matrix",
+    "module": "resources.framework_stack_matrix",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/resources_framework_stack_matrix.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/resources_framework_stack_matrix.json"
+  },
+  {
+    "experiment_id": "training_gradient_checkpointing_demo",
+    "module": "training.gradient_checkpointing_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/training_gradient_checkpointing_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/training_gradient_checkpointing_demo.json"
+  },
+  {
+    "experiment_id": "systems_inference_batching_demo",
+    "module": "systems.inference_batching_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/systems_inference_batching_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/systems_inference_batching_demo.json"
+  },
+  {
+    "experiment_id": "utilization_least_to_most_demo",
+    "module": "utilization.least_to_most_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_least_to_most_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_least_to_most_demo.json"
+  },
+  {
+    "experiment_id": "resources_library_stack_matrix",
+    "module": "resources.library_stack_matrix",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/resources_library_stack_matrix.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/resources_library_stack_matrix.json"
+  },
+  {
+    "experiment_id": "training_memory_partitioning_demo",
+    "module": "training.memory_partitioning_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/training_memory_partitioning_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/training_memory_partitioning_demo.json"
+  },
+  {
+    "experiment_id": "reporting_module_provenance_dashboard",
+    "module": "reporting.module_provenance_dashboard",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/reporting_module_provenance_dashboard.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/reporting_module_provenance_dashboard.json"
+  },
+  {
+    "experiment_id": "pretraining_multilingual_data_demo",
+    "module": "pretraining.multilingual_data_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/pretraining_multilingual_data_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/pretraining_multilingual_data_demo.json"
+  },
+  {
+    "experiment_id": "multilingual_transfer_eval",
+    "module": "multilingual.transfer_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/multilingual_transfer_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/multilingual_transfer_eval.json"
+  },
+  {
+    "experiment_id": "training_objective_mixture_demo",
+    "module": "training.objective_mixture_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/training_objective_mixture_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/training_objective_mixture_demo.json"
+  },
+  {
+    "experiment_id": "training_optimizer_schedule_demo",
+    "module": "training.optimizer_schedule_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/training_optimizer_schedule_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/training_optimizer_schedule_demo.json"
+  },
+  {
+    "experiment_id": "reporting_paper_section_dashboard",
+    "module": "reporting.paper_section_dashboard",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/reporting_paper_section_dashboard.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/reporting_paper_section_dashboard.json"
+  },
+  {
+    "experiment_id": "pretraining_repeated_data_scaling_demo",
+    "module": "pretraining.repeated_data_scaling_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/pretraining_repeated_data_scaling_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/pretraining_repeated_data_scaling_demo.json"
+  },
+  {
+    "experiment_id": "pretraining_toxicity_filter_demo",
+    "module": "pretraining.toxicity_filter_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/pretraining_toxicity_filter_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/pretraining_toxicity_filter_demo.json"
+  },
+  {
+    "experiment_id": "utilization_program_aided_reasoning_demo",
+    "module": "utilization.program_aided_reasoning_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_program_aided_reasoning_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_program_aided_reasoning_demo.json"
+  },
+  {
+    "experiment_id": "utilization_prompt_order_sensitivity_demo",
+    "module": "utilization.prompt_order_sensitivity_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_prompt_order_sensitivity_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_prompt_order_sensitivity_demo.json"
+  },
+  {
+    "experiment_id": "resources_public_model_registry",
+    "module": "resources.public_model_registry",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/resources_public_model_registry.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/resources_public_model_registry.json"
+  },
+  {
+    "experiment_id": "utilization_react_demo",
+    "module": "utilization.react_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_react_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_react_demo.json"
+  },
+  {
+    "experiment_id": "reasoning_faithfulness_eval_demo",
+    "module": "reasoning_faithfulness_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/reasoning_faithfulness_eval_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/reasoning_faithfulness_eval_demo.json"
+  },
+  {
+    "experiment_id": "retrieval_grounding_eval_demo",
+    "module": "retrieval_grounding_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/retrieval_grounding_eval_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/retrieval_grounding_eval_demo.json"
+  },
+  {
+    "experiment_id": "utilization_scratchpad_demo",
+    "module": "utilization.scratchpad_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_scratchpad_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_scratchpad_demo.json"
+  },
+  {
+    "experiment_id": "systems_speculative_decoding_demo",
+    "module": "systems.speculative_decoding_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/systems_speculative_decoding_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/systems_speculative_decoding_demo.json"
+  },
+  {
+    "experiment_id": "utilization_structured_prompting_demo",
+    "module": "utilization.structured_prompting_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_structured_prompting_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_structured_prompting_demo.json"
+  },
+  {
+    "experiment_id": "utilization_toolformer_style_demo",
+    "module": "utilization.toolformer_style_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_toolformer_style_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_toolformer_style_demo.json"
+  },
+  {
+    "experiment_id": "training_warmup_decay_demo",
+    "module": "training.warmup_decay_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/training_warmup_decay_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/training_warmup_decay_demo.json"
+  },
+  {
+    "experiment_id": "utilization_world_model_planning_demo",
+    "module": "utilization.world_model_planning_demo",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/utilization_world_model_planning_demo.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055654/utilization_world_model_planning_demo.json"
+  }
+]

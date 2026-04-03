@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "evaluation_truthfulness_eval",
+  "module": "evaluation.truthfulness_eval",
+  "status": "ok",
+  "metrics": {
+    "truthfulness_score": 0.695,
+    "imitation_gap": 0.1
+  },
+  "artifacts": {
+    "truthful": [
+      0.71,
+      0.68,
+      0.75,
+      0.64
+    ],
+    "imitative": [
+      0.82,
+      0.8,
+      0.79,
+      0.77
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite evaluation/risk implementation with explicit measurable probes."
+  ]
+}

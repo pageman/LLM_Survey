@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "training_objective_mixture_demo",
+  "module": "training.objective_mixture_demo",
+  "status": "ok",
+  "metrics": {
+    "best_mixture_loss": 1.119,
+    "mixture_gain": 0.0943
+  },
+  "artifacts": {
+    "candidate_losses": [
+      [
+        1.22,
+        1.15,
+        1.08
+      ],
+      [
+        1.18,
+        1.09,
+        1.01
+      ],
+      [
+        1.24,
+        1.11,
+        1.03
+      ]
+    ],
+    "weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite training-algorithm implementation using toy optimization and systems probes."
+  ]
+}

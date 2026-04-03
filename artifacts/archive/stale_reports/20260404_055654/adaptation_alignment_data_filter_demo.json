@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "adaptation_alignment_data_filter_demo",
+  "module": "adaptation.alignment_data_filter_demo",
+  "status": "ok",
+  "metrics": {
+    "baseline_loss": 1.33,
+    "adapted_loss": 1.2925,
+    "gain": 0.0375
+  },
+  "artifacts": {
+    "raw_scores": [
+      0.61,
+      0.57,
+      0.52,
+      0.4
+    ],
+    "filtered_scores": [
+      0.61,
+      0.57,
+      0.52
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite alignment/adaptation implementation using explicit preference and safety probes."
+  ]
+}

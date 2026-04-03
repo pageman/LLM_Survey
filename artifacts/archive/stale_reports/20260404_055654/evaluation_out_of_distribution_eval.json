@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "evaluation_out_of_distribution_eval",
+  "module": "evaluation.out_of_distribution_eval",
+  "status": "ok",
+  "metrics": {
+    "ood_gap": 0.2133,
+    "ood_score": 0.59
+  },
+  "artifacts": {
+    "in_distribution": [
+      0.83,
+      0.8,
+      0.78
+    ],
+    "ood": [
+      0.62,
+      0.59,
+      0.56
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite evaluation/risk implementation with explicit measurable probes."
+  ]
+}

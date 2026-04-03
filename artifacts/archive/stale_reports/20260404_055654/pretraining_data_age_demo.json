@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "pretraining_data_age_demo",
+  "module": "pretraining.data_age_demo",
+  "status": "ok",
+  "metrics": {
+    "recency_sensitivity": 0.0992,
+    "freshness_gain": 0.2718
+  },
+  "artifacts": {
+    "age_years": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "utility": [
+      0.9158,
+      0.8125,
+      0.644,
+      0.3848,
+      0.122
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite pre-training/data implementation built from explicit distribution and scaling probes."
+  ]
+}

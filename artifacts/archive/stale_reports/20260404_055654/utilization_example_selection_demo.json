@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_example_selection_demo",
+  "module": "utilization.example_selection_demo",
+  "status": "ok",
+  "metrics": {
+    "topk_similarity": 0.83,
+    "selection_gap": 0.47
+  },
+  "artifacts": {
+    "similarities": [
+      0.91,
+      0.86,
+      0.72,
+      0.61,
+      0.44
+    ],
+    "selected_indices": [
+      0,
+      1,
+      2
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

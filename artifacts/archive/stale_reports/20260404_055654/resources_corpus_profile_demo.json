@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "resources_corpus_profile_demo",
+  "module": "resources.corpus_profile_demo",
+  "status": "ok",
+  "metrics": {
+    "coverage_score": 0.19,
+    "domain_entropy": 1.7175
+  },
+  "artifacts": {
+    "domain_mixture": [
+      0.28,
+      0.22,
+      0.16,
+      0.14,
+      0.11,
+      0.09
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite registry/stack implementation over explicit survey resources."
+  ]
+}

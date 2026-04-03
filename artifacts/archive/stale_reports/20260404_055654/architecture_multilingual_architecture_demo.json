@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "architecture_multilingual_architecture_demo",
+  "module": "architecture.multilingual_architecture_demo",
+  "status": "ok",
+  "metrics": {
+    "parameter_sharing_score": 0.7125,
+    "transfer_score": 0.8462
+  },
+  "artifacts": {
+    "language_transfer": [
+      0.78,
+      0.72,
+      0.69,
+      0.66
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite architecture implementation with explicit structural probes instead of placeholder scoring."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "systems_inference_batching_demo",
+  "module": "systems.inference_batching_demo",
+  "status": "ok",
+  "metrics": {
+    "max_throughput": 3.0769,
+    "latency_amortization": 3.0769
+  },
+  "artifacts": {
+    "batch_size": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "throughput": [
+      1.0,
+      1.5385,
+      2.1053,
+      2.6667,
+      3.0769
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite systems implementation over batching and draft-verification probes."
+  ]
+}

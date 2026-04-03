@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_prompt_order_sensitivity_demo",
+  "module": "utilization.prompt_order_sensitivity_demo",
+  "status": "ok",
+  "metrics": {
+    "order_variance": 0.0019,
+    "best_order_score": 0.81
+  },
+  "artifacts": {
+    "permutation_scores": [
+      0.74,
+      0.81,
+      0.69,
+      0.77
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

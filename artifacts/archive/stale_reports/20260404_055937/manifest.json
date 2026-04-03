@@ -1,0 +1,20 @@
+[
+  {
+    "experiment_id": "code_generation_risk_eval",
+    "module": "code_generation_risk_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/code_generation_risk_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055937/code_generation_risk_eval.json"
+  },
+  {
+    "experiment_id": "reasoning_faithfulness_eval",
+    "module": "reasoning_faithfulness_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/reasoning_faithfulness_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055937/reasoning_faithfulness_eval.json"
+  },
+  {
+    "experiment_id": "retrieval_grounding_eval",
+    "module": "retrieval_grounding_eval",
+    "from": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/retrieval_grounding_eval.json",
+    "to": "/Users/hifi/Downloads/LLM_Survey/artifacts/archive/stale_reports/20260404_055937/retrieval_grounding_eval.json"
+  }
+]

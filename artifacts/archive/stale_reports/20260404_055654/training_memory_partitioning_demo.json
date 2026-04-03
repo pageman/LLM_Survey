@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "training_memory_partitioning_demo",
+  "module": "training.memory_partitioning_demo",
+  "status": "ok",
+  "metrics": {
+    "memory_saving": 0.6464,
+    "communication_cost": 0.7925
+  },
+  "artifacts": {
+    "shards": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "memory_fraction": [
+      1.0,
+      0.7071,
+      0.5,
+      0.3536
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite training-algorithm implementation using toy optimization and systems probes."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "resources_closed_model_registry",
+  "module": "resources.closed_model_registry",
+  "status": "ok",
+  "metrics": {
+    "registry_completeness": 0.75,
+    "provider_coverage": 1.0
+  },
+  "artifacts": {
+    "provider_counts": {
+      "openai": 4,
+      "anthropic": 3,
+      "google": 3,
+      "meta-hosted": 2
+    },
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite registry/stack implementation over explicit survey resources."
+  ]
+}

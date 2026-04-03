@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "pretraining_toxicity_filter_demo",
+  "module": "pretraining.toxicity_filter_demo",
+  "status": "ok",
+  "metrics": {
+    "retention_rate": 0.6667,
+    "toxicity_reduction": 0.2192
+  },
+  "artifacts": {
+    "raw_toxicity": [
+      0.91,
+      0.72,
+      0.33,
+      0.18,
+      0.08,
+      0.04
+    ],
+    "retained_mask": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite pre-training/data implementation built from explicit distribution and scaling probes."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "training_gradient_checkpointing_demo",
+  "module": "training.gradient_checkpointing_demo",
+  "status": "ok",
+  "metrics": {
+    "memory_reduction": 0.47,
+    "recompute_overhead": 0.23
+  },
+  "artifacts": {
+    "memory_fraction": [
+      1.0,
+      0.67,
+      0.53
+    ],
+    "runtime_fraction": [
+      1.0,
+      1.11,
+      1.23
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite training-algorithm implementation using toy optimization and systems probes."
+  ]
+}

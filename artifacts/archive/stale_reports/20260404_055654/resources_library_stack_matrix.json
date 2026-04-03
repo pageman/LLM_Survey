@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "resources_library_stack_matrix",
+  "module": "resources.library_stack_matrix",
+  "status": "ok",
+  "metrics": {
+    "stack_coverage": 0.7778,
+    "interop_score": 0.3333
+  },
+  "artifacts": {
+    "matrix": [
+      [
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "axes": [
+      "training",
+      "inference",
+      "evaluation"
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite registry/stack implementation over explicit survey resources."
+  ]
+}

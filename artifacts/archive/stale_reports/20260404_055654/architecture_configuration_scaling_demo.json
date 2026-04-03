@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "architecture_configuration_scaling_demo",
+  "module": "architecture.configuration_scaling_demo",
+  "status": "ok",
+  "metrics": {
+    "scaling_slope": 0.11,
+    "max_score": 0.75
+  },
+  "artifacts": {
+    "params_millions": [
+      20.0,
+      80.0,
+      300.0,
+      1000.0
+    ],
+    "score": [
+      0.5631,
+      0.6293,
+      0.6925,
+      0.75
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite architecture implementation with explicit structural probes instead of placeholder scoring."
+  ]
+}

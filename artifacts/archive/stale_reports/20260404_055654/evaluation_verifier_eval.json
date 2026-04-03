@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "evaluation_verifier_eval",
+  "module": "evaluation.verifier_eval",
+  "status": "ok",
+  "metrics": {
+    "verifier_gain": 0.1533,
+    "verified_score": 0.73
+  },
+  "artifacts": {
+    "base": [
+      0.58,
+      0.61,
+      0.54
+    ],
+    "verified": [
+      0.72,
+      0.76,
+      0.71
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite evaluation/risk implementation with explicit measurable probes."
+  ]
+}

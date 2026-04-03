@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_world_model_planning_demo",
+  "module": "utilization.world_model_planning_demo",
+  "status": "ok",
+  "metrics": {
+    "plan_success": 1.0,
+    "state_value_gain": 0.8
+  },
+  "artifacts": {
+    "state_values": [
+      0.2,
+      0.5,
+      0.7,
+      1.0
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

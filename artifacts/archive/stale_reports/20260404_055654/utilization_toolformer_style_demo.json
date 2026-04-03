@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_toolformer_style_demo",
+  "module": "utilization.toolformer_style_demo",
+  "status": "ok",
+  "metrics": {
+    "tool_call_rate": 0.6667,
+    "tool_use_gain": 0.105
+  },
+  "artifacts": {
+    "tool_calls": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "answer_gain": [
+      0.18,
+      0.0,
+      0.11,
+      0.14,
+      0.0,
+      0.2
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "training_batch_scaling_demo",
+  "module": "training.batch_scaling_demo",
+  "status": "ok",
+  "metrics": {
+    "best_batch_size": 16,
+    "throughput_gain": 3.6
+  },
+  "artifacts": {
+    "batch_size": [
+      16.0,
+      32.0,
+      64.0,
+      128.0,
+      256.0
+    ],
+    "quality_curve": [
+      1.06,
+      1.08,
+      1.12,
+      1.18,
+      1.26
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite training-algorithm implementation using toy optimization and systems probes."
+  ]
+}

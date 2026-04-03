@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_structured_prompting_demo",
+  "module": "utilization.structured_prompting_demo",
+  "status": "ok",
+  "metrics": {
+    "schema_gain": 0.19,
+    "structured_success": 0.7567
+  },
+  "artifacts": {
+    "raw_scores": [
+      0.51,
+      0.57,
+      0.62
+    ],
+    "structured_scores": [
+      0.71,
+      0.76,
+      0.8
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

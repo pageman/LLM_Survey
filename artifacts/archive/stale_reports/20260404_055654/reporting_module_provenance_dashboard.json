@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "reporting_module_provenance_dashboard",
+  "module": "reporting.module_provenance_dashboard",
+  "status": "ok",
+  "metrics": {
+    "donor_backed_fraction": 0.3596,
+    "expanded_scope_fraction": 0.6404
+  },
+  "artifacts": {
+    "provenance_counts": [
+      41,
+      73
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite reporting/benchmark implementation summarizing the expanded survey surface."
+  ]
+}

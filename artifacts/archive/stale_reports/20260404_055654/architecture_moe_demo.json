@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "architecture_moe_demo",
+  "module": "architecture.moe_demo",
+  "status": "ok",
+  "metrics": {
+    "load_balance": 0.7083,
+    "expert_specialization": 0.2939
+  },
+  "artifacts": {
+    "routing": [
+      [
+        0.7,
+        0.2,
+        0.1
+      ],
+      [
+        0.1,
+        0.8,
+        0.1
+      ],
+      [
+        0.15,
+        0.2,
+        0.65
+      ]
+    ],
+    "expert_load": [
+      0.3167,
+      0.4,
+      0.2833
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite architecture implementation with explicit structural probes instead of placeholder scoring."
+  ]
+}

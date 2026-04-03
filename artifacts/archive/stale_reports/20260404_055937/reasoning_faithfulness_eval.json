@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "reasoning_faithfulness_eval",
+  "module": "reasoning_faithfulness_eval",
+  "status": "ok",
+  "metrics": {
+    "truthfulness_score": 0.64,
+    "faithfulness_gap": 0.1533
+  },
+  "artifacts": {
+    "answer_accuracy": [
+      0.83,
+      0.79,
+      0.76
+    ],
+    "trace_faithfulness": [
+      0.67,
+      0.64,
+      0.61
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite cross-cutting implementation over multilingual, grounding, safety, and generalization tradeoffs."
+  ]
+}

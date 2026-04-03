@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "benchmark_adaptation_bundle_summary",
+  "module": "benchmark.adaptation_bundle_summary",
+  "status": "ok",
+  "metrics": {
+    "bundle_score": 0.2475,
+    "best_gain": 0.31
+  },
+  "artifacts": {
+    "adaptation_gains": [
+      0.31,
+      0.27,
+      0.19,
+      0.22
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite reporting/benchmark implementation summarizing the expanded survey surface."
+  ]
+}

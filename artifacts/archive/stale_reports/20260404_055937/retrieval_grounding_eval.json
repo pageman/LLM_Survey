@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "retrieval_grounding_eval",
+  "module": "retrieval_grounding_eval",
+  "status": "ok",
+  "metrics": {
+    "grounding_score": 0.8,
+    "support_floor": 0.76
+  },
+  "artifacts": {
+    "support_rate": [
+      0.84,
+      0.79,
+      0.81,
+      0.76
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite cross-cutting implementation over multilingual, grounding, safety, and generalization tradeoffs."
+  ]
+}

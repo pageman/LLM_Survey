@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "adaptation_ppo_rlhf_toy",
+  "module": "adaptation.ppo_rlhf_toy",
+  "status": "ok",
+  "metrics": {
+    "baseline_loss": 1.42,
+    "adapted_loss": 0.952,
+    "gain": 0.468
+  },
+  "artifacts": {
+    "reward_curve": [
+      0.32,
+      0.48,
+      0.57,
+      0.61
+    ],
+    "kl_curve": [
+      0.02,
+      0.05,
+      0.08,
+      0.12
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite alignment/adaptation implementation using explicit preference and safety probes."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "evaluation_formal_reasoning_eval",
+  "module": "evaluation.formal_reasoning_eval",
+  "status": "ok",
+  "metrics": {
+    "proof_validity": 0.8,
+    "formal_error_rate": 0.2
+  },
+  "artifacts": {
+    "valid_steps": [
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite evaluation/risk implementation with explicit measurable probes."
+  ]
+}

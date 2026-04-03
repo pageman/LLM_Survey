@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "evaluation_robustness_eval",
+  "module": "evaluation.robustness_eval",
+  "status": "ok",
+  "metrics": {
+    "robustness_gap": 0.16,
+    "perturbed_score": 0.64
+  },
+  "artifacts": {
+    "clean": [
+      0.82,
+      0.8,
+      0.78
+    ],
+    "perturbed": [
+      0.67,
+      0.64,
+      0.61
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite evaluation/risk implementation with explicit measurable probes."
+  ]
+}

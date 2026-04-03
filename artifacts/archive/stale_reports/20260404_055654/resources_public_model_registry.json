@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "resources_public_model_registry",
+  "module": "resources.public_model_registry",
+  "status": "ok",
+  "metrics": {
+    "registry_completeness": 0.875,
+    "architecture_diversity": 1.0
+  },
+  "artifacts": {
+    "model_families": {
+      "decoder_only": 8,
+      "encoder_decoder": 3,
+      "mixture_of_experts": 2,
+      "multilingual": 4,
+      "code_specialized": 4
+    },
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite registry/stack implementation over explicit survey resources."
+  ]
+}

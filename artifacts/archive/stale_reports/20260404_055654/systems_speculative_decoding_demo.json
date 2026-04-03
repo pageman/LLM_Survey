@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "systems_speculative_decoding_demo",
+  "module": "systems.speculative_decoding_demo",
+  "status": "ok",
+  "metrics": {
+    "acceptance_rate": 0.8438,
+    "speedup": 4.2
+  },
+  "artifacts": {
+    "draft_length": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "accepted_tokens": [
+      1.0,
+      1.8,
+      3.1,
+      4.2
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite systems implementation over batching and draft-verification probes."
+  ]
+}

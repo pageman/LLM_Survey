@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_program_aided_reasoning_demo",
+  "module": "utilization.program_aided_reasoning_demo",
+  "status": "ok",
+  "metrics": {
+    "execution_gain": 0.4333,
+    "program_success": 0.8433
+  },
+  "artifacts": {
+    "direct": [
+      0.38,
+      0.44,
+      0.41
+    ],
+    "program_aided": [
+      0.84,
+      0.88,
+      0.81
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

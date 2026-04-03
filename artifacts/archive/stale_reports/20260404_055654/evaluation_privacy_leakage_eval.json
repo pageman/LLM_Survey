@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "evaluation_privacy_leakage_eval",
+  "module": "evaluation.privacy_leakage_eval",
+  "status": "ok",
+  "metrics": {
+    "privacy_risk": 0.155,
+    "max_exposure": 0.21
+  },
+  "artifacts": {
+    "exposure": [
+      0.14,
+      0.21,
+      0.09,
+      0.18
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite evaluation/risk implementation with explicit measurable probes."
+  ]
+}

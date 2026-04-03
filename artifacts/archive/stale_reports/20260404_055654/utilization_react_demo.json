@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "utilization_react_demo",
+  "module": "utilization.react_demo",
+  "status": "ok",
+  "metrics": {
+    "task_success": 0.8,
+    "grounded_reasoning_score": 0.6
+  },
+  "artifacts": {
+    "action_trace": [
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "grounded_trace": [
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite utilization/prompting implementation with explicit reasoning and action probes."
+  ]
+}

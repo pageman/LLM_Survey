@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "pretraining_repeated_data_scaling_demo",
+  "module": "pretraining.repeated_data_scaling_demo",
+  "status": "ok",
+  "metrics": {
+    "best_repeat_ratio": 0.0,
+    "best_validation_loss": 1.2,
+    "overfit_gap": 0.8
+  },
+  "artifacts": {
+    "repeat_ratio": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "validation_loss": [
+      1.2,
+      1.2969,
+      1.4625,
+      1.6969,
+      2.0
+    ],
+    "paper_scope_status": "implemented_lite",
+    "fidelity_band": "medium"
+  },
+  "notes": [
+    "Lite pre-training/data implementation built from explicit distribution and scaling probes."
+  ]
+}
