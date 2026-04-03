@@ -5,14 +5,14 @@
   "status": "ok",
   "metrics": {
     "num_reports": 5,
-    "best_utilization_score": 2.7778
+    "best_utilization_score": 3.0
   },
   "artifacts": {
     "num_reports": 5,
     "best_utilization_demo": "retrieval",
-    "best_utilization_score": 2.7778,
+    "best_utilization_score": 3.0,
     "bundle_rows": {
-      "retrieval": 2.7778,
+      "retrieval": 3.0,
       "rag": 0.4997,
       "react": 1.75,
       "toolformer_style": 0.885,

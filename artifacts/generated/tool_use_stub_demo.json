@@ -4,101 +4,218 @@
   "module": "utilization.tool_use_stub",
   "status": "ok",
   "metrics": {
-    "used_tool_rate": 0.75
+    "used_tool_rate": 0.75,
+    "grounding_required_rate": 0.75
   },
   "artifacts": {
     "routes": [
       {
         "query": "what is the weather in manila",
+        "goal": "answer_weather_question",
+        "constraints": [
+          "needs_location_grounding"
+        ],
         "intent": "weather_lookup",
         "selected_tool": "weather_api",
         "used_tool": true,
+        "requires_grounding": true,
+        "tool_arguments": {
+          "location": "manila"
+        },
         "tool_output": "weather(manila)=sunny",
+        "final_answer": "weather(manila)=sunny",
+        "final_mode": "tool_grounded_answer",
         "confidence": 0.8,
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=weather_lookup"
+            "step": "infer_goal",
+            "content": "answer_weather_question",
+            "constraints": [
+              "needs_location_grounding"
+            ]
           },
           {
-            "step": "act",
-            "content": "weather_api"
+            "step": "select_tool",
+            "content": "weather_api",
+            "intent": "weather_lookup",
+            "rationale": "grounded_tool"
           },
           {
-            "step": "observe",
-            "content": "weather(manila)=sunny"
+            "step": "build_arguments",
+            "content": {
+              "location": "manila"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "weather(manila)=sunny",
+            "confidence": 0.8
+          },
+          {
+            "step": "finalize_answer",
+            "content": "weather(manila)=sunny",
+            "mode": "tool_grounded_answer"
           }
         ]
       },
       {
         "query": "search for large language model papers",
+        "goal": "retrieve_external_information",
+        "constraints": [
+          "needs_retrieval"
+        ],
         "intent": "information_retrieval",
         "selected_tool": "search_api",
         "used_tool": true,
+        "requires_grounding": true,
+        "tool_arguments": {
+          "topic": "large language model papers"
+        },
         "tool_output": "search_results(large language model papers)",
+        "final_answer": "search_results(large language model papers)",
+        "final_mode": "tool_grounded_answer",
         "confidence": 0.75,
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=information_retrieval"
+            "step": "infer_goal",
+            "content": "retrieve_external_information",
+            "constraints": [
+              "needs_retrieval"
+            ]
           },
           {
-            "step": "act",
-            "content": "search_api"
+            "step": "select_tool",
+            "content": "search_api",
+            "intent": "information_retrieval",
+            "rationale": "grounded_tool"
           },
           {
-            "step": "observe",
-            "content": "search_results(large language model papers)"
+            "step": "build_arguments",
+            "content": {
+              "topic": "large language model papers"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "search_results(large language model papers)",
+            "confidence": 0.75
+          },
+          {
+            "step": "finalize_answer",
+            "content": "search_results(large language model papers)",
+            "mode": "tool_grounded_answer"
           }
         ]
       },
       {
         "query": "calculate 12 times 7",
+        "goal": "perform_exact_computation",
+        "constraints": [
+          "needs_symbolic_execution"
+        ],
         "intent": "numeric_reasoning",
         "selected_tool": "calculator",
         "used_tool": true,
+        "requires_grounding": true,
+        "tool_arguments": {
+          "numbers": [
+            12,
+            7
+          ],
+          "operator": "multiply"
+        },
         "tool_output": "calculator_result=84",
+        "final_answer": "calculator_result=84",
+        "final_mode": "tool_grounded_answer",
         "confidence": 0.95,
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=numeric_reasoning"
+            "step": "infer_goal",
+            "content": "perform_exact_computation",
+            "constraints": [
+              "needs_symbolic_execution"
+            ]
           },
           {
-            "step": "act",
-            "content": "calculator"
+            "step": "select_tool",
+            "content": "calculator",
+            "intent": "numeric_reasoning",
+            "rationale": "grounded_tool"
           },
           {
-            "step": "observe",
-            "content": "calculator_result=84"
+            "step": "build_arguments",
+            "content": {
+              "numbers": [
+                12,
+                7
+              ],
+              "operator": "multiply"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "calculator_result=84",
+            "confidence": 0.95
+          },
+          {
+            "step": "finalize_answer",
+            "content": "calculator_result=84",
+            "mode": "tool_grounded_answer"
           }
         ]
       },
       {
         "query": "write a short poem",
+        "goal": "respond_directly",
+        "constraints": [
+          "safe_to_answer_directly",
+          "prefer_brief_response",
+          "creative_format"
+        ],
         "intent": "direct_response",
         "selected_tool": "none",
         "used_tool": false,
+        "requires_grounding": false,
+        "tool_arguments": {},
         "tool_output": "no_tool_used",
+        "final_answer": "direct_response",
+        "final_mode": "direct_response",
         "confidence": 0.5,
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=direct_response"
+            "step": "infer_goal",
+            "content": "respond_directly",
+            "constraints": [
+              "safe_to_answer_directly",
+              "prefer_brief_response",
+              "creative_format"
+            ]
           },
           {
-            "step": "act",
-            "content": "none"
+            "step": "select_tool",
+            "content": "none",
+            "intent": "direct_response",
+            "rationale": "answer_directly"
           },
           {
-            "step": "observe",
-            "content": "no_tool_used"
+            "step": "build_arguments",
+            "content": {}
+          },
+          {
+            "step": "execute_tool",
+            "content": "no_tool_used",
+            "confidence": 0.5
+          },
+          {
+            "step": "finalize_answer",
+            "content": "direct_response",
+            "mode": "direct_response"
           }
         ]
       }
     ]
   },
   "notes": [
-    "Minimal tool routing stub for utilization-layer coverage."
+    "Planner-act-observe tool-use stub with explicit goal inference, tool arguments, and execution traces."
   ]
 }

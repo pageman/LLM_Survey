@@ -18,16 +18,33 @@
         "final_answer": "search_results(transformer architecture papers)",
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=information_retrieval"
+            "step": "infer_goal",
+            "content": "retrieve_external_information",
+            "constraints": [
+              "needs_retrieval"
+            ]
           },
           {
-            "step": "act",
-            "content": "search_api"
+            "step": "select_tool",
+            "content": "search_api",
+            "intent": "information_retrieval",
+            "rationale": "grounded_tool"
           },
           {
-            "step": "observe",
-            "content": "search_results(transformer architecture papers)"
+            "step": "build_arguments",
+            "content": {
+              "topic": "transformer architecture papers"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "search_results(transformer architecture papers)",
+            "confidence": 0.75
+          },
+          {
+            "step": "finalize_answer",
+            "content": "search_results(transformer architecture papers)",
+            "mode": "tool_grounded_answer"
           },
           {
             "step": "answer",
@@ -42,16 +59,33 @@
         "final_answer": "weather(manila)=sunny",
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=weather_lookup"
+            "step": "infer_goal",
+            "content": "answer_weather_question",
+            "constraints": [
+              "needs_location_grounding"
+            ]
           },
           {
-            "step": "act",
-            "content": "weather_api"
+            "step": "select_tool",
+            "content": "weather_api",
+            "intent": "weather_lookup",
+            "rationale": "grounded_tool"
           },
           {
-            "step": "observe",
-            "content": "weather(manila)=sunny"
+            "step": "build_arguments",
+            "content": {
+              "location": "manila"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "weather(manila)=sunny",
+            "confidence": 0.8
+          },
+          {
+            "step": "finalize_answer",
+            "content": "weather(manila)=sunny",
+            "mode": "tool_grounded_answer"
           },
           {
             "step": "answer",
@@ -66,16 +100,37 @@
         "final_answer": "calculator_result=15",
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=numeric_reasoning"
+            "step": "infer_goal",
+            "content": "perform_exact_computation",
+            "constraints": [
+              "needs_symbolic_execution"
+            ]
           },
           {
-            "step": "act",
-            "content": "calculator"
+            "step": "select_tool",
+            "content": "calculator",
+            "intent": "numeric_reasoning",
+            "rationale": "grounded_tool"
           },
           {
-            "step": "observe",
-            "content": "calculator_result=15"
+            "step": "build_arguments",
+            "content": {
+              "numbers": [
+                9,
+                6
+              ],
+              "operator": "sum"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "calculator_result=15",
+            "confidence": 0.95
+          },
+          {
+            "step": "finalize_answer",
+            "content": "calculator_result=15",
+            "mode": "tool_grounded_answer"
           },
           {
             "step": "answer",
@@ -90,16 +145,33 @@
         "final_answer": "respond_directly",
         "trace": [
           {
-            "step": "reason",
-            "content": "intent=direct_response"
+            "step": "infer_goal",
+            "content": "respond_directly",
+            "constraints": [
+              "safe_to_answer_directly",
+              "prefer_brief_response",
+              "creative_format"
+            ]
           },
           {
-            "step": "act",
-            "content": "none"
+            "step": "select_tool",
+            "content": "none",
+            "intent": "direct_response",
+            "rationale": "answer_directly"
           },
           {
-            "step": "observe",
-            "content": "no_tool_used"
+            "step": "build_arguments",
+            "content": {}
+          },
+          {
+            "step": "execute_tool",
+            "content": "no_tool_used",
+            "confidence": 0.5
+          },
+          {
+            "step": "finalize_answer",
+            "content": "direct_response",
+            "mode": "direct_response"
           },
           {
             "step": "answer",

@@ -23,13 +23,14 @@ def main() -> None:
     ]
     routed = [stub.route(query) for query in queries]
     used_rate = sum(1 for item in routed if item["used_tool"]) / len(routed)
+    grounded_rate = sum(1 for item in routed if item["requires_grounding"]) / len(routed)
 
     report = build_report(
         experiment_id="tool_use_stub_demo",
         module="utilization.tool_use_stub",
-        metrics={"used_tool_rate": used_rate},
+        metrics={"used_tool_rate": used_rate, "grounding_required_rate": grounded_rate},
         artifacts={"routes": routed},
-        notes=["Minimal tool routing stub for utilization-layer coverage."],
+        notes=["Planner-act-observe tool-use stub with explicit goal inference, tool arguments, and execution traces."],
     )
     write_report(report, output_dir / "tool_use_stub_demo.json")
     print(json.dumps(report, indent=2))

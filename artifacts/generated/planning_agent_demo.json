@@ -4,19 +4,162 @@
   "module": "utilization.planning_agent_demo",
   "status": "ok",
   "metrics": {
-    "success_rate": 0.78
+    "success_rate": 1.0,
+    "verification_rate": 1.0,
+    "replanning_rate": 0.3333333333333333,
+    "avg_branch_quality": 0.5433333333333333
   },
   "artifacts": {
-    "plan_steps": [
-      "understand goal",
-      "retrieve facts",
-      "draft answer",
-      "verify answer"
-    ],
-    "success_rate": 0.78,
-    "num_steps": 4
+    "success_rate": 1.0,
+    "verification_rate": 1.0,
+    "replanning_rate": 0.3333333333333333,
+    "avg_branch_quality": 0.5433333333333333,
+    "runs": [
+      {
+        "query": "compare RAG versus fine-tuning for factual QA",
+        "problem_type": "comparison",
+        "plan_steps": [
+          "identify compared entities",
+          "gather differentiating facts",
+          "align facts under shared criteria",
+          "verify comparison summary"
+        ],
+        "num_steps": 4,
+        "branch_quality": 0.79,
+        "verification_passed": true,
+        "replanned": false,
+        "success": true,
+        "trace": [
+          {
+            "step_index": 0,
+            "step": "identify compared entities",
+            "state_before": "pending",
+            "observation": "problem_frame=identified",
+            "confidence": 0.77
+          },
+          {
+            "step_index": 1,
+            "step": "gather differentiating facts",
+            "state_before": "partial_plan_ready",
+            "observation": "evidence_bundle=available",
+            "confidence": 0.8
+          },
+          {
+            "step_index": 2,
+            "step": "align facts under shared criteria",
+            "state_before": "partial_plan_ready",
+            "observation": "branch_scores=0.62,0.79",
+            "confidence": 0.76
+          },
+          {
+            "step_index": 3,
+            "step": "verify comparison summary",
+            "state_before": "partial_plan_ready",
+            "observation": "verification=passed",
+            "confidence": 0.84
+          }
+        ]
+      },
+      {
+        "query": "plan a short weekend research sprint",
+        "problem_type": "multi_step_plan",
+        "plan_steps": [
+          "extract constraints",
+          "propose candidate steps",
+          "check sequence feasibility",
+          "verify end-state coverage"
+        ],
+        "num_steps": 4,
+        "branch_quality": 0.84,
+        "verification_passed": true,
+        "replanned": true,
+        "success": true,
+        "trace": [
+          {
+            "step_index": 0,
+            "step": "extract constraints",
+            "state_before": "pending",
+            "observation": "constraints=budget,time,ordering",
+            "confidence": 0.74
+          },
+          {
+            "step_index": 1,
+            "step": "propose candidate steps",
+            "state_before": "partial_plan_ready",
+            "observation": "candidate_plan=constructed",
+            "confidence": 0.78
+          },
+          {
+            "step_index": 2,
+            "step": "check sequence feasibility",
+            "state_before": "partial_plan_ready",
+            "observation": "branch_scores=0.62,0.79",
+            "confidence": 0.76
+          },
+          {
+            "step_index": 3,
+            "step": "verify end-state coverage",
+            "state_before": "partial_plan_ready",
+            "observation": "verification=passed",
+            "confidence": 0.84
+          },
+          {
+            "step_index": 4,
+            "step": "replan_after_feasibility_gap",
+            "state_before": "low_branch_margin",
+            "observation": "inserted_buffer_step",
+            "confidence": 0.72
+          }
+        ]
+      },
+      {
+        "query": "research and summarize scaling law tradeoffs",
+        "problem_type": "research_synthesis",
+        "plan_steps": [
+          "identify core question",
+          "retrieve supporting evidence",
+          "draft synthesis",
+          "verify against evidence"
+        ],
+        "num_steps": 4,
+        "branch_quality": 0.0,
+        "verification_passed": true,
+        "replanned": false,
+        "success": true,
+        "trace": [
+          {
+            "step_index": 0,
+            "step": "identify core question",
+            "state_before": "pending",
+            "observation": "problem_frame=identified",
+            "confidence": 0.77
+          },
+          {
+            "step_index": 1,
+            "step": "retrieve supporting evidence",
+            "state_before": "partial_plan_ready",
+            "observation": "evidence_bundle=available",
+            "confidence": 0.8
+          },
+          {
+            "step_index": 2,
+            "step": "draft synthesis",
+            "state_before": "partial_plan_ready",
+            "observation": "candidate_plan=constructed",
+            "confidence": 0.78
+          },
+          {
+            "step_index": 3,
+            "step": "verify against evidence",
+            "state_before": "partial_plan_ready",
+            "observation": "verification=passed",
+            "confidence": 0.84
+          }
+        ]
+      }
+    ]
   },
   "notes": [
-    "Toy planning-agent decomposition demo."
+    "Planning-agent demo with explicit decomposition, branch evaluation, verification, and replanning traces."
   ]
 }
