@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "moe_demo",
+  "module": "architecture.moe_demo",
+  "status": "ok",
+  "metrics": {
+    "load_balance": 0.6812492487747825,
+    "expert_specialization": 0.20701048066959316
+  },
+  "artifacts": {
+    "routing": [
+      [
+        0.7115,
+        0.1686,
+        0.12
+      ],
+      [
+        0.1602,
+        0.6763,
+        0.1635
+      ],
+      [
+        0.1684,
+        0.1753,
+        0.6563
+      ],
+      [
+        0.5942,
+        0.2321,
+        0.1737
+      ]
+    ],
+    "top_expert": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "expert_outputs": [
+      [
+        0.7954,
+        0.2525
+      ],
+      [
+        0.2747,
+        0.7907
+      ],
+      [
+        0.6278,
+        0.6347
+      ],
+      [
+        0.7158,
+        0.3537
+      ]
+    ],
+    "load_balance": 0.6812492487747825,
+    "expert_specialization": 0.20701048066959316
+  },
+  "notes": [
+    "Lite mixture-of-experts demo with explicit routing, expert load, and specialization metrics."
+  ]
+}

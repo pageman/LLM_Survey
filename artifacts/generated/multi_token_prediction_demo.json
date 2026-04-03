@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "multi_token_prediction_demo",
+  "module": "pretraining.multi_token_prediction",
+  "status": "ok",
+  "metrics": {
+    "sample_efficiency_gain": 2.0
+  },
+  "artifacts": {
+    "context": [
+      1,
+      2,
+      3
+    ],
+    "predicted_tokens": [
+      4,
+      5,
+      6
+    ],
+    "horizon": 3,
+    "sample_efficiency_gain": 2.0
+  },
+  "notes": [
+    "Toy multi-token prediction horizon demo."
+  ]
+}

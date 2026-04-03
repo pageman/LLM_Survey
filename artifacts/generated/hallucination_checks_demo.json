@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "hallucination_checks_demo",
+  "module": "evaluation.hallucination_checks",
+  "status": "ok",
+  "metrics": {
+    "supported_rate": 0.82,
+    "hallucination_rate": 0.18
+  },
+  "artifacts": {
+    "supported_rate": 0.82,
+    "hallucination_rate": 0.18,
+    "citation_match_rate": 0.76
+  },
+  "notes": [
+    "Toy supported-vs-hallucinated answer quality probe."
+  ]
+}

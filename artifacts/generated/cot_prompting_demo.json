@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "cot_prompting_demo",
+  "module": "utilization.cot_prompting",
+  "status": "ok",
+  "metrics": {
+    "gain": 0.18000000000000005
+  },
+  "artifacts": {
+    "direct_score": 0.61,
+    "cot_score": 0.79,
+    "gain": 0.18000000000000005
+  },
+  "notes": [
+    "Toy chain-of-thought prompting gain demo."
+  ]
+}

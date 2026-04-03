@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "capability_vs_alignment_tradeoff_demo",
+  "module": "capability_vs_alignment_tradeoff_demo",
+  "status": "ok",
+  "metrics": {
+    "integration_score": 0.6014499999999999,
+    "tradeoff_correlation": -0.9715750878059592
+  },
+  "artifacts": {
+    "capability": [
+      0.63,
+      0.74,
+      0.82,
+      0.87
+    ],
+    "alignment": [
+      0.89,
+      0.84,
+      0.76,
+      0.69
+    ],
+    "integration_score": 0.6014499999999999,
+    "tradeoff_correlation": -0.9715750878059592
+  },
+  "notes": [
+    "Lite capability-versus-alignment tradeoff demo."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "embodied_planning_eval_demo",
+  "module": "evaluation.embodied_planning_eval",
+  "status": "ok",
+  "metrics": {
+    "success_rate": 0.6499999999999999,
+    "path_consistency": 0.16583123951777
+  },
+  "artifacts": {
+    "episode_success": [
+      0.6,
+      0.8,
+      0.4,
+      0.8
+    ],
+    "success_rate": 0.6499999999999999,
+    "path_consistency": 0.16583123951777
+  },
+  "notes": [
+    "Lite embodied planning evaluation over toy episode success."
+  ]
+}

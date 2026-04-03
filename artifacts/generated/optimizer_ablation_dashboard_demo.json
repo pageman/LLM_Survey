@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "optimizer_ablation_dashboard_demo",
+  "module": "training.optimizer_ablation_dashboard",
+  "status": "ok",
+  "metrics": {
+    "variant_count": 4,
+    "best_loss": 1.31,
+    "loss_spread": 0.8700000000000001
+  },
+  "artifacts": {
+    "variant_count": 4,
+    "best_optimizer": "adamw",
+    "best_loss": 1.31,
+    "loss_spread": 0.8700000000000001,
+    "variants": {
+      "sgd": 2.18,
+      "adam": 1.42,
+      "adamw": 1.31,
+      "lion": 1.37
+    }
+  },
+  "notes": [
+    "Dedicated optimizer ablation comparing SGD-family alternatives."
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "adaptation_leaderboard_demo",
+  "module": "evaluation.adaptation_leaderboard",
+  "status": "ok",
+  "metrics": {
+    "num_ranked": 5,
+    "best_gain": 4.1089615294545005,
+    "best_efficiency_score": 4.549930418818014,
+    "best_adapted_loss": -0.8121145308492252
+  },
+  "artifacts": {
+    "num_ranked": 5,
+    "top_by_gain": [
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "baseline_loss": 3.2968469986052753,
+        "adapted_loss": -0.8121145308492252,
+        "gain": 4.1089615294545005,
+        "trainable_fraction": null,
+        "efficiency_score": 4.1089615294545005
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "baseline_loss": 10.259614135594376,
+        "adapted_loss": 7.107504386944394,
+        "gain": 3.1521097486499814,
+        "trainable_fraction": null,
+        "efficiency_score": 3.1521097486499814
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "baseline_loss": 2.402044204207483,
+        "adapted_loss": 0.4520740247140484,
+        "gain": 1.9499701794934345,
+        "trainable_fraction": 0.42857142857142855,
+        "efficiency_score": 4.549930418818014
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "baseline_loss": 21.311969093782416,
+        "adapted_loss": 20.051440401544276,
+        "gain": 1.2605286922381396,
+        "trainable_fraction": null,
+        "efficiency_score": 1.2605286922381396
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "baseline_loss": 10.261408609322052,
+        "adapted_loss": 9.572479058717004,
+        "gain": 0.6889295506050477,
+        "trainable_fraction": null,
+        "efficiency_score": 0.6889295506050477
+      }
+    ],
+    "top_by_efficiency": [
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "baseline_loss": 2.402044204207483,
+        "adapted_loss": 0.4520740247140484,
+        "gain": 1.9499701794934345,
+        "trainable_fraction": 0.42857142857142855,
+        "efficiency_score": 4.549930418818014
+      },
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "baseline_loss": 3.2968469986052753,
+        "adapted_loss": -0.8121145308492252,
+        "gain": 4.1089615294545005,
+        "trainable_fraction": null,
+        "efficiency_score": 4.1089615294545005
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "baseline_loss": 10.259614135594376,
+        "adapted_loss": 7.107504386944394,
+        "gain": 3.1521097486499814,
+        "trainable_fraction": null,
+        "efficiency_score": 3.1521097486499814
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "baseline_loss": 21.311969093782416,
+        "adapted_loss": 20.051440401544276,
+        "gain": 1.2605286922381396,
+        "trainable_fraction": null,
+        "efficiency_score": 1.2605286922381396
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "baseline_loss": 10.261408609322052,
+        "adapted_loss": 9.572479058717004,
+        "gain": 0.6889295506050477,
+        "trainable_fraction": null,
+        "efficiency_score": 0.6889295506050477
+      }
+    ],
+    "top_by_lowest_adapted_loss": [
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "baseline_loss": 3.2968469986052753,
+        "adapted_loss": -0.8121145308492252,
+        "gain": 4.1089615294545005,
+        "trainable_fraction": null,
+        "efficiency_score": 4.1089615294545005
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "baseline_loss": 2.402044204207483,
+        "adapted_loss": 0.4520740247140484,
+        "gain": 1.9499701794934345,
+        "trainable_fraction": 0.42857142857142855,
+        "efficiency_score": 4.549930418818014
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "baseline_loss": 10.259614135594376,
+        "adapted_loss": 7.107504386944394,
+        "gain": 3.1521097486499814,
+        "trainable_fraction": null,
+        "efficiency_score": 3.1521097486499814
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "baseline_loss": 10.261408609322052,
+        "adapted_loss": 9.572479058717004,
+        "gain": 0.6889295506050477,
+        "trainable_fraction": null,
+        "efficiency_score": 0.6889295506050477
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "baseline_loss": 21.311969093782416,
+        "adapted_loss": 20.051440401544276,
+        "gain": 1.2605286922381396,
+        "trainable_fraction": null,
+        "efficiency_score": 1.2605286922381396
+      }
+    ]
+  },
+  "notes": [
+    "Presentation-only leaderboard layered on top of adaptation summary without changing report schema."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "verifier_eval_demo",
+  "module": "evaluation.verifier_eval",
+  "status": "ok",
+  "metrics": {
+    "verifier_gain": 0.1425,
+    "verified_score": 0.7250000000000001
+  },
+  "artifacts": {
+    "verifier_gain": 0.1425,
+    "verified_score": 0.7250000000000001,
+    "base_scores": [
+      0.58,
+      0.61,
+      0.54,
+      0.6
+    ],
+    "verifier_scores": [
+      0.71,
+      0.76,
+      0.69,
+      0.74
+    ]
+  },
+  "notes": [
+    "Lite verifier-guided reasoning demo with base-vs-verified scoring."
+  ]
+}

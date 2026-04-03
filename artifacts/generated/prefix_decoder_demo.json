@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "prefix_decoder_demo",
+  "module": "pretraining.prefix_decoder_demo",
+  "status": "ok",
+  "metrics": {
+    "prefix_length": 2
+  },
+  "artifacts": {
+    "prefix": "prefix prompt",
+    "continuation": "generated continuation",
+    "combined": "prefix prompt generated continuation",
+    "prefix_length": 2
+  },
+  "notes": [
+    "Toy prefix-decoder serialization demo."
+  ]
+}

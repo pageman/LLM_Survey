@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "adaptation_bundle_summary_demo",
+  "module": "benchmark.adaptation_bundle_summary",
+  "status": "ok",
+  "metrics": {
+    "num_reports": 5,
+    "mean_gain": 1.3686,
+    "best_gain": 3.1521
+  },
+  "artifacts": {
+    "num_reports": 5,
+    "mean_gain": 1.3686,
+    "best_gain": 3.1521,
+    "bundle_rows": {
+      "finetuning": 3.1521,
+      "instruction_tuning": 0.6889,
+      "peft_lora": 1.95,
+      "dpo_toy": 0.5705,
+      "ppo_rlhf_toy": 0.4815
+    }
+  },
+  "notes": [
+    "Dedicated adaptation-bundle summary over core adaptation demos."
+  ]
+}

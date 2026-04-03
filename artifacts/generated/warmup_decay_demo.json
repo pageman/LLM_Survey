@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "warmup_decay_demo",
+  "module": "training.warmup_decay_demo",
+  "status": "ok",
+  "metrics": {
+    "peak_step": 3,
+    "stability_score": 0.9271150055653068
+  },
+  "artifacts": {
+    "schedule": [
+      0.333333,
+      0.471405,
+      0.57735,
+      0.5,
+      0.447214,
+      0.408248,
+      0.377964,
+      0.353553,
+      0.333333
+    ],
+    "peak_step": 3,
+    "stability_score": 0.9271150055653068
+  },
+  "notes": [
+    "Lite warmup-decay schedule demo with peak-step and stability tracking."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "long_context_demo",
+  "module": "evaluation.long_context",
+  "status": "ok",
+  "metrics": {
+    "best_edge_score": 1.0,
+    "middle_score": 0.04999999999999993,
+    "edge_gap": 0.9500000000000001
+  },
+  "artifacts": {
+    "positions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "scores": [
+      1.0,
+      0.6071428571428571,
+      0.5142857142857142,
+      0.4214285714285714,
+      0.3285714285714285,
+      0.23571428571428565,
+      0.1428571428571428,
+      0.04999999999999993,
+      0.1428571428571428,
+      0.2357142857142857,
+      0.3285714285714285,
+      0.4214285714285714,
+      0.5142857142857142,
+      0.6071428571428571,
+      1.0
+    ],
+    "best_edge_score": 1.0,
+    "middle_score": 0.04999999999999993,
+    "edge_gap": 0.9500000000000001
+  },
+  "notes": [
+    "Toy U-shaped long-context performance profile inspired by Lost in the Middle."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "dataset_license_audit_demo",
+  "module": "resources.dataset_license_audit",
+  "status": "ok",
+  "metrics": {
+    "dataset_count": 5,
+    "redistributable_rate": 0.6,
+    "mixed_license_rate": 0.4
+  },
+  "artifacts": {
+    "dataset_count": 5,
+    "redistributable_rate": 0.6,
+    "mixed_license_rate": 0.4,
+    "datasets": [
+      {
+        "name": "Common Crawl Slice",
+        "license": "mixed",
+        "redistributable": false
+      },
+      {
+        "name": "The Pile Subset",
+        "license": "mixed",
+        "redistributable": false
+      },
+      {
+        "name": "OpenWebMath",
+        "license": "open",
+        "redistributable": true
+      },
+      {
+        "name": "StarCoderData Slice",
+        "license": "open",
+        "redistributable": true
+      },
+      {
+        "name": "WikiText",
+        "license": "open",
+        "redistributable": true
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated audit over redistributable and mixed-license dataset slices."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "least_to_most_demo",
+  "module": "utilization.least_to_most_demo",
+  "status": "ok",
+  "metrics": {
+    "decomposition_gain": 0.21666666666666667,
+    "stepwise_success": 0.6466666666666666
+  },
+  "artifacts": {
+    "direct": [
+      0.43,
+      0.46,
+      0.4
+    ],
+    "decomposed": [
+      0.64,
+      0.68,
+      0.62
+    ],
+    "decomposition_gain": 0.21666666666666667,
+    "stepwise_success": 0.6466666666666666
+  },
+  "notes": [
+    "Lite least-to-most demo comparing direct against decomposed reasoning."
+  ]
+}

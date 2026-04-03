@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "paper_scope_completion_demo",
+  "module": "evaluation.paper_scope_completion",
+  "status": "ok",
+  "metrics": {
+    "num_generated_reports": 0,
+    "target_modules": 0
+  },
+  "artifacts": {
+    "generated_experiment_ids": []
+  },
+  "notes": [
+    "Generates explicit lite paper-scope implementation reports for the remaining tracked modules."
+  ]
+}

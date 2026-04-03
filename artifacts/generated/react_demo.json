@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "react_demo",
+  "module": "utilization.react_demo",
+  "status": "ok",
+  "metrics": {
+    "task_success": 1.0,
+    "grounded_reasoning_score": 0.75
+  },
+  "artifacts": {
+    "task_success": 1.0,
+    "grounded_reasoning_score": 0.75,
+    "runs": [
+      {
+        "query": "search for transformer architecture papers",
+        "grounded": true,
+        "success": true,
+        "final_answer": "search_results(transformer architecture papers)",
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=information_retrieval"
+          },
+          {
+            "step": "act",
+            "content": "search_api"
+          },
+          {
+            "step": "observe",
+            "content": "search_results(transformer architecture papers)"
+          },
+          {
+            "step": "answer",
+            "content": "search_results(transformer architecture papers)"
+          }
+        ]
+      },
+      {
+        "query": "what is the weather in manila",
+        "grounded": true,
+        "success": true,
+        "final_answer": "weather(manila)=sunny",
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=weather_lookup"
+          },
+          {
+            "step": "act",
+            "content": "weather_api"
+          },
+          {
+            "step": "observe",
+            "content": "weather(manila)=sunny"
+          },
+          {
+            "step": "answer",
+            "content": "weather(manila)=sunny"
+          }
+        ]
+      },
+      {
+        "query": "calculate 9 plus 6",
+        "grounded": true,
+        "success": true,
+        "final_answer": "calculator_result=15",
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=numeric_reasoning"
+          },
+          {
+            "step": "act",
+            "content": "calculator"
+          },
+          {
+            "step": "observe",
+            "content": "calculator_result=15"
+          },
+          {
+            "step": "answer",
+            "content": "calculator_result=15"
+          }
+        ]
+      },
+      {
+        "query": "write a short poem",
+        "grounded": false,
+        "success": true,
+        "final_answer": "respond_directly",
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=direct_response"
+          },
+          {
+            "step": "act",
+            "content": "none"
+          },
+          {
+            "step": "observe",
+            "content": "no_tool_used"
+          },
+          {
+            "step": "answer",
+            "content": "respond_directly"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Lite ReAct demo with explicit reason-act-observe-answer traces."
+  ]
+}

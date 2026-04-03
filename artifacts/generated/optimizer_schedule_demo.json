@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "optimizer_schedule_demo",
+  "module": "training.optimizer_schedule_demo",
+  "status": "ok",
+  "metrics": {
+    "final_loss": 0.96,
+    "schedule_gain": 0.41999999999999993
+  },
+  "artifacts": {
+    "schedule": [
+      0.333333,
+      0.471405,
+      0.57735,
+      0.5,
+      0.447214,
+      0.408248,
+      0.377964,
+      0.353553
+    ],
+    "peak_step": 3,
+    "final_loss": 0.96,
+    "schedule_gain": 0.41999999999999993,
+    "loss_curve": [
+      1.38,
+      1.22,
+      1.12,
+      1.06,
+      1.02,
+      0.99,
+      0.97,
+      0.96
+    ]
+  },
+  "notes": [
+    "Lite optimizer schedule demo with warmup-decay behavior and loss tracking."
+  ]
+}

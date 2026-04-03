@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "pipeline_parallelism_demo",
+  "module": "systems.pipeline_parallelism",
+  "status": "ok",
+  "metrics": {
+    "throughput_gain": 1.103448275862069
+  },
+  "artifacts": {
+    "stages": 4,
+    "microbatches": 8,
+    "sequential_steps": 32,
+    "pipelined_steps": 29,
+    "throughput_gain": 1.103448275862069
+  },
+  "notes": [
+    "Toy GPipe-style throughput demo."
+  ]
+}

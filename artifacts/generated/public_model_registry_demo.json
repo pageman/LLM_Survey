@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "public_model_registry_demo",
+  "module": "resources.public_model_registry",
+  "status": "ok",
+  "metrics": {
+    "registry_size": 4,
+    "open_license_rate": 1.0,
+    "average_context_window": 73472.0
+  },
+  "artifacts": {
+    "registry_size": 4,
+    "open_license_rate": 1.0,
+    "average_context_window": 73472.0,
+    "models": [
+      {
+        "name": "Llama 3.1 8B",
+        "family": "decoder",
+        "license": "open",
+        "context": 128000
+      },
+      {
+        "name": "Mistral 7B",
+        "family": "decoder",
+        "license": "open",
+        "context": 32768
+      },
+      {
+        "name": "Qwen2.5 7B",
+        "family": "decoder",
+        "license": "open",
+        "context": 131072
+      },
+      {
+        "name": "Flan-T5 XL",
+        "family": "encoder-decoder",
+        "license": "open",
+        "context": 2048
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated public-model registry for open, inspectable model families."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "program_synthesis_demo",
+  "module": "code_pretraining.program_synthesis_demo",
+  "status": "ok",
+  "metrics": {
+    "exact_match": 0.75,
+    "execution_success": 0.75
+  },
+  "artifacts": {
+    "spec_success": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "program_success": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "exact_match": 0.75,
+    "execution_success": 0.75
+  },
+  "notes": [
+    "Lite program synthesis demo over spec satisfaction and execution success."
+  ]
+}

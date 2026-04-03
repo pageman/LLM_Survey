@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "planning_agent_demo",
+  "module": "utilization.planning_agent_demo",
+  "status": "ok",
+  "metrics": {
+    "success_rate": 0.78
+  },
+  "artifacts": {
+    "plan_steps": [
+      "understand goal",
+      "retrieve facts",
+      "draft answer",
+      "verify answer"
+    ],
+    "success_rate": 0.78,
+    "num_steps": 4
+  },
+  "notes": [
+    "Toy planning-agent decomposition demo."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "causal_lm_demo",
+  "module": "pretraining.causal_lm",
+  "status": "ok",
+  "metrics": {
+    "mean_loss": 2.507782942921586,
+    "perplexity": 12.27767954735404
+  },
+  "artifacts": {
+    "prompt": "large language models",
+    "generated": "large language models models models models"
+  },
+  "notes": [
+    "Toy decoder-only next-token scoring and greedy generation demo."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "tool_use_stub_demo",
+  "module": "utilization.tool_use_stub",
+  "status": "ok",
+  "metrics": {
+    "used_tool_rate": 0.75
+  },
+  "artifacts": {
+    "routes": [
+      {
+        "query": "what is the weather in manila",
+        "intent": "weather_lookup",
+        "selected_tool": "weather_api",
+        "used_tool": true,
+        "tool_output": "weather(manila)=sunny",
+        "confidence": 0.8,
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=weather_lookup"
+          },
+          {
+            "step": "act",
+            "content": "weather_api"
+          },
+          {
+            "step": "observe",
+            "content": "weather(manila)=sunny"
+          }
+        ]
+      },
+      {
+        "query": "search for large language model papers",
+        "intent": "information_retrieval",
+        "selected_tool": "search_api",
+        "used_tool": true,
+        "tool_output": "search_results(large language model papers)",
+        "confidence": 0.75,
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=information_retrieval"
+          },
+          {
+            "step": "act",
+            "content": "search_api"
+          },
+          {
+            "step": "observe",
+            "content": "search_results(large language model papers)"
+          }
+        ]
+      },
+      {
+        "query": "calculate 12 times 7",
+        "intent": "numeric_reasoning",
+        "selected_tool": "calculator",
+        "used_tool": true,
+        "tool_output": "calculator_result=84",
+        "confidence": 0.95,
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=numeric_reasoning"
+          },
+          {
+            "step": "act",
+            "content": "calculator"
+          },
+          {
+            "step": "observe",
+            "content": "calculator_result=84"
+          }
+        ]
+      },
+      {
+        "query": "write a short poem",
+        "intent": "direct_response",
+        "selected_tool": "none",
+        "used_tool": false,
+        "tool_output": "no_tool_used",
+        "confidence": 0.5,
+        "trace": [
+          {
+            "step": "reason",
+            "content": "intent=direct_response"
+          },
+          {
+            "step": "act",
+            "content": "none"
+          },
+          {
+            "step": "observe",
+            "content": "no_tool_used"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Minimal tool routing stub for utilization-layer coverage."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "example_selection_demo",
+  "module": "utilization.example_selection_demo",
+  "status": "ok",
+  "metrics": {
+    "topk_similarity": 0.8466666666666667,
+    "selection_gap": 0.52
+  },
+  "artifacts": {
+    "similarities": [
+      0.93,
+      0.87,
+      0.74,
+      0.58,
+      0.41
+    ],
+    "selected_indices": [
+      0,
+      1,
+      2
+    ],
+    "topk_similarity": 0.8466666666666667,
+    "selection_gap": 0.52
+  },
+  "notes": [
+    "Lite example-selection demo for in-context retrieval of demonstrations."
+  ]
+}

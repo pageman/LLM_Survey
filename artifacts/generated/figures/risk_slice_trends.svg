@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="24" y="32" font-family="Georgia, serif" font-size="24" fill="#202124">Risk Slice Trends</text>
+<text x="24" y="52" font-family="Georgia, serif" font-size="13" fill="#5b5b5b">Risk panel with aligned beneficial-versus-harm signals so slices remain directly comparable.</text>
+<line x1="80" y1="400" x2="920" y2="400" stroke="#555" stroke-width="1.5"/>
+<line x1="80" y1="50" x2="80" y2="400" stroke="#555" stroke-width="1.5"/>
+<line x1="76" y1="400.0" x2="920" y2="400.0" stroke="#ddd" stroke-width="1"/>
+<text x="12" y="404.0" font-family="Courier New, monospace" font-size="12" fill="#555">0.00</text>
+<line x1="76" y1="312.5" x2="920" y2="312.5" stroke="#ddd" stroke-width="1"/>
+<text x="12" y="316.5" font-family="Courier New, monospace" font-size="12" fill="#555">0.25</text>
+<line x1="76" y1="225.0" x2="920" y2="225.0" stroke="#ddd" stroke-width="1"/>
+<text x="12" y="229.0" font-family="Courier New, monospace" font-size="12" fill="#555">0.50</text>
+<line x1="76" y1="137.5" x2="920" y2="137.5" stroke="#ddd" stroke-width="1"/>
+<text x="12" y="141.5" font-family="Courier New, monospace" font-size="12" fill="#555">0.75</text>
+<line x1="76" y1="50.0" x2="920" y2="50.0" stroke="#ddd" stroke-width="1"/>
+<text x="12" y="54.0" font-family="Courier New, monospace" font-size="12" fill="#555">1.00</text>
+<polyline fill="none" stroke="#1d4e89" stroke-width="2.5" points="80.0,50.0 290.0,113.0 500.0,92.0 710.0,123.5 920.0,92.7"/>
+<circle cx="80.0" cy="50.0" r="3.5" fill="#1d4e89"/>
+<circle cx="290.0" cy="113.0" r="3.5" fill="#1d4e89"/>
+<circle cx="500.0" cy="92.0" r="3.5" fill="#1d4e89"/>
+<circle cx="710.0" cy="123.5" r="3.5" fill="#1d4e89"/>
+<circle cx="920.0" cy="92.7" r="3.5" fill="#1d4e89"/>
+<rect x="730" y="60" width="12" height="3" fill="#1d4e89"/>
+<text x="750" y="70" font-family="Courier New, monospace" font-size="12" fill="#1d4e89">beneficial_signal</text>
+<polyline fill="none" stroke="#b35c2e" stroke-width="2.5" points="80.0,400.0 290.0,337.0 500.0,358.0 710.0,326.5 920.0,357.3"/>
+<circle cx="80.0" cy="400.0" r="3.5" fill="#b35c2e"/>
+<circle cx="290.0" cy="337.0" r="3.5" fill="#b35c2e"/>
+<circle cx="500.0" cy="358.0" r="3.5" fill="#b35c2e"/>
+<circle cx="710.0" cy="326.5" r="3.5" fill="#b35c2e"/>
+<circle cx="920.0" cy="357.3" r="3.5" fill="#b35c2e"/>
+<rect x="730" y="78" width="12" height="3" fill="#b35c2e"/>
+<text x="750" y="88" font-family="Courier New, monospace" font-size="12" fill="#b35c2e">harm_signal</text>
+<text x="64.0" y="424" font-family="Courier New, monospace" font-size="11" fill="#555">truthfulness-eval</text>
+<text x="274.0" y="424" font-family="Courier New, monospace" font-size="11" fill="#555">hallucination-checks</text>
+<text x="484.0" y="424" font-family="Courier New, monospace" font-size="11" fill="#555">safety-eval</text>
+<text x="694.0" y="424" font-family="Courier New, monospace" font-size="11" fill="#555">bias-eval</text>
+<text x="904.0" y="424" font-family="Courier New, monospace" font-size="11" fill="#555">privacy-leakage-eval</text>
+<text x="24" y="444" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">All series share the same y-scale for direct visual comparison.</text>
+</svg>

@@ -1,7 +1,23 @@
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .DS_Store
 .ipynb_checkpoints/
-artifacts/generated/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Test and lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# Packaging
 dist/
 build/
+*.egg-info/

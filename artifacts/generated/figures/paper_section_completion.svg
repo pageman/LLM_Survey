@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="544" viewBox="0 0 920 544">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="24" y="34" font-family="Georgia, serif" font-size="24" fill="#202124">Paper Section Completion</text>
+<text x="24" y="76" font-family="Courier New, monospace" font-size="13" fill="#333">Adaptation</text>
+<rect x="240" y="62" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="62" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="76" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="108" font-family="Courier New, monospace" font-size="13" fill="#333">Applications</text>
+<rect x="240" y="94" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="94" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="108" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="140" font-family="Courier New, monospace" font-size="13" fill="#333">Architecture</text>
+<rect x="240" y="126" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="126" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="140" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="172" font-family="Courier New, monospace" font-size="13" fill="#333">Benchmarking</text>
+<rect x="240" y="158" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="158" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="172" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="204" font-family="Courier New, monospace" font-size="13" fill="#333">Code Pretraining</text>
+<rect x="240" y="190" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="190" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="204" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="236" font-family="Courier New, monospace" font-size="13" fill="#333">Evaluation</text>
+<rect x="240" y="222" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="222" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="236" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="268" font-family="Courier New, monospace" font-size="13" fill="#333">Foundations</text>
+<rect x="240" y="254" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="254" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="268" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="300" font-family="Courier New, monospace" font-size="13" fill="#333">Multilingual</text>
+<rect x="240" y="286" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="286" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="300" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="332" font-family="Courier New, monospace" font-size="13" fill="#333">Pre-training</text>
+<rect x="240" y="318" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="318" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="332" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="364" font-family="Courier New, monospace" font-size="13" fill="#333">Reporting</text>
+<rect x="240" y="350" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="350" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="364" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="396" font-family="Courier New, monospace" font-size="13" fill="#333">Resources</text>
+<rect x="240" y="382" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="382" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="396" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="428" font-family="Courier New, monospace" font-size="13" fill="#333">Systems</text>
+<rect x="240" y="414" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="414" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="428" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="460" font-family="Courier New, monospace" font-size="13" fill="#333">Training</text>
+<rect x="240" y="446" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="446" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="460" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+<text x="24" y="492" font-family="Courier New, monospace" font-size="13" fill="#333">Utilization</text>
+<rect x="240" y="478" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="478" width="620.00" height="18" fill="#b35c2e"/>
+<text x="872" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">100.000</text>
+</svg>

@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "configuration_scaling_demo",
+  "module": "architecture.configuration_scaling_demo",
+  "status": "ok",
+  "metrics": {
+    "scaling_slope": 0.17363115709512034,
+    "max_score": 0.74
+  },
+  "artifacts": {
+    "params_millions": [
+      25.0,
+      80.0,
+      250.0,
+      800.0
+    ],
+    "depth": [
+      6,
+      12,
+      24,
+      36
+    ],
+    "width": [
+      256,
+      384,
+      512,
+      768
+    ],
+    "score": [
+      0.48,
+      0.57,
+      0.66,
+      0.74
+    ],
+    "scaling_slope": 0.17363115709512034,
+    "max_score": 0.74
+  },
+  "notes": [
+    "Lite architecture scaling demo over parameter, depth, and width configurations."
+  ]
+}

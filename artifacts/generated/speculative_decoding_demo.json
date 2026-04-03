@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "speculative_decoding_demo",
+  "module": "systems.speculative_decoding_demo",
+  "status": "ok",
+  "metrics": {
+    "acceptance_rate": 0.8208333333333333,
+    "speedup": 2.77027027027027
+  },
+  "artifacts": {
+    "draft_lengths": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "accepted_tokens": [
+      1.0,
+      1.7,
+      3.0,
+      4.1
+    ],
+    "verification_cost": [
+      1.0,
+      1.15,
+      1.3,
+      1.48
+    ],
+    "acceptance_rate": 0.8208333333333333,
+    "speedup": 2.77027027027027
+  },
+  "notes": [
+    "Lite speculative decoding demo with draft acceptance and verification cost accounting."
+  ]
+}

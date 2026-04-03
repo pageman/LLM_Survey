@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "LLM_Survey"
+type: software
+license: "MIT"
+authors:
+  - family-names: "pageman"
+repository-code: "https://github.com/pageman/LLM_Survey"
+abstract: >
+  NumPy-only educational re-implementations of the major technical areas
+  covered by A Survey of Large Language Models, packaged as runnable local
+  demos, canonical JSON reports, provenance tables, and publication-facing
+  figures and documentation.
+keywords:
+  - large language models
+  - survey
+  - numpy
+  - education
+  - reproducibility
+  - provenance
+version: "1.0.0"
+date-released: 2026-04-04

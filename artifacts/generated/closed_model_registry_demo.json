@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "closed_model_registry_demo",
+  "module": "resources.closed_model_registry",
+  "status": "ok",
+  "metrics": {
+    "registry_size": 4,
+    "tooling_rate": 1.0,
+    "multimodal_rate": 0.75
+  },
+  "artifacts": {
+    "registry_size": 4,
+    "tooling_rate": 1.0,
+    "multimodal_rate": 0.75,
+    "models": [
+      {
+        "name": "GPT-4.1",
+        "api_only": true,
+        "tooling": true,
+        "multimodal": true
+      },
+      {
+        "name": "Claude 3.7 Sonnet",
+        "api_only": true,
+        "tooling": true,
+        "multimodal": true
+      },
+      {
+        "name": "Gemini 2.0 Pro",
+        "api_only": true,
+        "tooling": true,
+        "multimodal": true
+      },
+      {
+        "name": "Command R+",
+        "api_only": true,
+        "tooling": true,
+        "multimodal": false
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated closed-model registry emphasizing API-only frontier systems."
+  ]
+}

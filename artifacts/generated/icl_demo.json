@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "icl_demo",
+  "module": "utilization.icl_demo",
+  "status": "ok",
+  "metrics": {
+    "gain": 0.16000000000000003
+  },
+  "artifacts": {
+    "zero_shot_score": 0.58,
+    "few_shot_score": 0.74,
+    "gain": 0.16000000000000003
+  },
+  "notes": [
+    "Toy in-context learning gain demo."
+  ]
+}

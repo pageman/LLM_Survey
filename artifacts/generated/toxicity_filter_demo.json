@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "toxicity_filter_demo",
+  "module": "pretraining.toxicity_filter_demo",
+  "status": "ok",
+  "metrics": {
+    "retention_rate": 0.6666666666666666,
+    "toxicity_reduction": 0.22916666666666663
+  },
+  "artifacts": {
+    "raw_toxicity": [
+      0.92,
+      0.74,
+      0.31,
+      0.16,
+      0.07,
+      0.03
+    ],
+    "retained_mask": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "retention_rate": 0.6666666666666666,
+    "toxicity_reduction": 0.22916666666666663
+  },
+  "notes": [
+    "Lite toxicity filtering demo over raw versus retained samples."
+  ]
+}

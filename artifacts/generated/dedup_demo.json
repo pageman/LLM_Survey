@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "dedup_demo",
+  "module": "pretraining.dedup_demo",
+  "status": "ok",
+  "metrics": {
+    "best_quality_score": 1.0034558419206479,
+    "best_privacy_risk": 0.10821618143501159
+  },
+  "artifacts": {
+    "duplicate_rates": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "quality_scores": [
+      1.0034558419206479,
+      0.9433043707618338,
+      0.8590535586667312,
+      0.6946304676463971,
+      0.5536457239618608
+    ],
+    "privacy_risks": [
+      0.10821618143501159,
+      0.1769684276839564,
+      0.3294637457236401,
+      0.5558111810419636,
+      0.7779413249665553
+    ],
+    "best_quality_rate": 0.0
+  },
+  "notes": [
+    "Toy repeated-data study for quality and privacy tradeoffs."
+  ]
+}

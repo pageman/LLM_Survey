@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "self_consistency_demo",
+  "module": "utilization.self_consistency_demo",
+  "status": "ok",
+  "metrics": {
+    "gain": 0.09000000000000008
+  },
+  "artifacts": {
+    "single_path_score": 0.72,
+    "majority_vote_score": 0.81,
+    "gain": 0.09000000000000008
+  },
+  "notes": [
+    "Toy self-consistency majority-vote gain demo."
+  ]
+}

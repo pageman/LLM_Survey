@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "objective_mixture_demo",
+  "module": "training.objective_mixture_demo",
+  "status": "ok",
+  "metrics": {
+    "best_mixture_loss": 0.9830000000000001,
+    "mixture_gain": 0.137
+  },
+  "artifacts": {
+    "candidate_losses": [
+      [
+        1.26,
+        1.12,
+        1.08
+      ],
+      [
+        1.11,
+        0.99,
+        0.95
+      ],
+      [
+        1.03,
+        0.92,
+        0.88
+      ],
+      [
+        1.08,
+        0.9,
+        0.84
+      ]
+    ],
+    "weight_grid": [
+      [
+        0.2,
+        0.2,
+        0.6
+      ],
+      [
+        0.2,
+        0.4,
+        0.4
+      ],
+      [
+        0.2,
+        0.6,
+        0.2
+      ],
+      [
+        0.4,
+        0.2,
+        0.4
+      ],
+      [
+        0.4,
+        0.4,
+        0.2
+      ],
+      [
+        0.4,
+        0.6,
+        0.0
+      ],
+      [
+        0.6,
+        0.2,
+        0.2
+      ],
+      [
+        0.6,
+        0.4,
+        0.0
+      ]
+    ],
+    "best_weights": [
+      0.2,
+      0.2,
+      0.6
+    ],
+    "best_mixture_loss": 0.9830000000000001,
+    "mixture_gain": 0.137
+  },
+  "notes": [
+    "Lite objective-mixture demo with explicit weighting search across multiple training objectives."
+  ]
+}

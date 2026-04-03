@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "preference_data_quality_demo",
+  "module": "adaptation.preference_data_quality_demo",
+  "status": "ok",
+  "metrics": {
+    "baseline_loss": 1.28,
+    "adapted_loss": 1.1345,
+    "gain": 0.14549999999999996
+  },
+  "artifacts": {
+    "preference_quality": [
+      0.87,
+      0.69,
+      0.51,
+      0.9
+    ],
+    "baseline_loss": 1.28,
+    "adapted_loss": 1.1345,
+    "gain": 0.14549999999999996
+  },
+  "notes": [
+    "Lite preference-data quality demo over label-quality effects."
+  ]
+}

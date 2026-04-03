@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "tokenizer_demo",
+  "module": "pretraining.tokenizer_demo",
+  "status": "ok",
+  "metrics": {
+    "compression_ratio": 0.15789473684210525
+  },
+  "artifacts": {
+    "text": "large language models",
+    "word_token_count": 3,
+    "char_token_count": 19,
+    "compression_ratio": 0.15789473684210525
+  },
+  "notes": [
+    "Toy tokenizer granularity comparison."
+  ]
+}

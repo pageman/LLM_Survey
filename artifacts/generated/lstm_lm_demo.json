@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "lstm_lm_demo",
+  "module": "foundations.lstm_lm",
+  "status": "ok",
+  "metrics": {
+    "sampled_next_token": 0
+  },
+  "artifacts": {
+    "input_tokens": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "next_token_distribution": [
+      0.19998117461466602,
+      0.2000298710972601,
+      0.2000115009671341,
+      0.1999861427409508,
+      0.19999131057998912
+    ]
+  },
+  "notes": [
+    "Local forward-pass demo for the LSTM language model facade."
+  ]
+}

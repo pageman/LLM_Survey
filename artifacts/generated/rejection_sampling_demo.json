@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "rejection_sampling_demo",
+  "module": "adaptation.rejection_sampling_demo",
+  "status": "ok",
+  "metrics": {
+    "baseline_loss": 1.35,
+    "adapted_loss": 1.1280000000000001,
+    "gain": 0.22199999999999998
+  },
+  "artifacts": {
+    "candidate_rewards": [
+      0.41,
+      0.74,
+      0.66,
+      0.58
+    ],
+    "baseline_loss": 1.35,
+    "adapted_loss": 1.1280000000000001,
+    "gain": 0.22199999999999998
+  },
+  "notes": [
+    "Lite rejection-sampling adaptation demo over candidate-reward filtering."
+  ]
+}

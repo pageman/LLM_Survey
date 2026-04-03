@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "publication_assets_demo",
+  "module": "reporting.publication_assets",
+  "status": "ok",
+  "metrics": {
+    "module_count": 124,
+    "benchmark_ranked_count": 29,
+    "benchmark_family_count": 19,
+    "benchmark_family_group_count": 7,
+    "mechanism_provenance_count": 110,
+    "survey_map_provenance_count": 14,
+    "stale_report_count": 0
+  },
+  "artifacts": {
+    "fidelity_matrix": "/Users/hifi/Downloads/LLM_Survey/docs/fidelity_matrix.md",
+    "module_matrix": "/Users/hifi/Downloads/LLM_Survey/docs/module_matrix.md",
+    "figures_and_tables": "/Users/hifi/Downloads/LLM_Survey/docs/figures_and_tables.md",
+    "mechanism_provenance": "/Users/hifi/Downloads/LLM_Survey/docs/mechanism_provenance.md",
+    "resource_provenance": "/Users/hifi/Downloads/LLM_Survey/docs/resource_provenance.md",
+    "survey_map_provenance": "/Users/hifi/Downloads/LLM_Survey/docs/survey_map_provenance.md",
+    "module_matrix_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/module_matrix.csv",
+    "benchmark_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/benchmark_experiment_scores.csv",
+    "benchmark_family_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/benchmark_family_scores.csv",
+    "benchmark_family_group_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/benchmark_family_group_scores.csv",
+    "section_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/paper_section_completion.csv",
+    "survey_map_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/survey_map_provenance.csv",
+    "mechanism_csv": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/tables/mechanism_provenance.csv",
+    "section_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/paper_section_completion.svg",
+    "benchmark_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/benchmark_family_scores.svg",
+    "fidelity_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/fidelity_band_split.svg",
+    "adaptation_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/adaptation_gain_trends.svg",
+    "retrieval_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/retrieval_slice_trends.svg",
+    "risk_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/risk_slice_trends.svg",
+    "trend_panels_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/trend_panels.svg",
+    "trend_callouts_svg": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/figures/trend_callouts.svg"
+  },
+  "notes": [
+    "Generates publication-facing Markdown and CSV tables from canonical local reports."
+  ]
+}

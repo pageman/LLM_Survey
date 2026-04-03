@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="980" viewBox="0 0 1240 980">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<rect x="12" y="12" width="1216" height="948" rx="18" fill="none" stroke="#d8d2c3" stroke-width="1.5"/>
+<text x="24" y="34" font-family="Georgia, serif" font-size="28" fill="#202124">Trend Callout Boards</text>
+<text x="24" y="56" font-family="Georgia, serif" font-size="14" fill="#5b5b5b">Figure Set B: companion callout boards for the publication trend figures.</text>
+<text x="24" y="76" font-family="Courier New, monospace" font-size="12" fill="#4a4a4a">Label key: A=Adaptation, B=Retrieval, C=Risk.</text>
+<rect x="20" y="100" width="1190" height="240" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
+<text x="24" y="112" font-family="Georgia, serif" font-size="18" fill="#202124">A. Adaptation Callouts</text>
+<text x="48" y="132" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">Normalized gain, efficiency, and loss-improvement for the top adaptation slice.</text>
+<text x="40" y="160" font-family="Courier New, monospace" font-size="12" fill="#333">Demo</text>
+<text x="520" y="160" font-family="Courier New, monospace" font-size="12" fill="#333">Gain</text>
+<text x="680" y="160" font-family="Courier New, monospace" font-size="12" fill="#333">Eff.</text>
+<text x="840" y="160" font-family="Courier New, monospace" font-size="12" fill="#333">Loss+</text>
+<line x1="24" y1="168" x2="1190" y2="168" stroke="#bbb" stroke-width="1"/>
+<text x="40" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">preference_tuning_demo</text>
+<text x="520" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="680" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">0.903</text>
+<text x="840" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="40" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">finetuning_demo</text>
+<text x="520" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.767</text>
+<text x="680" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.693</text>
+<text x="840" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.620</text>
+<text x="40" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">peft_lora_demo</text>
+<text x="520" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">0.475</text>
+<text x="680" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="840" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">0.939</text>
+<text x="40" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">alignment_sft_demo</text>
+<text x="520" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">0.307</text>
+<text x="680" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">0.277</text>
+<text x="840" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">0.000</text>
+<text x="40" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">instruction_tuning_demo</text>
+<text x="520" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.168</text>
+<text x="680" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.151</text>
+<text x="840" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.502</text>
+<rect x="20" y="380" width="1190" height="240" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
+<text x="24" y="392" font-family="Georgia, serif" font-size="18" fill="#202124">B. Retrieval Callouts</text>
+<text x="48" y="412" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">MRR and recall-at-max-k for dense, sparse, and hybrid retrieval.</text>
+<text x="40" y="440" font-family="Courier New, monospace" font-size="12" fill="#333">Retriever</text>
+<text x="520" y="440" font-family="Courier New, monospace" font-size="12" fill="#333">MRR</text>
+<text x="700" y="440" font-family="Courier New, monospace" font-size="12" fill="#333">Recall@max_k</text>
+<line x1="24" y1="448" x2="1190" y2="448" stroke="#bbb" stroke-width="1"/>
+<text x="40" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">dense</text>
+<text x="520" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">0.778</text>
+<text x="700" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="40" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">bm25</text>
+<text x="520" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="700" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="40" y="514" font-family="Courier New, monospace" font-size="12" fill="#333">hybrid</text>
+<text x="520" y="514" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="700" y="514" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<rect x="20" y="660" width="1190" height="240" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
+<text x="24" y="672" font-family="Georgia, serif" font-size="18" fill="#202124">C. Risk Callouts</text>
+<text x="48" y="692" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">Beneficial and harm signals aligned per risk slice.</text>
+<text x="40" y="720" font-family="Courier New, monospace" font-size="12" fill="#333">Slice</text>
+<text x="520" y="720" font-family="Courier New, monospace" font-size="12" fill="#333">Benefit</text>
+<text x="700" y="720" font-family="Courier New, monospace" font-size="12" fill="#333">Harm</text>
+<line x1="24" y1="728" x2="1190" y2="728" stroke="#bbb" stroke-width="1"/>
+<text x="40" y="750" font-family="Courier New, monospace" font-size="12" fill="#333">truthfulness-eval</text>
+<text x="520" y="750" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="700" y="750" font-family="Courier New, monospace" font-size="12" fill="#333">0.000</text>
+<text x="40" y="772" font-family="Courier New, monospace" font-size="12" fill="#333">hallucination-checks</text>
+<text x="520" y="772" font-family="Courier New, monospace" font-size="12" fill="#333">0.820</text>
+<text x="700" y="772" font-family="Courier New, monospace" font-size="12" fill="#333">0.180</text>
+<text x="40" y="794" font-family="Courier New, monospace" font-size="12" fill="#333">safety-eval</text>
+<text x="520" y="794" font-family="Courier New, monospace" font-size="12" fill="#333">0.880</text>
+<text x="700" y="794" font-family="Courier New, monospace" font-size="12" fill="#333">0.120</text>
+<text x="40" y="816" font-family="Courier New, monospace" font-size="12" fill="#333">bias-eval</text>
+<text x="520" y="816" font-family="Courier New, monospace" font-size="12" fill="#333">0.790</text>
+<text x="700" y="816" font-family="Courier New, monospace" font-size="12" fill="#333">0.210</text>
+<text x="40" y="838" font-family="Courier New, monospace" font-size="12" fill="#333">privacy-leakage-eval</text>
+<text x="520" y="838" font-family="Courier New, monospace" font-size="12" fill="#333">0.878</text>
+<text x="700" y="838" font-family="Courier New, monospace" font-size="12" fill="#333">0.122</text>
+<text x="24" y="956" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">Shared publication caption: these tables mirror the plotted slices so figure panels and callout boards can be read as one cohesive set.</text>
+</svg>

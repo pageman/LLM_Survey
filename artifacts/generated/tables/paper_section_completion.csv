@@ -1,0 +1,15 @@
+section,prefix,implemented,target,percentage
+Adaptation,adaptation,16,16,100.0
+Applications,applications,3,3,100.0
+Architecture,architecture,7,7,100.0
+Benchmarking,benchmark,4,4,100.0
+Code Pretraining,code_pretraining,2,2,100.0
+Evaluation,evaluation,22,22,100.0
+Foundations,foundations,4,4,100.0
+Multilingual,multilingual,2,2,100.0
+Pre-training,pretraining,17,17,100.0
+Reporting,reporting,3,3,100.0
+Resources,resources,7,7,100.0
+Systems,systems,6,6,100.0
+Training,training,7,7,100.0
+Utilization,utilization,18,18,100.0

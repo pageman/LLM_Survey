@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "embodied_agent_stub_demo",
+  "module": "applications.embodied_agent_stub",
+  "status": "ok",
+  "metrics": {
+    "task_success_rate": 0.73
+  },
+  "artifacts": {
+    "actions": [
+      "locate mug",
+      "reach mug",
+      "grasp mug",
+      "place mug on table"
+    ],
+    "task_success_rate": 0.73
+  },
+  "notes": [
+    "Toy embodied-agent application stub."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "constitution_sweep_demo",
+  "module": "adaptation.constitution_sweep_demo",
+  "status": "ok",
+  "metrics": {
+    "principle_count": 4,
+    "best_gain": 0.41,
+    "mean_safety_score": 0.83
+  },
+  "artifacts": {
+    "principle_count": 4,
+    "best_principle": "truthfulness",
+    "best_gain": 0.41,
+    "mean_safety_score": 0.83,
+    "rows": [
+      {
+        "principle": "non-maleficence",
+        "gain": 0.32,
+        "safety_score": 0.81
+      },
+      {
+        "principle": "truthfulness",
+        "gain": 0.41,
+        "safety_score": 0.84
+      },
+      {
+        "principle": "privacy",
+        "gain": 0.28,
+        "safety_score": 0.88
+      },
+      {
+        "principle": "fairness",
+        "gain": 0.35,
+        "safety_score": 0.79
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated sweep over constitutional principle choices."
+  ]
+}

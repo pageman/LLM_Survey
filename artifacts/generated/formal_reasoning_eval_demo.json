@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "formal_reasoning_eval_demo",
+  "module": "evaluation.formal_reasoning_eval",
+  "status": "ok",
+  "metrics": {
+    "proof_validity": 0.8333333333333334,
+    "formal_error_rate": 0.16666666666666663
+  },
+  "artifacts": {
+    "valid_steps": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "proof_validity": 0.8333333333333334,
+    "formal_error_rate": 0.16666666666666663
+  },
+  "notes": [
+    "Lite formal reasoning demo over proof-step validity."
+  ]
+}

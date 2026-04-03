@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "toolformer_style_demo",
+  "module": "utilization.toolformer_style_demo",
+  "status": "ok",
+  "metrics": {
+    "tool_call_rate": 0.75,
+    "tool_use_gain": 0.135
+  },
+  "artifacts": {
+    "tool_call_rate": 0.75,
+    "tool_use_gain": 0.135,
+    "annotations": [
+      {
+        "query": "search for scaling laws",
+        "inserted_call": "[TOOL:search_api]",
+        "tool_called": true,
+        "answer_gain": 0.18
+      },
+      {
+        "query": "what is the weather in manila",
+        "inserted_call": "[TOOL:weather_api]",
+        "tool_called": true,
+        "answer_gain": 0.18
+      },
+      {
+        "query": "calculate 3 plus 4",
+        "inserted_call": "[TOOL:calculator]",
+        "tool_called": true,
+        "answer_gain": 0.18
+      },
+      {
+        "query": "write a poem",
+        "inserted_call": "",
+        "tool_called": false,
+        "answer_gain": 0.0
+      }
+    ]
+  },
+  "notes": [
+    "Lite Toolformer-style demo with self-inserted tool calls and answer-gain accounting."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "kv_cache_toy_demo",
+  "module": "systems.kv_cache_toy",
+  "status": "ok",
+  "metrics": {
+    "speedup": 128.0
+  },
+  "artifacts": {
+    "seq_len": 128,
+    "no_cache_cost": 16384,
+    "cache_cost": 128,
+    "speedup": 128.0
+  },
+  "notes": [
+    "Toy autoregressive KV-cache cost reduction demo."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "risk_bundle_summary_demo",
+  "module": "benchmark.risk_bundle_summary",
+  "status": "ok",
+  "metrics": {
+    "bundle_score": 0.8676,
+    "risk_floor": 0.76
+  },
+  "artifacts": {
+    "component_scores": {
+      "hallucination_checks": 0.82,
+      "safety_eval": 0.88,
+      "bias_eval": 0.76,
+      "truthfulness_eval": 1.0,
+      "privacy_leakage_eval": 0.878
+    },
+    "bundle_score": 0.8676,
+    "risk_floor": 0.76
+  },
+  "notes": [
+    "Dedicated risk-bundle summary over core evaluation artifacts."
+  ]
+}

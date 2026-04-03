@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "library_stack_matrix_demo",
+  "module": "resources.library_stack_matrix",
+  "status": "ok",
+  "metrics": {
+    "num_libraries": 4,
+    "capability_coverage": 7
+  },
+  "artifacts": {
+    "num_libraries": 4,
+    "capability_coverage": 7,
+    "matrix": [
+      {
+        "library": "NumPy",
+        "core_math": 1,
+        "autograd": 0,
+        "serving": 0,
+        "tokenization": 0
+      },
+      {
+        "library": "PyTorch",
+        "core_math": 1,
+        "autograd": 1,
+        "serving": 1,
+        "tokenization": 0
+      },
+      {
+        "library": "Transformers",
+        "core_math": 0,
+        "autograd": 0,
+        "serving": 1,
+        "tokenization": 1
+      },
+      {
+        "library": "SentencePiece",
+        "core_math": 0,
+        "autograd": 0,
+        "serving": 0,
+        "tokenization": 1
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated library-stack matrix covering math, autograd, serving, and tokenization roles."
+  ]
+}

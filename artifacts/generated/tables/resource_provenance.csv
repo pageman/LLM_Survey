@@ -1,0 +1,8 @@
+module,evidence_file,donor_origin,supporting_file
+resources.public_model_registry,/Users/hifi/Downloads/2303.18223v19.pdf,repo-authored resource synthesis,/Users/hifi/Downloads/LLM_Survey/third_party/sutskever_30_manifest.md
+resources.closed_model_registry,/Users/hifi/Downloads/2303.18223v19.pdf,repo-authored resource synthesis,/Users/hifi/Downloads/LLM_Survey/third_party/sutskever_30_manifest.md
+resources.corpus_profile_demo,/Users/hifi/Downloads/2303.18223v19.pdf,donor context: /Users/hifi/sutskever-30-implementations/README.md,/Users/hifi/Downloads/LLM_Survey/docs/full_survey_gap_audit.md
+resources.library_stack_matrix,/Users/hifi/sutskever-30-implementations/README.md,donor manifest: /Users/hifi/Downloads/LLM_Survey/third_party/sutskever_30_manifest.md,/Users/hifi/Downloads/LLM_Survey/docs/reuse_audit.md
+resources.framework_stack_matrix,/Users/hifi/sutskever-30-implementations/TRAINING_UTILS_README.md,donor manifest: /Users/hifi/Downloads/LLM_Survey/third_party/sutskever_30_manifest.md,/Users/hifi/Downloads/LLM_Survey/docs/reuse_audit.md
+resources.dataset_license_audit,/Users/hifi/Downloads/2303.18223v19.pdf,repo-authored licensing summary,/Users/hifi/Downloads/LLM_Survey/docs/limitations.md
+resources.model_release_timeline,/Users/hifi/Downloads/2303.18223v19.pdf,repo-authored release timeline,/Users/hifi/Downloads/LLM_Survey/docs/release_notes.md

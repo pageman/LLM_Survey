@@ -1,0 +1,939 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "benchmark_harness_demo",
+  "module": "evaluation.benchmark_harness",
+  "status": "ok",
+  "metrics": {
+    "num_reports": 131,
+    "num_compared_metrics": 59,
+    "num_ranked_experiments": 29,
+    "num_families": 19,
+    "num_family_groups": 7
+  },
+  "artifacts": {
+    "comparisons": [
+      {
+        "experiment_id": "data_mixture_toy_demo",
+        "module": "pretraining.data_mixture_toy",
+        "metric": "best_score",
+        "value": 1.0128084530088657,
+        "goal": "max",
+        "family": "pretraining_mixture",
+        "family_group": "pretraining",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "dedup_demo",
+        "module": "pretraining.dedup_demo",
+        "metric": "best_quality_score",
+        "value": 1.0034558419206479,
+        "goal": "max",
+        "family": "pretraining_curation",
+        "family_group": "pretraining",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "dedup_demo",
+        "module": "pretraining.dedup_demo",
+        "metric": "best_privacy_risk",
+        "value": 0.10821618143501159,
+        "goal": "min",
+        "family": "pretraining_curation",
+        "family_group": "pretraining",
+        "normalized_score": 0.8917838185649885
+      },
+      {
+        "experiment_id": "contamination_demo",
+        "module": "pretraining.contamination_demo",
+        "metric": "max_inflation",
+        "value": 0.3144617716357595,
+        "goal": "min",
+        "family": "pretraining_curation",
+        "family_group": "pretraining",
+        "normalized_score": 0.6855382283642405
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "metric": "baseline_loss",
+        "value": 21.311969093782416,
+        "goal": "min",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.14752123624870336
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "metric": "adapted_loss",
+        "value": 20.051440401544276,
+        "goal": "min",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.19032921532522012
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "metric": "gain",
+        "value": 1.2605286922381396,
+        "goal": "max",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.2521057384476279
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "metric": "baseline_loss",
+        "value": 10.259614135594376,
+        "goal": "min",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.589615434576225
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "metric": "adapted_loss",
+        "value": 7.107504386944394,
+        "goal": "min",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.6881729081944463
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "metric": "gain",
+        "value": 3.1521097486499814,
+        "goal": "max",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.6304219497299963
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "metric": "baseline_loss",
+        "value": 10.261408609322052,
+        "goal": "min",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.589543655627118
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "metric": "adapted_loss",
+        "value": 9.572479058717004,
+        "goal": "min",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.593366190049346
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "metric": "gain",
+        "value": 0.6889295506050477,
+        "goal": "max",
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.13778591012100955
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "metric": "baseline_loss",
+        "value": 2.402044204207483,
+        "goal": "min",
+        "family": "adaptation_parameter_efficient",
+        "family_group": "adaptation",
+        "normalized_score": 0.9039182318317006
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "metric": "adapted_loss",
+        "value": 0.4520740247140484,
+        "goal": "min",
+        "family": "adaptation_parameter_efficient",
+        "family_group": "adaptation",
+        "normalized_score": 0.9441509990494598
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "metric": "gain",
+        "value": 1.9499701794934345,
+        "goal": "max",
+        "family": "adaptation_parameter_efficient",
+        "family_group": "adaptation",
+        "normalized_score": 0.3899940358986869
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "metric": "trainable_fraction",
+        "value": 0.42857142857142855,
+        "goal": "min",
+        "family": "adaptation_parameter_efficient",
+        "family_group": "adaptation",
+        "normalized_score": 0.5714285714285714
+      },
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "metric": "baseline_loss",
+        "value": 3.2968469986052753,
+        "goal": "min",
+        "family": "adaptation_preference",
+        "family_group": "adaptation",
+        "normalized_score": 0.868126120055789
+      },
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "metric": "adapted_loss",
+        "value": -0.8121145308492252,
+        "goal": "min",
+        "family": "adaptation_preference",
+        "family_group": "adaptation",
+        "normalized_score": 0.9927736358018933
+      },
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "metric": "gain",
+        "value": 4.1089615294545005,
+        "goal": "max",
+        "family": "adaptation_preference",
+        "family_group": "adaptation",
+        "normalized_score": 0.8217923058909001
+      },
+      {
+        "experiment_id": "retrieval_demo",
+        "module": "utilization.retrieval",
+        "metric": "dense_mrr",
+        "value": 0.7777777777777778,
+        "goal": "max",
+        "family": "retrieval_ranking",
+        "family_group": "retrieval",
+        "normalized_score": 0.7777777777777778
+      },
+      {
+        "experiment_id": "retrieval_demo",
+        "module": "utilization.retrieval",
+        "metric": "bm25_mrr",
+        "value": 1.0,
+        "goal": "max",
+        "family": "retrieval_ranking",
+        "family_group": "retrieval",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "retrieval_demo",
+        "module": "utilization.retrieval",
+        "metric": "hybrid_mrr",
+        "value": 1.0,
+        "goal": "max",
+        "family": "retrieval_ranking",
+        "family_group": "retrieval",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "retrieval_selection_demo",
+        "module": "utilization.retrieval_selection_demo",
+        "metric": "selection_confidence",
+        "value": 0.5980000000000001,
+        "goal": "max",
+        "family": "retrieval_selection",
+        "family_group": "retrieval",
+        "normalized_score": 0.5980000000000001
+      },
+      {
+        "experiment_id": "retrieval_selection_demo",
+        "module": "utilization.retrieval_selection_demo",
+        "metric": "hybrid_gain",
+        "value": 0.028000000000000094,
+        "goal": "max",
+        "family": "retrieval_selection",
+        "family_group": "retrieval",
+        "normalized_score": 0.028000000000000094
+      },
+      {
+        "experiment_id": "context_packing_demo",
+        "module": "utilization.context_packing_demo",
+        "metric": "packed_efficiency",
+        "value": 0.859375,
+        "goal": "max",
+        "family": "utilization_context",
+        "family_group": "utilization",
+        "normalized_score": 0.5729166666666666
+      },
+      {
+        "experiment_id": "context_packing_demo",
+        "module": "utilization.context_packing_demo",
+        "metric": "packing_gain",
+        "value": 0.6,
+        "goal": "max",
+        "family": "utilization_context",
+        "family_group": "utilization",
+        "normalized_score": 0.6
+      },
+      {
+        "experiment_id": "tool_use_stub_demo",
+        "module": "utilization.tool_use_stub",
+        "metric": "used_tool_rate",
+        "value": 0.75,
+        "goal": "max",
+        "family": "utilization_tool_use",
+        "family_group": "utilization",
+        "normalized_score": 0.75
+      },
+      {
+        "experiment_id": "long_context_demo",
+        "module": "evaluation.long_context",
+        "metric": "best_edge_score",
+        "value": 1.0,
+        "goal": "max",
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "long_context_demo",
+        "module": "evaluation.long_context",
+        "metric": "middle_score",
+        "value": 0.04999999999999993,
+        "goal": "max",
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 0.04999999999999993
+      },
+      {
+        "experiment_id": "long_context_demo",
+        "module": "evaluation.long_context",
+        "metric": "edge_gap",
+        "value": 0.9500000000000001,
+        "goal": "min",
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 0.04999999999999993
+      },
+      {
+        "experiment_id": "position_bias_eval_demo",
+        "module": "evaluation.position_bias_eval",
+        "metric": "edge_mean",
+        "value": 0.5742857142857142,
+        "goal": "max",
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 0.5742857142857142
+      },
+      {
+        "experiment_id": "position_bias_eval_demo",
+        "module": "evaluation.position_bias_eval",
+        "metric": "middle_mean",
+        "value": 0.1614285714285714,
+        "goal": "max",
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 0.1614285714285714
+      },
+      {
+        "experiment_id": "position_bias_eval_demo",
+        "module": "evaluation.position_bias_eval",
+        "metric": "edge_over_middle_ratio",
+        "value": 3.5575221238938055,
+        "goal": "min",
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 0.0
+      },
+      {
+        "experiment_id": "calibration_eval_demo",
+        "module": "evaluation.calibration_eval",
+        "metric": "ece",
+        "value": 0.09799999999999998,
+        "goal": "min",
+        "family": "evaluation_reliability",
+        "family_group": "evaluation",
+        "normalized_score": 0.902
+      },
+      {
+        "experiment_id": "hallucination_checks_demo",
+        "module": "evaluation.hallucination_checks",
+        "metric": "hallucination_rate",
+        "value": 0.18,
+        "goal": "min",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 0.8200000000000001
+      },
+      {
+        "experiment_id": "hallucination_checks_demo",
+        "module": "evaluation.hallucination_checks",
+        "metric": "supported_rate",
+        "value": 0.82,
+        "goal": "max",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 0.82
+      },
+      {
+        "experiment_id": "truthfulness_eval_demo",
+        "module": "evaluation.truthfulness_eval",
+        "metric": "truthfulness_score",
+        "value": 1.0,
+        "goal": "max",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "truthfulness_eval_demo",
+        "module": "evaluation.truthfulness_eval",
+        "metric": "imitation_gap",
+        "value": 1.0,
+        "goal": "max",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
+        "module": "evaluation.truthfulness_vs_helpfulness_eval",
+        "metric": "helpfulness_score",
+        "value": 0.855,
+        "goal": "max",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 0.855
+      },
+      {
+        "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
+        "module": "evaluation.truthfulness_vs_helpfulness_eval",
+        "metric": "truthfulness_score",
+        "value": 0.7874999999999999,
+        "goal": "max",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 0.7874999999999999
+      },
+      {
+        "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
+        "module": "evaluation.truthfulness_vs_helpfulness_eval",
+        "metric": "mean_gap",
+        "value": 0.0675,
+        "goal": "min",
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 0.9325
+      },
+      {
+        "experiment_id": "safety_eval_demo",
+        "module": "evaluation.safety_eval",
+        "metric": "refusal_rate",
+        "value": 0.88,
+        "goal": "max",
+        "family": "evaluation_safety",
+        "family_group": "evaluation",
+        "normalized_score": 0.88
+      },
+      {
+        "experiment_id": "safety_eval_demo",
+        "module": "evaluation.safety_eval",
+        "metric": "jailbreak_success_rate",
+        "value": 0.12,
+        "goal": "min",
+        "family": "evaluation_safety",
+        "family_group": "evaluation",
+        "normalized_score": 0.88
+      },
+      {
+        "experiment_id": "jailbreak_transfer_eval_demo",
+        "module": "evaluation.jailbreak_transfer_eval",
+        "metric": "source_attack_rate",
+        "value": 0.4166666666666667,
+        "goal": "min",
+        "family": "evaluation_safety",
+        "family_group": "evaluation",
+        "normalized_score": 0.5833333333333333
+      },
+      {
+        "experiment_id": "jailbreak_transfer_eval_demo",
+        "module": "evaluation.jailbreak_transfer_eval",
+        "metric": "transfer_attack_rate",
+        "value": 0.26666666666666666,
+        "goal": "min",
+        "family": "evaluation_safety",
+        "family_group": "evaluation",
+        "normalized_score": 0.7333333333333334
+      },
+      {
+        "experiment_id": "jailbreak_transfer_eval_demo",
+        "module": "evaluation.jailbreak_transfer_eval",
+        "metric": "transfer_ratio",
+        "value": 0.64,
+        "goal": "min",
+        "family": "evaluation_safety",
+        "family_group": "evaluation",
+        "normalized_score": 0.36
+      },
+      {
+        "experiment_id": "bias_eval_demo",
+        "module": "evaluation.bias_eval",
+        "metric": "stereotype_score",
+        "value": 0.24,
+        "goal": "min",
+        "family": "evaluation_fairness",
+        "family_group": "evaluation",
+        "normalized_score": 0.76
+      },
+      {
+        "experiment_id": "bias_eval_demo",
+        "module": "evaluation.bias_eval",
+        "metric": "fairness_score",
+        "value": 0.79,
+        "goal": "max",
+        "family": "evaluation_fairness",
+        "family_group": "evaluation",
+        "normalized_score": 0.79
+      },
+      {
+        "experiment_id": "optimizer_ablation_dashboard_demo",
+        "module": "training.optimizer_ablation_dashboard",
+        "metric": "best_loss",
+        "value": 1.31,
+        "goal": "min",
+        "family": "training_optimization",
+        "family_group": "training",
+        "normalized_score": 0.5633333333333334
+      },
+      {
+        "experiment_id": "optimizer_ablation_dashboard_demo",
+        "module": "training.optimizer_ablation_dashboard",
+        "metric": "loss_spread",
+        "value": 0.8700000000000001,
+        "goal": "min",
+        "family": "training_optimization",
+        "family_group": "training",
+        "normalized_score": 0.565
+      },
+      {
+        "experiment_id": "warmup_decay_demo",
+        "module": "training.warmup_decay_demo",
+        "metric": "stability_score",
+        "value": 0.9271150055653068,
+        "goal": "max",
+        "family": "training_optimization",
+        "family_group": "training",
+        "normalized_score": 0.9271150055653068
+      },
+      {
+        "experiment_id": "batch_scaling_demo",
+        "module": "training.batch_scaling_demo",
+        "metric": "throughput_gain",
+        "value": 5.5,
+        "goal": "max",
+        "family": "training_scaling",
+        "family_group": "training",
+        "normalized_score": 1.0
+      },
+      {
+        "experiment_id": "gradient_checkpointing_demo",
+        "module": "training.gradient_checkpointing_demo",
+        "metric": "memory_reduction",
+        "value": 0.43000000000000005,
+        "goal": "max",
+        "family": "training_memory",
+        "family_group": "training",
+        "normalized_score": 0.43000000000000005
+      },
+      {
+        "experiment_id": "memory_partitioning_demo",
+        "module": "training.memory_partitioning_demo",
+        "metric": "memory_saving",
+        "value": 0.6464466094067263,
+        "goal": "max",
+        "family": "training_memory",
+        "family_group": "training",
+        "normalized_score": 0.6464466094067263
+      },
+      {
+        "experiment_id": "inference_batching_demo",
+        "module": "systems.inference_batching_demo",
+        "metric": "latency_amortization",
+        "value": 3.1372549019607847,
+        "goal": "max",
+        "family": "systems_serving",
+        "family_group": "systems",
+        "normalized_score": 0.7124183006535949
+      },
+      {
+        "experiment_id": "speculative_decoding_demo",
+        "module": "systems.speculative_decoding_demo",
+        "metric": "speedup",
+        "value": 2.77027027027027,
+        "goal": "max",
+        "family": "systems_serving",
+        "family_group": "systems",
+        "normalized_score": 0.8851351351351351
+      },
+      {
+        "experiment_id": "kv_cache_fragmentation_demo",
+        "module": "systems.kv_cache_fragmentation_demo",
+        "metric": "mean_fragmentation_penalty",
+        "value": 0.19750000000000004,
+        "goal": "min",
+        "family": "systems_memory",
+        "family_group": "systems",
+        "normalized_score": 0.8025
+      },
+      {
+        "experiment_id": "kv_cache_fragmentation_demo",
+        "module": "systems.kv_cache_fragmentation_demo",
+        "metric": "worst_case_penalty",
+        "value": 0.30000000000000004,
+        "goal": "min",
+        "family": "systems_memory",
+        "family_group": "systems",
+        "normalized_score": 0.7
+      }
+    ],
+    "experiment_scores": [
+      {
+        "experiment_id": "data_mixture_toy_demo",
+        "module": "pretraining.data_mixture_toy",
+        "normalized_score": 1.0,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "truthfulness_eval_demo",
+        "module": "evaluation.truthfulness_eval",
+        "normalized_score": 1.0,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "batch_scaling_demo",
+        "module": "training.batch_scaling_demo",
+        "normalized_score": 1.0,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "dedup_demo",
+        "module": "pretraining.dedup_demo",
+        "normalized_score": 0.9459,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "warmup_decay_demo",
+        "module": "training.warmup_decay_demo",
+        "normalized_score": 0.9271,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "retrieval_demo",
+        "module": "utilization.retrieval",
+        "normalized_score": 0.9259,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "calibration_eval_demo",
+        "module": "evaluation.calibration_eval",
+        "normalized_score": 0.902,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "normalized_score": 0.8942,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "speculative_decoding_demo",
+        "module": "systems.speculative_decoding_demo",
+        "normalized_score": 0.8851,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "safety_eval_demo",
+        "module": "evaluation.safety_eval",
+        "normalized_score": 0.88,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
+        "module": "evaluation.truthfulness_vs_helpfulness_eval",
+        "normalized_score": 0.8583,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "hallucination_checks_demo",
+        "module": "evaluation.hallucination_checks",
+        "normalized_score": 0.82,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "bias_eval_demo",
+        "module": "evaluation.bias_eval",
+        "normalized_score": 0.775,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "kv_cache_fragmentation_demo",
+        "module": "systems.kv_cache_fragmentation_demo",
+        "normalized_score": 0.7512,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "tool_use_stub_demo",
+        "module": "utilization.tool_use_stub",
+        "normalized_score": 0.75,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "inference_batching_demo",
+        "module": "systems.inference_batching_demo",
+        "normalized_score": 0.7124,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "normalized_score": 0.7024,
+        "num_metrics": 4
+      },
+      {
+        "experiment_id": "contamination_demo",
+        "module": "pretraining.contamination_demo",
+        "normalized_score": 0.6855,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "memory_partitioning_demo",
+        "module": "training.memory_partitioning_demo",
+        "normalized_score": 0.6464,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "finetuning_demo",
+        "module": "adaptation.finetuning",
+        "normalized_score": 0.6361,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "context_packing_demo",
+        "module": "utilization.context_packing_demo",
+        "normalized_score": 0.5865,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "optimizer_ablation_dashboard_demo",
+        "module": "training.optimizer_ablation_dashboard",
+        "normalized_score": 0.5642,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "jailbreak_transfer_eval_demo",
+        "module": "evaluation.jailbreak_transfer_eval",
+        "normalized_score": 0.5589,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "normalized_score": 0.4402,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "gradient_checkpointing_demo",
+        "module": "training.gradient_checkpointing_demo",
+        "normalized_score": 0.43,
+        "num_metrics": 1
+      },
+      {
+        "experiment_id": "long_context_demo",
+        "module": "evaluation.long_context",
+        "normalized_score": 0.3667,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "retrieval_selection_demo",
+        "module": "utilization.retrieval_selection_demo",
+        "normalized_score": 0.313,
+        "num_metrics": 2
+      },
+      {
+        "experiment_id": "position_bias_eval_demo",
+        "module": "evaluation.position_bias_eval",
+        "normalized_score": 0.2452,
+        "num_metrics": 3
+      },
+      {
+        "experiment_id": "alignment_sft_demo",
+        "module": "adaptation.alignment_sft",
+        "normalized_score": 0.1967,
+        "num_metrics": 3
+      }
+    ],
+    "family_scores": [
+      {
+        "family": "pretraining_mixture",
+        "family_group": "pretraining",
+        "normalized_score": 1.0,
+        "num_metrics": 1
+      },
+      {
+        "family": "training_scaling",
+        "family_group": "training",
+        "normalized_score": 1.0,
+        "num_metrics": 1
+      },
+      {
+        "family": "retrieval_ranking",
+        "family_group": "retrieval",
+        "normalized_score": 0.9259,
+        "num_metrics": 3
+      },
+      {
+        "family": "evaluation_reliability",
+        "family_group": "evaluation",
+        "normalized_score": 0.902,
+        "num_metrics": 1
+      },
+      {
+        "family": "adaptation_preference",
+        "family_group": "adaptation",
+        "normalized_score": 0.8942,
+        "num_metrics": 3
+      },
+      {
+        "family": "evaluation_truth_grounding",
+        "family_group": "evaluation",
+        "normalized_score": 0.8879,
+        "num_metrics": 7
+      },
+      {
+        "family": "pretraining_curation",
+        "family_group": "pretraining",
+        "normalized_score": 0.8591,
+        "num_metrics": 3
+      },
+      {
+        "family": "systems_serving",
+        "family_group": "systems",
+        "normalized_score": 0.7988,
+        "num_metrics": 2
+      },
+      {
+        "family": "evaluation_fairness",
+        "family_group": "evaluation",
+        "normalized_score": 0.775,
+        "num_metrics": 2
+      },
+      {
+        "family": "systems_memory",
+        "family_group": "systems",
+        "normalized_score": 0.7512,
+        "num_metrics": 2
+      },
+      {
+        "family": "utilization_tool_use",
+        "family_group": "utilization",
+        "normalized_score": 0.75,
+        "num_metrics": 1
+      },
+      {
+        "family": "adaptation_parameter_efficient",
+        "family_group": "adaptation",
+        "normalized_score": 0.7024,
+        "num_metrics": 4
+      },
+      {
+        "family": "evaluation_safety",
+        "family_group": "evaluation",
+        "normalized_score": 0.6873,
+        "num_metrics": 5
+      },
+      {
+        "family": "training_optimization",
+        "family_group": "training",
+        "normalized_score": 0.6851,
+        "num_metrics": 3
+      },
+      {
+        "family": "utilization_context",
+        "family_group": "utilization",
+        "normalized_score": 0.5865,
+        "num_metrics": 2
+      },
+      {
+        "family": "training_memory",
+        "family_group": "training",
+        "normalized_score": 0.5382,
+        "num_metrics": 2
+      },
+      {
+        "family": "adaptation_supervised",
+        "family_group": "adaptation",
+        "normalized_score": 0.4243,
+        "num_metrics": 9
+      },
+      {
+        "family": "retrieval_selection",
+        "family_group": "retrieval",
+        "normalized_score": 0.313,
+        "num_metrics": 2
+      },
+      {
+        "family": "evaluation_context_position",
+        "family_group": "evaluation",
+        "normalized_score": 0.306,
+        "num_metrics": 6
+      }
+    ],
+    "family_group_scores": [
+      {
+        "family_group": "pretraining",
+        "normalized_score": 0.8943,
+        "num_metrics": 4
+      },
+      {
+        "family_group": "systems",
+        "normalized_score": 0.775,
+        "num_metrics": 4
+      },
+      {
+        "family_group": "training",
+        "normalized_score": 0.6886,
+        "num_metrics": 6
+      },
+      {
+        "family_group": "retrieval",
+        "normalized_score": 0.6808,
+        "num_metrics": 5
+      },
+      {
+        "family_group": "evaluation",
+        "normalized_score": 0.6638,
+        "num_metrics": 21
+      },
+      {
+        "family_group": "utilization",
+        "normalized_score": 0.641,
+        "num_metrics": 3
+      },
+      {
+        "family_group": "adaptation",
+        "normalized_score": 0.5819,
+        "num_metrics": 16
+      }
+    ]
+  },
+  "notes": [
+    "Compares selected metrics with normalized scoring so cross-demo summaries are more comparable."
+  ]
+}

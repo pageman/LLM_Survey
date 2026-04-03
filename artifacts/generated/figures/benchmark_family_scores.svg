@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="704" viewBox="0 0 920 704">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="24" y="34" font-family="Georgia, serif" font-size="24" fill="#202124">Benchmark Family Scores</text>
+<text x="24" y="76" font-family="Courier New, monospace" font-size="13" fill="#333">pretraining_mixture</text>
+<rect x="240" y="62" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="62" width="620.00" height="18" fill="#2d6a4f"/>
+<text x="872" y="76" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="24" y="108" font-family="Courier New, monospace" font-size="13" fill="#333">training_scaling</text>
+<rect x="240" y="94" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="94" width="620.00" height="18" fill="#2d6a4f"/>
+<text x="872" y="108" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="24" y="140" font-family="Courier New, monospace" font-size="13" fill="#333">retrieval_ranking</text>
+<rect x="240" y="126" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="126" width="574.06" height="18" fill="#2d6a4f"/>
+<text x="872" y="140" font-family="Courier New, monospace" font-size="12" fill="#333">0.926</text>
+<text x="24" y="172" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_reliability</text>
+<rect x="240" y="158" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="158" width="559.24" height="18" fill="#2d6a4f"/>
+<text x="872" y="172" font-family="Courier New, monospace" font-size="12" fill="#333">0.902</text>
+<text x="24" y="204" font-family="Courier New, monospace" font-size="13" fill="#333">adaptation_preference</text>
+<rect x="240" y="190" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="190" width="554.40" height="18" fill="#2d6a4f"/>
+<text x="872" y="204" font-family="Courier New, monospace" font-size="12" fill="#333">0.894</text>
+<text x="24" y="236" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_truth_grounding</text>
+<rect x="240" y="222" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="222" width="550.50" height="18" fill="#2d6a4f"/>
+<text x="872" y="236" font-family="Courier New, monospace" font-size="12" fill="#333">0.888</text>
+<text x="24" y="268" font-family="Courier New, monospace" font-size="13" fill="#333">pretraining_curation</text>
+<rect x="240" y="254" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="254" width="532.64" height="18" fill="#2d6a4f"/>
+<text x="872" y="268" font-family="Courier New, monospace" font-size="12" fill="#333">0.859</text>
+<text x="24" y="300" font-family="Courier New, monospace" font-size="13" fill="#333">systems_serving</text>
+<rect x="240" y="286" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="286" width="495.26" height="18" fill="#2d6a4f"/>
+<text x="872" y="300" font-family="Courier New, monospace" font-size="12" fill="#333">0.799</text>
+<text x="24" y="332" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_fairness</text>
+<rect x="240" y="318" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="318" width="480.50" height="18" fill="#2d6a4f"/>
+<text x="872" y="332" font-family="Courier New, monospace" font-size="12" fill="#333">0.775</text>
+<text x="24" y="364" font-family="Courier New, monospace" font-size="13" fill="#333">systems_memory</text>
+<rect x="240" y="350" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="350" width="465.74" height="18" fill="#2d6a4f"/>
+<text x="872" y="364" font-family="Courier New, monospace" font-size="12" fill="#333">0.751</text>
+<text x="24" y="396" font-family="Courier New, monospace" font-size="13" fill="#333">utilization_tool_use</text>
+<rect x="240" y="382" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="382" width="465.00" height="18" fill="#2d6a4f"/>
+<text x="872" y="396" font-family="Courier New, monospace" font-size="12" fill="#333">0.750</text>
+<text x="24" y="428" font-family="Courier New, monospace" font-size="13" fill="#333">adaptation_parameter_efficient</text>
+<rect x="240" y="414" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="414" width="435.49" height="18" fill="#2d6a4f"/>
+<text x="872" y="428" font-family="Courier New, monospace" font-size="12" fill="#333">0.702</text>
+<text x="24" y="460" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_safety</text>
+<rect x="240" y="446" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="446" width="426.13" height="18" fill="#2d6a4f"/>
+<text x="872" y="460" font-family="Courier New, monospace" font-size="12" fill="#333">0.687</text>
+<text x="24" y="492" font-family="Courier New, monospace" font-size="13" fill="#333">training_optimization</text>
+<rect x="240" y="478" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="478" width="424.76" height="18" fill="#2d6a4f"/>
+<text x="872" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">0.685</text>
+<text x="24" y="524" font-family="Courier New, monospace" font-size="13" fill="#333">utilization_context</text>
+<rect x="240" y="510" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="510" width="363.63" height="18" fill="#2d6a4f"/>
+<text x="872" y="524" font-family="Courier New, monospace" font-size="12" fill="#333">0.587</text>
+<text x="24" y="556" font-family="Courier New, monospace" font-size="13" fill="#333">training_memory</text>
+<rect x="240" y="542" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="542" width="333.68" height="18" fill="#2d6a4f"/>
+<text x="872" y="556" font-family="Courier New, monospace" font-size="12" fill="#333">0.538</text>
+<text x="24" y="588" font-family="Courier New, monospace" font-size="13" fill="#333">adaptation_supervised</text>
+<rect x="240" y="574" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="574" width="263.07" height="18" fill="#2d6a4f"/>
+<text x="872" y="588" font-family="Courier New, monospace" font-size="12" fill="#333">0.424</text>
+<text x="24" y="620" font-family="Courier New, monospace" font-size="13" fill="#333">retrieval_selection</text>
+<rect x="240" y="606" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="606" width="194.06" height="18" fill="#2d6a4f"/>
+<text x="872" y="620" font-family="Courier New, monospace" font-size="12" fill="#333">0.313</text>
+<text x="24" y="652" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_context_position</text>
+<rect x="240" y="638" width="620" height="18" fill="#e6e1d8"/>
+<rect x="240" y="638" width="189.72" height="18" fill="#2d6a4f"/>
+<text x="872" y="652" font-family="Courier New, monospace" font-size="12" fill="#333">0.306</text>
+</svg>

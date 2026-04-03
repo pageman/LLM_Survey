@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "data_age_demo",
+  "module": "pretraining.data_age_demo",
+  "status": "ok",
+  "metrics": {
+    "recency_sensitivity": 0.03875000000000001,
+    "freshness_gain": 0.09000000000000008
+  },
+  "artifacts": {
+    "age_years": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "utility": [
+      0.92,
+      0.89,
+      0.83,
+      0.74,
+      0.61
+    ],
+    "recency_sensitivity": 0.03875000000000001,
+    "freshness_gain": 0.09000000000000008
+  },
+  "notes": [
+    "Lite data-age demo with freshness-sensitive utility curves."
+  ]
+}

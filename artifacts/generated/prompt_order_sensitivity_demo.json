@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "prompt_order_sensitivity_demo",
+  "module": "utilization.prompt_order_sensitivity_demo",
+  "status": "ok",
+  "metrics": {
+    "order_variance": 0.0021187500000000034,
+    "best_order_score": 0.81
+  },
+  "artifacts": {
+    "permutation_scores": [
+      0.72,
+      0.81,
+      0.69,
+      0.77
+    ],
+    "order_variance": 0.0021187500000000034,
+    "best_order_score": 0.81
+  },
+  "notes": [
+    "Lite prompt-order sensitivity demo over demonstration permutations."
+  ]
+}

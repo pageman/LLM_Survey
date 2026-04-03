@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "retrieval_selection_demo",
+  "module": "utilization.retrieval_selection_demo",
+  "status": "ok",
+  "metrics": {
+    "selection_confidence": 0.5980000000000001,
+    "hybrid_gain": 0.028000000000000094
+  },
+  "artifacts": {
+    "selection_confidence": 0.5980000000000001,
+    "hybrid_gain": 0.028000000000000094,
+    "selected_index": 0,
+    "hybrid_scores": [
+      0.598,
+      0.5815,
+      0.478,
+      0.247
+    ]
+  },
+  "notes": [
+    "Dedicated retrieval-selection demo over dense, sparse, and hybrid scores."
+  ]
+}

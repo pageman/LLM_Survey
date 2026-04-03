@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "safety_eval_demo",
+  "module": "evaluation.safety_eval",
+  "status": "ok",
+  "metrics": {
+    "refusal_rate": 0.88,
+    "jailbreak_success_rate": 0.12
+  },
+  "artifacts": {
+    "refusal_rate": 0.88,
+    "harmless_response_rate": 0.91,
+    "jailbreak_success_rate": 0.12
+  },
+  "notes": [
+    "Toy refusal and jailbreak-resistance probe."
+  ]
+}

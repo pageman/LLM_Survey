@@ -15,6 +15,7 @@ Start here if you want the publication-facing outputs first:
 
 - Docs landing page: [`docs/index.md`](/Users/hifi/Downloads/LLM_Survey/docs/index.md)
 - Research narrative and method: [`docs/research_narrative_and_method.md`](/Users/hifi/Downloads/LLM_Survey/docs/research_narrative_and_method.md)
+- Citation metadata: [`CITATION.cff`](/Users/hifi/Downloads/LLM_Survey/CITATION.cff)
 - Figures and tables: [`docs/figures_and_tables.md`](/Users/hifi/Downloads/LLM_Survey/docs/figures_and_tables.md)
 - Fidelity matrix: [`docs/fidelity_matrix.md`](/Users/hifi/Downloads/LLM_Survey/docs/fidelity_matrix.md)
 - Survey-map provenance: [`docs/survey_map_provenance.md`](/Users/hifi/Downloads/LLM_Survey/docs/survey_map_provenance.md)
@@ -72,6 +73,10 @@ Important caveat:
 - arXiv: <https://arxiv.org/abs/2303.18223>
 - Local source used in this workspace: `/Users/hifi/Downloads/2303.18223v19.pdf`
 - Survey resource repo: <https://github.com/RUCAIBox/LLMSurvey>
+
+## License And Citation
+
+This repository is released under the [`MIT License`](/Users/hifi/Downloads/LLM_Survey/LICENSE). Citation metadata for GitHub and downstream tooling is in [`CITATION.cff`](/Users/hifi/Downloads/LLM_Survey/CITATION.cff).
 
 ## What This Repo Contains
 
@@ -143,6 +148,7 @@ python3 experiments/run_publication_assets_demo.py
 
 - Docs landing page: [`docs/index.md`](/Users/hifi/Downloads/LLM_Survey/docs/index.md)
 - Research narrative and method: [`docs/research_narrative_and_method.md`](/Users/hifi/Downloads/LLM_Survey/docs/research_narrative_and_method.md)
+- Citation metadata: [`CITATION.cff`](/Users/hifi/Downloads/LLM_Survey/CITATION.cff)
 - Figures and tables: [`docs/figures_and_tables.md`](/Users/hifi/Downloads/LLM_Survey/docs/figures_and_tables.md)
 - Fidelity matrix: [`docs/fidelity_matrix.md`](/Users/hifi/Downloads/LLM_Survey/docs/fidelity_matrix.md)
 - Survey-map provenance: [`docs/survey_map_provenance.md`](/Users/hifi/Downloads/LLM_Survey/docs/survey_map_provenance.md)

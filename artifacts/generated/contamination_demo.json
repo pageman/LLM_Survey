@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "contamination_demo",
+  "module": "pretraining.contamination_demo",
+  "status": "ok",
+  "metrics": {
+    "max_inflation": 0.3144617716357595
+  },
+  "artifacts": {
+    "leakage_rates": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "reported_scores": [
+      0.5466630494031279,
+      0.5614546907396827,
+      0.6594387325475815,
+      0.7144838374985985,
+      0.867273878333736
+    ],
+    "true_scores": [
+      0.5518905338179354,
+      0.5458693645660811,
+      0.5679970738272091,
+      0.5467457716313218,
+      0.5528121066979765
+    ],
+    "inflation": [
+      -0.005227484414807471,
+      0.015585326173601532,
+      0.09144165872037235,
+      0.1677380658672767,
+      0.3144617716357595
+    ],
+    "max_inflation": 0.3144617716357595
+  },
+  "notes": [
+    "Toy train-test leakage demo showing inflated reported scores."
+  ]
+}

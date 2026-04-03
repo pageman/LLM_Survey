@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "out_of_distribution_eval_demo",
+  "module": "evaluation.out_of_distribution_eval",
+  "status": "ok",
+  "metrics": {
+    "ood_gap": 0.20000000000000004,
+    "ood_score": 0.6033333333333334
+  },
+  "artifacts": {
+    "in_distribution": [
+      0.83,
+      0.8,
+      0.78
+    ],
+    "ood": [
+      0.64,
+      0.6,
+      0.57
+    ],
+    "ood_gap": 0.20000000000000004,
+    "ood_score": 0.6033333333333334
+  },
+  "notes": [
+    "Lite OOD generalization demo."
+  ]
+}

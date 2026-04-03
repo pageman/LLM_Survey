@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "dpo_toy_demo",
+  "module": "adaptation.dpo_toy",
+  "status": "ok",
+  "metrics": {
+    "baseline_loss": 0.6931471805599453,
+    "adapted_loss": 0.12261520122191773,
+    "gain": 0.5705319793380276,
+    "trainable_fraction": 0.18
+  },
+  "artifacts": {
+    "baseline_loss": 0.6931471805599453,
+    "adapted_loss": 0.12261520122191773,
+    "gain": 0.5705319793380276,
+    "trainable_fraction": 0.18,
+    "loss_history": [
+      0.701584669711059,
+      0.5668986517319451,
+      0.46764508062522747,
+      0.3935076804286261,
+      0.3370825925192397,
+      0.293265095715623,
+      0.25856788157734495,
+      0.23059287536628248,
+      0.2076676335145411,
+      0.1886055353456442,
+      0.17254933262520644,
+      0.15886865471668857,
+      0.14709209001439272,
+      0.1368615100915785
+    ],
+    "top_positive_tokens": {
+      "balanced": 0.7491346695950892,
+      "summary": 0.7491346695950892,
+      "a": 0.6889536138416462,
+      "provide": 0.6889536138416461,
+      "cautious": 0.6889536138416461
+    }
+  },
+  "notes": [
+    "Lite DPO-style preference optimization with explicit chosen-vs-rejected margin updates."
+  ]
+}

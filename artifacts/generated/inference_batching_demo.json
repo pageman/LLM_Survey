@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "inference_batching_demo",
+  "module": "systems.inference_batching_demo",
+  "status": "ok",
+  "metrics": {
+    "max_throughput": 3.1372549019607847,
+    "latency_amortization": 3.1372549019607847
+  },
+  "artifacts": {
+    "batch_size": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "latency": [
+      1.0,
+      1.28,
+      1.9,
+      3.05,
+      5.1
+    ],
+    "throughput": [
+      1.0,
+      1.5625,
+      2.1053,
+      2.623,
+      3.1373
+    ],
+    "max_throughput": 3.1372549019607847,
+    "latency_amortization": 3.1372549019607847
+  },
+  "notes": [
+    "Lite inference batching demo over latency amortization and throughput."
+  ]
+}

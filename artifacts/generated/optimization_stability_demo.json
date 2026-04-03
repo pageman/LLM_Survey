@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "optimization_stability_demo",
+  "module": "systems.optimization_stability_demo",
+  "status": "ok",
+  "metrics": {
+    "stability_gain": 0.7999999999999998
+  },
+  "artifacts": {
+    "unclipped_grad_norm": 8.5,
+    "clipped_grad_norm": 1.0,
+    "unstable_loss": 2.4,
+    "stable_loss": 1.6,
+    "stability_gain": 0.7999999999999998
+  },
+  "notes": [
+    "Toy optimization stability and gradient clipping demo."
+  ]
+}

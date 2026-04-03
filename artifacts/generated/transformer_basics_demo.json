@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "transformer_basics_demo",
+  "module": "foundations.transformer_basics",
+  "status": "ok",
+  "metrics": {
+    "logits_rows": 5,
+    "logits_cols": 7
+  },
+  "artifacts": {
+    "input_tokens": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "next_token_distribution": [
+      0.09603901196083968,
+      0.1296555872133769,
+      0.18595825283612977,
+      0.1634547506141349,
+      0.14967554022716767,
+      0.12124077143982451,
+      0.15397608570852653
+    ],
+    "attention_shapes": [
+      [
+        2,
+        5,
+        5
+      ],
+      [
+        2,
+        5,
+        5
+      ]
+    ]
+  },
+  "notes": [
+    "Decoder-only transformer forward-pass demo with causal masking."
+  ]
+}

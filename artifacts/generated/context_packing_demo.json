@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "context_packing_demo",
+  "module": "utilization.context_packing_demo",
+  "status": "ok",
+  "metrics": {
+    "packed_efficiency": 0.859375,
+    "packing_gain": 0.6
+  },
+  "artifacts": {
+    "packed_efficiency": 0.859375,
+    "packing_gain": 0.6,
+    "packed_examples": [
+      0,
+      2,
+      4
+    ],
+    "token_lengths": [
+      180,
+      220,
+      140,
+      260,
+      120
+    ]
+  },
+  "notes": [
+    "Dedicated context-packing demo for multi-example batching efficiency."
+  ]
+}

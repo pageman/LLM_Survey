@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "batch_scaling_demo",
+  "module": "training.batch_scaling_demo",
+  "status": "ok",
+  "metrics": {
+    "best_batch_size": 64,
+    "throughput_gain": 5.5
+  },
+  "artifacts": {
+    "batch_size": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "throughput": [
+      1.0,
+      1.7,
+      2.9,
+      4.6,
+      6.5
+    ],
+    "quality": [
+      1.14,
+      1.07,
+      1.0,
+      1.02,
+      1.09
+    ],
+    "best_batch_size": 64,
+    "throughput_gain": 5.5
+  },
+  "notes": [
+    "Lite batch-scaling demo over throughput and quality tradeoffs."
+  ]
+}

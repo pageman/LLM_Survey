@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "data_quality_filter_demo",
+  "module": "pretraining.data_quality_filter_demo",
+  "status": "ok",
+  "metrics": {
+    "quality_gain": 0.16000000000000003
+  },
+  "artifacts": {
+    "raw_quality": 0.62,
+    "filtered_quality": 0.78,
+    "quality_gain": 0.16000000000000003,
+    "toxic_rate_raw": 0.18,
+    "toxic_rate_filtered": 0.08
+  },
+  "notes": [
+    "Toy data quality filtering and toxicity reduction demo."
+  ]
+}

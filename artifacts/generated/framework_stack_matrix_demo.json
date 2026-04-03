@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "framework_stack_matrix_demo",
+  "module": "resources.framework_stack_matrix",
+  "status": "ok",
+  "metrics": {
+    "num_frameworks": 4,
+    "serving_ready_fraction": 0.5,
+    "distributed_ready_fraction": 0.75
+  },
+  "artifacts": {
+    "num_frameworks": 4,
+    "serving_ready_fraction": 0.5,
+    "distributed_ready_fraction": 0.75,
+    "matrix": [
+      {
+        "framework": "NumPy-lite",
+        "training": 1,
+        "distributed": 0,
+        "serving": 0,
+        "evaluation": 1
+      },
+      {
+        "framework": "JAX",
+        "training": 1,
+        "distributed": 1,
+        "serving": 0,
+        "evaluation": 1
+      },
+      {
+        "framework": "PyTorch",
+        "training": 1,
+        "distributed": 1,
+        "serving": 1,
+        "evaluation": 1
+      },
+      {
+        "framework": "vLLM",
+        "training": 0,
+        "distributed": 1,
+        "serving": 1,
+        "evaluation": 0
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated framework-stack matrix covering training, distributed execution, and serving."
+  ]
+}

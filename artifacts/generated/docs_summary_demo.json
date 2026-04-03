@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "docs_summary_demo",
+  "module": "evaluation.docs_summary",
+  "status": "ok",
+  "metrics": {
+    "implemented": 124,
+    "target": 124,
+    "percentage": 100.0
+  },
+  "artifacts": {
+    "scoreboard_path": "/Users/hifi/Downloads/LLM_Survey/docs/scoreboard.md"
+  },
+  "notes": [
+    "Generates a human-readable Markdown scoreboard from the local report artifacts."
+  ]
+}

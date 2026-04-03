@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "memory_efficient_adaptation_demo",
+  "module": "adaptation.memory_efficient_adaptation_demo",
+  "status": "ok",
+  "metrics": {
+    "baseline_loss": 1.37,
+    "adapted_loss": 1.09,
+    "gain": 0.28,
+    "trainable_fraction": 0.08
+  },
+  "artifacts": {
+    "baseline_loss": 1.37,
+    "adapted_loss": 1.09,
+    "gain": 0.28,
+    "trainable_fraction": 0.08,
+    "frozen_fraction": 0.92
+  },
+  "notes": [
+    "Lite memory-efficient adaptation demo with small-trainable-fraction accounting."
+  ]
+}

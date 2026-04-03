@@ -1,0 +1,117 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "paper_section_dashboard_demo",
+  "module": "reporting.paper_section_dashboard",
+  "status": "ok",
+  "metrics": {
+    "num_sections": 14,
+    "mean_section_completion": 100.0
+  },
+  "artifacts": {
+    "num_sections": 14,
+    "mean_section_completion": 100.0,
+    "sections": [
+      {
+        "section": "Adaptation",
+        "prefix": "adaptation",
+        "implemented": 16,
+        "target": 16,
+        "percentage": 100.0
+      },
+      {
+        "section": "Applications",
+        "prefix": "applications",
+        "implemented": 3,
+        "target": 3,
+        "percentage": 100.0
+      },
+      {
+        "section": "Architecture",
+        "prefix": "architecture",
+        "implemented": 7,
+        "target": 7,
+        "percentage": 100.0
+      },
+      {
+        "section": "Benchmarking",
+        "prefix": "benchmark",
+        "implemented": 4,
+        "target": 4,
+        "percentage": 100.0
+      },
+      {
+        "section": "Code Pretraining",
+        "prefix": "code_pretraining",
+        "implemented": 2,
+        "target": 2,
+        "percentage": 100.0
+      },
+      {
+        "section": "Evaluation",
+        "prefix": "evaluation",
+        "implemented": 22,
+        "target": 22,
+        "percentage": 100.0
+      },
+      {
+        "section": "Foundations",
+        "prefix": "foundations",
+        "implemented": 4,
+        "target": 4,
+        "percentage": 100.0
+      },
+      {
+        "section": "Multilingual",
+        "prefix": "multilingual",
+        "implemented": 2,
+        "target": 2,
+        "percentage": 100.0
+      },
+      {
+        "section": "Pre-training",
+        "prefix": "pretraining",
+        "implemented": 17,
+        "target": 17,
+        "percentage": 100.0
+      },
+      {
+        "section": "Reporting",
+        "prefix": "reporting",
+        "implemented": 3,
+        "target": 3,
+        "percentage": 100.0
+      },
+      {
+        "section": "Resources",
+        "prefix": "resources",
+        "implemented": 7,
+        "target": 7,
+        "percentage": 100.0
+      },
+      {
+        "section": "Systems",
+        "prefix": "systems",
+        "implemented": 6,
+        "target": 6,
+        "percentage": 100.0
+      },
+      {
+        "section": "Training",
+        "prefix": "training",
+        "implemented": 7,
+        "target": 7,
+        "percentage": 100.0
+      },
+      {
+        "section": "Utilization",
+        "prefix": "utilization",
+        "implemented": 18,
+        "target": 18,
+        "percentage": 100.0
+      }
+    ]
+  },
+  "notes": [
+    "Dedicated paper-section dashboard using the report index and implementation target list."
+  ]
+}

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1120" viewBox="0 0 1240 1120">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<rect x="12" y="12" width="1216" height="1090" rx="18" fill="none" stroke="#d8d2c3" stroke-width="1.5"/>
+<text x="24" y="34" font-family="Georgia, serif" font-size="28" fill="#202124">Publication Trend Panels</text>
+<text x="24" y="58" font-family="Georgia, serif" font-size="14" fill="#5b5b5b">Figure Set A: analytic trend panels. Panels A-C share a common normalized 0-1 y-scale for direct visual comparison.</text>
+<text x="24" y="78" font-family="Courier New, monospace" font-size="12" fill="#4a4a4a">Label key: A=Adaptation, B=Retrieval, C=Risk.</text>
+<rect x="20" y="106" width="1190" height="286" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
+<text x="24" y="136" font-family="Georgia, serif" font-size="18" fill="#202124">A. Adaptation</text>
+<text x="48" y="156" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">Gain, efficiency, and loss-improvement share one normalized axis.</text>
+<line x1="90" y1="336" x2="980" y2="336" stroke="#555" stroke-width="1.5"/>
+<line x1="90" y1="158" x2="90" y2="336" stroke="#555" stroke-width="1.5"/>
+<line x1="86" y1="336.0" x2="980" y2="336.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="340.0" font-family="Courier New, monospace" font-size="11" fill="#555">0.00</text>
+<line x1="86" y1="291.5" x2="980" y2="291.5" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="295.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.25</text>
+<line x1="86" y1="247.0" x2="980" y2="247.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="251.0" font-family="Courier New, monospace" font-size="11" fill="#555">0.50</text>
+<line x1="86" y1="202.5" x2="980" y2="202.5" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="206.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.75</text>
+<line x1="86" y1="158.0" x2="980" y2="158.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="162.0" font-family="Courier New, monospace" font-size="11" fill="#555">1.00</text>
+<polyline fill="none" stroke="#1d4e89" stroke-width="2.5" points="90.0,158.0 312.5,199.5 535.0,251.5 757.5,281.4 980.0,306.2"/>
+<circle cx="90.0" cy="158.0" r="3.5" fill="#1d4e89"/>
+<circle cx="312.5" cy="199.5" r="3.5" fill="#1d4e89"/>
+<circle cx="535.0" cy="251.5" r="3.5" fill="#1d4e89"/>
+<circle cx="757.5" cy="281.4" r="3.5" fill="#1d4e89"/>
+<circle cx="980.0" cy="306.2" r="3.5" fill="#1d4e89"/>
+<rect x="1000" y="126" width="12" height="3" fill="#1d4e89"/>
+<text x="1020" y="134" font-family="Courier New, monospace" font-size="11" fill="#1d4e89">gain_norm</text>
+<text x="72.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">preference_tuning</text>
+<text x="294.5" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">finetuning</text>
+<text x="517.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">peft_lora</text>
+<text x="739.5" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">alignment_sft</text>
+<text x="962.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">instruction_tuning</text>
+<polyline fill="none" stroke="#b35c2e" stroke-width="2.5" points="90.0,175.3 312.5,212.7 535.0,158.0 757.5,286.7 980.0,309.0"/>
+<circle cx="90.0" cy="175.3" r="3.5" fill="#b35c2e"/>
+<circle cx="312.5" cy="212.7" r="3.5" fill="#b35c2e"/>
+<circle cx="535.0" cy="158.0" r="3.5" fill="#b35c2e"/>
+<circle cx="757.5" cy="286.7" r="3.5" fill="#b35c2e"/>
+<circle cx="980.0" cy="309.0" r="3.5" fill="#b35c2e"/>
+<rect x="1000" y="142" width="12" height="3" fill="#b35c2e"/>
+<text x="1020" y="150" font-family="Courier New, monospace" font-size="11" fill="#b35c2e">efficiency_norm</text>
+<text x="72.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">preference_tuning</text>
+<text x="294.5" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">finetuning</text>
+<text x="517.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">peft_lora</text>
+<text x="739.5" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">alignment_sft</text>
+<text x="962.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">instruction_tuning</text>
+<polyline fill="none" stroke="#2d6a4f" stroke-width="2.5" points="90.0,158.0 312.5,225.6 535.0,168.8 757.5,336.0 980.0,246.6"/>
+<circle cx="90.0" cy="158.0" r="3.5" fill="#2d6a4f"/>
+<circle cx="312.5" cy="225.6" r="3.5" fill="#2d6a4f"/>
+<circle cx="535.0" cy="168.8" r="3.5" fill="#2d6a4f"/>
+<circle cx="757.5" cy="336.0" r="3.5" fill="#2d6a4f"/>
+<circle cx="980.0" cy="246.6" r="3.5" fill="#2d6a4f"/>
+<rect x="1000" y="158" width="12" height="3" fill="#2d6a4f"/>
+<text x="1020" y="166" font-family="Courier New, monospace" font-size="11" fill="#2d6a4f">loss_improvement_norm</text>
+<text x="72.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">preference_tuning</text>
+<text x="294.5" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">finetuning</text>
+<text x="517.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">peft_lora</text>
+<text x="739.5" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">alignment_sft</text>
+<text x="962.0" y="358" font-family="Courier New, monospace" font-size="10" fill="#555">instruction_tuning</text>
+<rect x="20" y="426" width="1190" height="286" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
+<text x="24" y="456" font-family="Georgia, serif" font-size="18" fill="#202124">B. Retrieval</text>
+<text x="48" y="476" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">MRR and recall are aligned for dense, sparse, and hybrid retrieval.</text>
+<line x1="90" y1="656" x2="980" y2="656" stroke="#555" stroke-width="1.5"/>
+<line x1="90" y1="478" x2="90" y2="656" stroke="#555" stroke-width="1.5"/>
+<line x1="86" y1="656.0" x2="980" y2="656.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="660.0" font-family="Courier New, monospace" font-size="11" fill="#555">0.00</text>
+<line x1="86" y1="611.5" x2="980" y2="611.5" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="615.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.25</text>
+<line x1="86" y1="567.0" x2="980" y2="567.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="571.0" font-family="Courier New, monospace" font-size="11" fill="#555">0.50</text>
+<line x1="86" y1="522.5" x2="980" y2="522.5" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="526.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.75</text>
+<line x1="86" y1="478.0" x2="980" y2="478.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="482.0" font-family="Courier New, monospace" font-size="11" fill="#555">1.00</text>
+<polyline fill="none" stroke="#1d4e89" stroke-width="2.5" points="90.0,517.6 535.0,478.0 980.0,478.0"/>
+<circle cx="90.0" cy="517.6" r="3.5" fill="#1d4e89"/>
+<circle cx="535.0" cy="478.0" r="3.5" fill="#1d4e89"/>
+<circle cx="980.0" cy="478.0" r="3.5" fill="#1d4e89"/>
+<rect x="1000" y="446" width="12" height="3" fill="#1d4e89"/>
+<text x="1020" y="454" font-family="Courier New, monospace" font-size="11" fill="#1d4e89">MRR</text>
+<text x="72.0" y="678" font-family="Courier New, monospace" font-size="10" fill="#555">dense</text>
+<text x="517.0" y="678" font-family="Courier New, monospace" font-size="10" fill="#555">bm25</text>
+<text x="962.0" y="678" font-family="Courier New, monospace" font-size="10" fill="#555">hybrid</text>
+<polyline fill="none" stroke="#b35c2e" stroke-width="2.5" points="90.0,478.0 535.0,478.0 980.0,478.0"/>
+<circle cx="90.0" cy="478.0" r="3.5" fill="#b35c2e"/>
+<circle cx="535.0" cy="478.0" r="3.5" fill="#b35c2e"/>
+<circle cx="980.0" cy="478.0" r="3.5" fill="#b35c2e"/>
+<rect x="1000" y="462" width="12" height="3" fill="#b35c2e"/>
+<text x="1020" y="470" font-family="Courier New, monospace" font-size="11" fill="#b35c2e">Recall</text>
+<text x="72.0" y="678" font-family="Courier New, monospace" font-size="10" fill="#555">dense</text>
+<text x="517.0" y="678" font-family="Courier New, monospace" font-size="10" fill="#555">bm25</text>
+<text x="962.0" y="678" font-family="Courier New, monospace" font-size="10" fill="#555">hybrid</text>
+<rect x="20" y="746" width="1190" height="286" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
+<text x="24" y="776" font-family="Georgia, serif" font-size="18" fill="#202124">C. Risk</text>
+<text x="48" y="796" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">Beneficial and harm signals are paired for the same evaluation slices.</text>
+<line x1="90" y1="976" x2="980" y2="976" stroke="#555" stroke-width="1.5"/>
+<line x1="90" y1="798" x2="90" y2="976" stroke="#555" stroke-width="1.5"/>
+<line x1="86" y1="976.0" x2="980" y2="976.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="980.0" font-family="Courier New, monospace" font-size="11" fill="#555">0.00</text>
+<line x1="86" y1="931.5" x2="980" y2="931.5" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="935.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.25</text>
+<line x1="86" y1="887.0" x2="980" y2="887.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="891.0" font-family="Courier New, monospace" font-size="11" fill="#555">0.50</text>
+<line x1="86" y1="842.5" x2="980" y2="842.5" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="846.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.75</text>
+<line x1="86" y1="798.0" x2="980" y2="798.0" stroke="#ddd" stroke-width="1"/>
+<text x="20" y="802.0" font-family="Courier New, monospace" font-size="11" fill="#555">1.00</text>
+<polyline fill="none" stroke="#1d4e89" stroke-width="2.5" points="90.0,798.0 312.5,830.0 535.0,819.4 757.5,835.4 980.0,819.7"/>
+<circle cx="90.0" cy="798.0" r="3.5" fill="#1d4e89"/>
+<circle cx="312.5" cy="830.0" r="3.5" fill="#1d4e89"/>
+<circle cx="535.0" cy="819.4" r="3.5" fill="#1d4e89"/>
+<circle cx="757.5" cy="835.4" r="3.5" fill="#1d4e89"/>
+<circle cx="980.0" cy="819.7" r="3.5" fill="#1d4e89"/>
+<rect x="1000" y="766" width="12" height="3" fill="#1d4e89"/>
+<text x="1020" y="774" font-family="Courier New, monospace" font-size="11" fill="#1d4e89">beneficial_signal</text>
+<text x="72.0" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">truthfulness-eval</text>
+<text x="294.5" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">hallucination-checks</text>
+<text x="517.0" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">safety-eval</text>
+<text x="739.5" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">bias-eval</text>
+<text x="962.0" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">privacy-leakage-eval</text>
+<polyline fill="none" stroke="#b35c2e" stroke-width="2.5" points="90.0,976.0 312.5,944.0 535.0,954.6 757.5,938.6 980.0,954.3"/>
+<circle cx="90.0" cy="976.0" r="3.5" fill="#b35c2e"/>
+<circle cx="312.5" cy="944.0" r="3.5" fill="#b35c2e"/>
+<circle cx="535.0" cy="954.6" r="3.5" fill="#b35c2e"/>
+<circle cx="757.5" cy="938.6" r="3.5" fill="#b35c2e"/>
+<circle cx="980.0" cy="954.3" r="3.5" fill="#b35c2e"/>
+<rect x="1000" y="782" width="12" height="3" fill="#b35c2e"/>
+<text x="1020" y="790" font-family="Courier New, monospace" font-size="11" fill="#b35c2e">harm_signal</text>
+<text x="72.0" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">truthfulness-eval</text>
+<text x="294.5" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">hallucination-checks</text>
+<text x="517.0" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">safety-eval</text>
+<text x="739.5" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">bias-eval</text>
+<text x="962.0" y="998" font-family="Courier New, monospace" font-size="10" fill="#555">privacy-leakage-eval</text>
+<text x="24" y="1098" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">Shared publication caption: use the normalized y-axis for cross-panel comparison; use the companion callout board for exact slice values.</text>
+</svg>

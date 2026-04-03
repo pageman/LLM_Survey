@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "domain_coverage_demo",
+  "module": "pretraining.domain_coverage_demo",
+  "status": "ok",
+  "metrics": {
+    "tail_coverage": 0.22999999999999998,
+    "domain_entropy": 1.5768612675877298
+  },
+  "artifacts": {
+    "domain_share": [
+      0.38,
+      0.24,
+      0.15,
+      0.1,
+      0.08,
+      0.05
+    ],
+    "tail_coverage": 0.22999999999999998,
+    "domain_entropy": 1.5768612675877298
+  },
+  "notes": [
+    "Lite domain-coverage demo over head and tail domain mass."
+  ]
+}

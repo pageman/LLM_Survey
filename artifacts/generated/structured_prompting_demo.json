@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "structured_prompting_demo",
+  "module": "utilization.structured_prompting_demo",
+  "status": "ok",
+  "metrics": {
+    "schema_gain": 0.20000000000000004,
+    "structured_success": 0.7666666666666666
+  },
+  "artifacts": {
+    "raw_scores": [
+      0.52,
+      0.57,
+      0.61
+    ],
+    "structured_scores": [
+      0.72,
+      0.77,
+      0.81
+    ],
+    "schema_gain": 0.20000000000000004,
+    "structured_success": 0.7666666666666666
+  },
+  "notes": [
+    "Lite structured prompting demo comparing raw prompts against schema-guided prompts."
+  ]
+}

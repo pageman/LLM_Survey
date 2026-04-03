@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "encoder_decoder_demo",
+  "module": "architecture.encoder_decoder_demo",
+  "status": "ok",
+  "metrics": {
+    "cross_attention_focus": 0.6899744811276125,
+    "copy_accuracy": 1.0
+  },
+  "artifacts": {
+    "source_tokens": [
+      "hello",
+      "world"
+    ],
+    "target_queries": [
+      "hola",
+      "mundo"
+    ],
+    "cross_attention": [
+      [
+        0.69,
+        0.31
+      ],
+      [
+        0.31,
+        0.69
+      ]
+    ],
+    "context_vectors": [
+      [
+        0.0,
+        0.69,
+        0.31,
+        0.0
+      ],
+      [
+        0.0,
+        0.31,
+        0.69,
+        0.0
+      ]
+    ],
+    "cross_attention_focus": 0.6899744811276125,
+    "copy_accuracy": 1.0
+  },
+  "notes": [
+    "Lite encoder-decoder demo with explicit encoder states, decoder queries, and cross-attention."
+  ]
+}

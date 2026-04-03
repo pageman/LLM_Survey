@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "masked_lm_demo",
+  "module": "pretraining.masked_lm_demo",
+  "status": "ok",
+  "metrics": {
+    "reconstruction_match": 1.0
+  },
+  "artifacts": {
+    "masked_text": "transformers <unk> masked language modeling",
+    "predicted_token": "use",
+    "reconstruction_match": true,
+    "mask_index": 1,
+    "left_context": "transformers",
+    "right_context": "masked",
+    "top_candidates": {
+      "use": 1
+    }
+  },
+  "notes": [
+    "Toy masked LM reconstruction demo."
+  ]
+}
