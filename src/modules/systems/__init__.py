@@ -1,8 +1,10 @@
 """Systems and efficiency modules."""
 
 from .attention_length_stability_demo import AttentionLengthStabilityDemo
+from .advanced_attention_suite_demo import AdvancedAttentionSuiteDemo
 from .flash_attention_comparison_demo import FlashAttentionComparisonDemo
 from .block_sparse_attention_demo import BlockSparseAttentionDemo
+from .efficient_attention_suite_board_demo import EfficientAttentionSuiteBoardDemo
 from .scale_stability_demo import ScaleStabilityDemo
 from .inference_batching_demo import InferenceBatchingDemo
 from .kv_cache_fragmentation_demo import KVCacheFragmentationDemo
@@ -22,8 +24,10 @@ from .sparse_attention_demo import SparseAttentionDemo
 from .speculative_decoding_demo import SpeculativeDecodingDemo
 
 __all__ = [
+    "AdvancedAttentionSuiteDemo",
     "AttentionLengthStabilityDemo",
     "BlockSparseAttentionDemo",
+    "EfficientAttentionSuiteBoardDemo",
     "FlashAttentionComparisonDemo",
     "FlashBlockSweepDemo",
     "InferenceBatchingDemo",

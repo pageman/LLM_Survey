@@ -14,9 +14,9 @@
     "citation_match_rate": 0.76,
     "failure_mode_count": 3,
     "category_breakdown": {
-      "evidence_missing": 1,
-      "evidence_conflict": 1,
       "supported": 1,
+      "evidence_conflict": 1,
+      "evidence_missing": 1,
       "unsupported_generation": 1
     },
     "cases": [

@@ -4,14 +4,14 @@
   "module": "evaluation.report_index",
   "status": "ok",
   "metrics": {
-    "num_reports": 145,
-    "num_modules": 145,
-    "raw_num_reports": 145,
+    "num_reports": 147,
+    "num_modules": 147,
+    "raw_num_reports": 147,
     "stale_report_count": 0
   },
   "artifacts": {
-    "raw_num_reports": 145,
-    "num_reports": 145,
+    "raw_num_reports": 147,
+    "num_reports": 147,
     "reports": [
       {
         "experiment_id": "adaptation_bundle_summary_demo",
@@ -30,6 +30,12 @@
         "module": "evaluation.adaptation_summary",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/adaptation_summary_demo.json"
+      },
+      {
+        "experiment_id": "advanced_attention_suite_demo",
+        "module": "systems.advanced_attention_suite_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/advanced_attention_suite_demo.json"
       },
       {
         "experiment_id": "alignment_data_filter_demo",
@@ -246,6 +252,12 @@
         "module": "adaptation.dpo_toy",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/dpo_toy_demo.json"
+      },
+      {
+        "experiment_id": "efficient_attention_suite_board_demo",
+        "module": "systems.efficient_attention_suite_board_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/efficient_attention_suite_board_demo.json"
       },
       {
         "experiment_id": "embodied_agent_stub_demo",
@@ -894,6 +906,9 @@
       "evaluation.adaptation_summary": [
         "adaptation_summary_demo"
       ],
+      "systems.advanced_attention_suite_demo": [
+        "advanced_attention_suite_demo"
+      ],
       "adaptation.alignment_data_filter_demo": [
         "alignment_data_filter_demo"
       ],
@@ -1001,6 +1016,9 @@
       ],
       "adaptation.dpo_toy": [
         "dpo_toy_demo"
+      ],
+      "systems.efficient_attention_suite_board_demo": [
+        "efficient_attention_suite_board_demo"
       ],
       "applications.embodied_agent_stub": [
         "embodied_agent_stub_demo"

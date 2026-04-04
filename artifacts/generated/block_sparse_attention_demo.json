@@ -12,6 +12,7 @@
     "visible_blocks": 2,
     "mask_density": 0.24305555555555555,
     "approximation_gap": 0.23690213317566158,
+    "mask_semantics": "0.0 visible, non-zero blocked",
     "visible_tokens_per_row": [
       1,
       2,

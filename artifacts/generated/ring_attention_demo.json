@@ -13,6 +13,7 @@
     "mean_visible_tokens": 8.0,
     "approximation_gap": 0.1262333792625621,
     "visibility_density": 0.3333333333333333,
+    "mask_semantics": "0.0 visible, non-zero blocked",
     "row_visibility": [
       1,
       2,

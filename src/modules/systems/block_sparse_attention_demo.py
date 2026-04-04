@@ -18,19 +18,18 @@ class BlockSparseAttentionDemo:
     seed: int = 0
 
     def _mask(self) -> np.ndarray:
-        mask = np.ones((self.seq_len, self.seq_len), dtype=float)
-        for row in range(self.seq_len):
-            row_block = row // self.block_size
-            min_block = max(0, row_block - self.visible_blocks + 1)
-            for block in range(min_block, row_block + 1):
-                start = block * self.block_size
-                stop = min(self.seq_len, start + self.block_size)
-                for col in range(start, stop):
-                    if col <= row:
-                        mask[row, col] = 0.0
-        return mask
+        """Return a block-sparse causal mask where `0.0` means visible."""
+        rows = np.arange(self.seq_len)[:, None]
+        cols = np.arange(self.seq_len)[None, :]
+        row_blocks = rows // self.block_size
+        col_blocks = cols // self.block_size
+        causal_ok = cols <= rows
+        within_visible_range = (col_blocks <= row_blocks) & (col_blocks >= (row_blocks - self.visible_blocks + 1))
+        visible = causal_ok & within_visible_range
+        return np.where(visible, 0.0, 1.0)
 
     def evaluate(self) -> dict[str, object]:
+        """Return block-sparse-vs-dense comparison metrics under the shared mask convention."""
         rng = np.random.default_rng(self.seed)
         query = rng.standard_normal((self.seq_len, self.d_model))
         key = rng.standard_normal((self.seq_len, self.d_model))
@@ -47,6 +46,7 @@ class BlockSparseAttentionDemo:
             "visible_blocks": self.visible_blocks,
             "mask_density": density,
             "approximation_gap": float(np.mean(np.abs(dense_out - sparse_out))),
+            "mask_semantics": "0.0 visible, non-zero blocked",
             "visible_tokens_per_row": (sparse_mask == 0.0).sum(axis=1).astype(int).tolist(),
             "first_row_weights": sparse_weights[0].round(6).tolist(),
         }

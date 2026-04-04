@@ -18,17 +18,17 @@ class SparseAttentionDemo:
     seed: int = 0
 
     def _build_mask(self) -> np.ndarray:
-        mask = np.ones((self.seq_len, self.seq_len), dtype=float)
-        for row in range(self.seq_len):
-            for col in range(self.seq_len):
-                local = abs(row - col) <= self.local_window
-                global_token = col % self.global_stride == 0
-                causal_ok = col <= row
-                if causal_ok and (local or global_token):
-                    mask[row, col] = 0.0
-        return mask
+        """Return a causal sparse mask where `0.0` means visible and non-zero means blocked."""
+        rows = np.arange(self.seq_len)[:, None]
+        cols = np.arange(self.seq_len)[None, :]
+        local = np.abs(rows - cols) <= self.local_window
+        global_token = (cols % self.global_stride) == 0
+        causal_ok = cols <= rows
+        visible = causal_ok & (local | global_token)
+        return np.where(visible, 0.0, 1.0)
 
     def evaluate(self) -> dict[str, object]:
+        """Return sparse-vs-dense comparison metrics under the shared mask convention."""
         rng = np.random.default_rng(self.seed)
         query = rng.standard_normal((self.seq_len, self.d_model))
         key = rng.standard_normal((self.seq_len, self.d_model))
@@ -47,6 +47,7 @@ class SparseAttentionDemo:
             "approximation_gap": approximation_gap,
             "local_window": self.local_window,
             "global_stride": self.global_stride,
+            "mask_semantics": "0.0 visible, non-zero blocked",
             "attended_per_row": (sparse_mask == 0.0).sum(axis=1).astype(int).tolist(),
             "first_row_weights": sparse_weights[0].round(6).tolist(),
         }

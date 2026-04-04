@@ -5,15 +5,15 @@
   "status": "ok",
   "metrics": {
     "num_sections": 4,
-    "best_section_score": 1.3609
+    "best_section_score": 1.361
   },
   "artifacts": {
     "num_sections": 4,
-    "best_section_score": 1.3609,
+    "best_section_score": 1.361,
     "best_section": "utilization",
     "section_scores": {
       "pretraining": 0.6882,
-      "utilization": 1.3609,
+      "utilization": 1.361,
       "evaluation": 0.6759,
       "adaptation": NaN
     },
@@ -48,7 +48,7 @@
       },
       {
         "section": "utilization",
-        "score": 1.3609,
+        "score": 1.361,
         "reports": [
           {
             "report_file": "retrieval_demo.json",
@@ -62,7 +62,7 @@
             "experiment_id": "rag_demo",
             "module": "utilization.rag",
             "metric_count": 1,
-            "mean_numeric_metric": 0.4994
+            "mean_numeric_metric": 0.4997
           },
           {
             "report_file": "react_demo.json",
