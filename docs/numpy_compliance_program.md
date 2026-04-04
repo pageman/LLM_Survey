@@ -33,6 +33,10 @@ Avoid:
 - scalar/reporting logic
 - simple one-step matrix products where `@` is already clearer
 
+Status note:
+- the Stage 3 pass is intentionally selective; once only `@`-clear sites remain,
+  the stage should be frozen as complete rather than extended for style alone
+
 ### Stage 4: Algorithmic Interventions
 
 - add advanced educational mechanisms as explicit modules or experiments

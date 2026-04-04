@@ -1,0 +1,147 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "efficient_attention_suite_board_demo",
+  "module": "systems.efficient_attention_suite_board_demo",
+  "status": "ok",
+  "metrics": {
+    "family_count": 5,
+    "best_efficiency": 1.0,
+    "lowest_quality_gap": 7.263778684782536e-17
+  },
+  "artifacts": {
+    "rows": [
+      {
+        "family": "flash",
+        "efficiency": 0.875,
+        "quality_gap": 7.263778684782536e-17,
+        "evidence": "flash_attention_lite peak memory ratio"
+      },
+      {
+        "family": "sliding_window",
+        "efficiency": 0.6301020408163265,
+        "quality_gap": 0.19866392474087527,
+        "evidence": "kv-aware cache reduction"
+      },
+      {
+        "family": "ring",
+        "efficiency": 0.7673611111111112,
+        "quality_gap": 0.1563355985948395,
+        "evidence": "ring visibility density"
+      },
+      {
+        "family": "block_sparse",
+        "efficiency": 0.7673611111111112,
+        "quality_gap": 0.18039055618106384,
+        "evidence": "block visibility density"
+      },
+      {
+        "family": "quantization",
+        "efficiency": 1.0,
+        "quality_gap": 0.0052909015672569035,
+        "evidence": "int8 compression ratio vs reconstruction error"
+      }
+    ],
+    "family_count": 5,
+    "best_efficiency": 1.0,
+    "lowest_quality_gap": 7.263778684782536e-17,
+    "mean_efficiency": 0.8079648526077097,
+    "mean_quality_gap": 0.1081361962168071,
+    "canonical_summary_surface": true,
+    "shared_metric_system": [
+      "efficiency",
+      "quality_gap"
+    ],
+    "long_context_reference": {
+      "rows": [
+        {
+          "family": "flash_short",
+          "efficiency": 0.8333333333333334,
+          "approximation_gap": 6.522181928289687e-17
+        },
+        {
+          "family": "flash_long",
+          "efficiency": 0.875,
+          "approximation_gap": 7.027103120940903e-17
+        },
+        {
+          "family": "sliding_window",
+          "efficiency": 0.6301020408163265,
+          "approximation_gap": 0.21141154917441082
+        },
+        {
+          "family": "ring",
+          "efficiency": 0.7673611111111112,
+          "approximation_gap": 0.18039055618106384
+        },
+        {
+          "family": "block_sparse",
+          "efficiency": 0.7673611111111112,
+          "approximation_gap": 0.16013636054488858
+        }
+      ],
+      "family_count": 5,
+      "best_efficiency": 0.875,
+      "best_gap": 6.522181928289687e-17,
+      "mean_efficiency": 0.7746315192743765,
+      "mean_gap": 0.11038769318007266
+    },
+    "advanced_suite_reference": {
+      "rows": [
+        {
+          "seq_len": 16,
+          "block_size": 4,
+          "input_scale": 10.0,
+          "dense_flash_gap": 2.0633722595114756e-17,
+          "stable_online_gap": 2.220446049250313e-16,
+          "dense_online_gap": 2.220446049250313e-16,
+          "layer_norm_gap": 6.661338147750939e-16,
+          "dense_to_tiled_ratio": 4.0
+        },
+        {
+          "seq_len": 32,
+          "block_size": 8,
+          "input_scale": 100.0,
+          "dense_flash_gap": 0.0,
+          "stable_online_gap": 0.0,
+          "dense_online_gap": 0.0,
+          "layer_norm_gap": 8.881784197001252e-16,
+          "dense_to_tiled_ratio": 4.0
+        },
+        {
+          "seq_len": 64,
+          "block_size": 8,
+          "input_scale": 300.0,
+          "dense_flash_gap": 0.0,
+          "stable_online_gap": 0.0,
+          "dense_online_gap": 0.0,
+          "layer_norm_gap": 8.881784197001252e-16,
+          "dense_to_tiled_ratio": 8.0
+        },
+        {
+          "seq_len": 96,
+          "block_size": 12,
+          "input_scale": 500.0,
+          "dense_flash_gap": 0.0,
+          "stable_online_gap": 0.0,
+          "dense_online_gap": 0.0,
+          "layer_norm_gap": 1.1102230246251565e-15,
+          "dense_to_tiled_ratio": 8.0
+        }
+      ],
+      "max_dense_flash_gap": 2.0633722595114756e-17,
+      "max_stable_online_gap": 2.220446049250313e-16,
+      "max_layer_norm_gap": 1.1102230246251565e-15,
+      "best_dense_to_tiled_ratio": 8.0,
+      "validated_helpers": [
+        "src/core/ops.py:online_softmax",
+        "src/core/ops.py:stable_softmax",
+        "src/core/ops.py:welford_layer_norm",
+        "src/core/ops.py:layer_norm",
+        "src/core/flash_attention_lite.py:flash_attention_lite"
+      ]
+    }
+  },
+  "notes": [
+    "Unified efficient-attention board spanning flash, sliding-window, ring, block-sparse, and quantization-aware angles."
+  ]
+}
