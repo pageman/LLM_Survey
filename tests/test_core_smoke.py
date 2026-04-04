@@ -10,8 +10,13 @@ from src.core import (
     TransformerBlock,
     VanillaRNNLanguageModel,
     create_causal_mask,
+    flash_attention_lite,
+    layer_norm,
+    online_softmax,
     positional_encoding,
     scaled_dot_product_attention,
+    stable_softmax,
+    welford_layer_norm,
 )
 
 
@@ -51,6 +56,17 @@ class AttentionSmokeTests(unittest.TestCase):
         mha = MultiHeadAttention(d_model=8, num_heads=2, rng=np.random.default_rng(22))
         with self.assertRaises(ValueError):
             mha.forward(np.ones((5, 7)), np.ones((5, 8)), np.ones((5, 8)))
+
+    def test_flash_attention_lite_matches_full_attention_on_small_example(self):
+        rng = np.random.default_rng(25)
+        q = rng.standard_normal((5, 8))
+        k = rng.standard_normal((5, 8))
+        v = rng.standard_normal((5, 8))
+        full_out, _ = scaled_dot_product_attention(q, k, v, mask=create_causal_mask(5))
+        flash_out, diagnostics = flash_attention_lite(q, k, v, mask=create_causal_mask(5), block_size=2)
+
+        np.testing.assert_allclose(flash_out, full_out, atol=1e-8)
+        self.assertEqual(diagnostics["num_blocks"], 3)
 
     def test_bahdanau_attention_context_shape(self):
         rng = np.random.default_rng(3)
@@ -131,6 +147,20 @@ class TransformerSmokeTests(unittest.TestCase):
         block = TransformerBlock(d_model=8, num_heads=2, d_ff=16, rng=np.random.default_rng(24))
         with self.assertRaises(ValueError):
             block.forward(np.ones((5, 7)))
+
+
+class NumericStabilitySmokeTests(unittest.TestCase):
+    def test_online_softmax_matches_stable_softmax(self):
+        rng = np.random.default_rng(26)
+        x = rng.standard_normal((4, 6)) * 10.0
+
+        np.testing.assert_allclose(online_softmax(x), stable_softmax(x), atol=1e-8)
+
+    def test_welford_layer_norm_matches_layer_norm(self):
+        rng = np.random.default_rng(27)
+        x = rng.standard_normal((3, 5, 8))
+
+        np.testing.assert_allclose(welford_layer_norm(x), layer_norm(x), atol=1e-8)
 
 
 if __name__ == "__main__":

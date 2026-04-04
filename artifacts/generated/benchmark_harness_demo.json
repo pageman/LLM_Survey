@@ -216,11 +216,11 @@
         "experiment_id": "retrieval_demo",
         "module": "utilization.retrieval",
         "metric": "dense_mrr",
-        "value": 1.0,
+        "value": 0.8333333333333334,
         "goal": "max",
         "family": "retrieval_ranking",
         "family_group": "retrieval",
-        "normalized_score": 1.0
+        "normalized_score": 0.8333333333333334
       },
       {
         "experiment_id": "retrieval_demo",
@@ -611,12 +611,6 @@
         "num_metrics": 1
       },
       {
-        "experiment_id": "retrieval_demo",
-        "module": "utilization.retrieval",
-        "normalized_score": 1.0,
-        "num_metrics": 3
-      },
-      {
         "experiment_id": "truthfulness_eval_demo",
         "module": "evaluation.truthfulness_eval",
         "normalized_score": 1.0,
@@ -633,6 +627,12 @@
         "module": "pretraining.dedup_demo",
         "normalized_score": 0.9459,
         "num_metrics": 2
+      },
+      {
+        "experiment_id": "retrieval_demo",
+        "module": "utilization.retrieval",
+        "normalized_score": 0.9444,
+        "num_metrics": 3
       },
       {
         "experiment_id": "warmup_decay_demo",
@@ -787,16 +787,16 @@
         "num_metrics": 1
       },
       {
-        "family": "retrieval_ranking",
-        "family_group": "retrieval",
-        "normalized_score": 1.0,
-        "num_metrics": 3
-      },
-      {
         "family": "training_scaling",
         "family_group": "training",
         "normalized_score": 1.0,
         "num_metrics": 1
+      },
+      {
+        "family": "retrieval_ranking",
+        "family_group": "retrieval",
+        "normalized_score": 0.9444,
+        "num_metrics": 3
       },
       {
         "family": "evaluation_reliability",
@@ -907,14 +907,14 @@
         "num_metrics": 4
       },
       {
-        "family_group": "retrieval",
-        "normalized_score": 0.7252,
-        "num_metrics": 5
-      },
-      {
         "family_group": "training",
         "normalized_score": 0.7061,
         "num_metrics": 6
+      },
+      {
+        "family_group": "retrieval",
+        "normalized_score": 0.6919,
+        "num_metrics": 5
       },
       {
         "family_group": "evaluation",

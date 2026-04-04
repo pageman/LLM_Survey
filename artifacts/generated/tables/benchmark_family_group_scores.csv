@@ -1,8 +1,8 @@
 family_group,normalized_score,num_metrics
 pretraining,0.8943,4
 systems,0.775,4
-retrieval,0.7252,5
 training,0.7061,6
+retrieval,0.6919,5
 evaluation,0.6633,21
 utilization,0.641,3
 adaptation,0.5819,16

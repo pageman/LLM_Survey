@@ -1,9 +1,9 @@
 experiment_id,module,normalized_score,num_metrics
 data_mixture_toy_demo,pretraining.data_mixture_toy,1.0,1
-retrieval_demo,utilization.retrieval,1.0,3
 truthfulness_eval_demo,evaluation.truthfulness_eval,1.0,2
 batch_scaling_demo,training.batch_scaling_demo,1.0,1
 dedup_demo,pretraining.dedup_demo,0.9459,2
+retrieval_demo,utilization.retrieval,0.9444,3
 warmup_decay_demo,training.warmup_decay_demo,0.9271,1
 calibration_eval_demo,evaluation.calibration_eval,0.902,1
 preference_tuning_demo,adaptation.preference_tuning,0.8942,3

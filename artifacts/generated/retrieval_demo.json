@@ -4,7 +4,7 @@
   "module": "utilization.retrieval",
   "status": "ok",
   "metrics": {
-    "dense_mrr": 1.0,
+    "dense_mrr": 0.8333333333333334,
     "bm25_mrr": 1.0,
     "hybrid_mrr": 1.0
   },
@@ -12,8 +12,8 @@
     "dense_predictions": [
       [
         0,
-        3,
-        1
+        1,
+        3
       ],
       [
         1,
@@ -21,9 +21,9 @@
         0
       ],
       [
+        1,
         2,
-        3,
-        1
+        3
       ]
     ],
     "bm25_predictions": [
@@ -46,8 +46,8 @@
     "hybrid_predictions": [
       [
         0,
-        3,
-        1
+        1,
+        3
       ],
       [
         1,
@@ -56,12 +56,12 @@
       ],
       [
         2,
-        3,
-        1
+        1,
+        3
       ]
     ],
     "dense_recall": {
-      "1": 1.0,
+      "1": 0.6666666666666666,
       "3": 1.0
     },
     "bm25_recall": {

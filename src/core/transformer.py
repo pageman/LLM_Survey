@@ -10,9 +10,10 @@ import numpy as np
 
 from .attention import MultiHeadAttention
 from .ops import feed_forward, glorot_scale, layer_norm
+from .types import Array2D, FloatArray, MaskArray
 
 
-def positional_encoding(seq_len: int, d_model: int) -> np.ndarray:
+def positional_encoding(seq_len: int, d_model: int) -> Array2D:
     """Return sinusoidal positional encoding with shape ``(seq_len, d_model)``."""
     if seq_len < 0 or d_model <= 0:
         raise ValueError("seq_len must be non-negative and d_model must be positive")
@@ -58,7 +59,7 @@ class TransformerBlock:
         self.W2 = self.rng.standard_normal((d_model, d_ff)) * scale
         self.b2 = np.zeros((d_model,), dtype=float)
 
-    def forward(self, x: np.ndarray, mask: np.ndarray | None = None) -> tuple[np.ndarray, np.ndarray]:
+    def forward(self, x: Array2D, mask: MaskArray | None = None) -> tuple[Array2D, FloatArray]:
         """Run one transformer block over ``x`` shaped ``(seq_len, d_model)``."""
         if x.ndim != 2 or x.shape[-1] != self.d_model:
             raise ValueError("x must have shape (seq_len, d_model)")

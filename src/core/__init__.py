@@ -8,9 +8,10 @@ from .attention import (
     softmax,
 )
 from .data import ToyTokenizer, hashed_bow_embedding, make_next_token_pairs, one_hot_sequence
+from .flash_attention_lite import flash_attention_lite
 from .lstm import LSTMCell, LSTMSequenceModel, sigmoid
 from .metrics import compute_retrieval_metrics, cross_entropy_from_probs, perplexity_from_losses, top_k_accuracy
-from .ops import feed_forward, layer_norm, stable_softmax
+from .ops import feed_forward, layer_norm, online_softmax, stable_softmax, welford_layer_norm
 from .protocols import AttentionModule, ForwardModule
 from .reporting import SCHEMA_VERSION, build_report, write_report
 from .rnn import VanillaRNNLanguageModel, one_hot
@@ -39,11 +40,13 @@ __all__ = [
     "create_causal_mask",
     "cross_entropy_from_probs",
     "feed_forward",
+    "flash_attention_lite",
     "hashed_bow_embedding",
     "layer_norm",
     "make_next_token_pairs",
     "one_hot",
     "one_hot_sequence",
+    "online_softmax",
     "perplexity_from_losses",
     "positional_encoding",
     "scaled_dot_product_attention",
@@ -51,5 +54,6 @@ __all__ = [
     "softmax",
     "stable_softmax",
     "top_k_accuracy",
+    "welford_layer_norm",
     "write_report",
 ]
