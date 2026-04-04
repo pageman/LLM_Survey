@@ -5,7 +5,8 @@
   "status": "ok",
   "metrics": {
     "syntax_bias_gain": 0.03333333333333336,
-    "code_structure_score": 0.6966666666666667
+    "code_structure_score": 0.6966666666666667,
+    "identifier_bias_score": 0.6766666666666667
   },
   "artifacts": {
     "token_branch": [
@@ -19,9 +20,30 @@
       0.79
     ],
     "syntax_bias_gain": 0.03333333333333336,
-    "code_structure_score": 0.6966666666666667
+    "code_structure_score": 0.6966666666666667,
+    "identifier_bias_score": 0.6766666666666667,
+    "tasks": [
+      {
+        "task": "token_completion",
+        "token_branch": 0.61,
+        "ast_branch": 0.56,
+        "identifier_branch": 0.58
+      },
+      {
+        "task": "syntax_repair",
+        "token_branch": 0.67,
+        "ast_branch": 0.74,
+        "identifier_branch": 0.69
+      },
+      {
+        "task": "semantic_refactor",
+        "token_branch": 0.71,
+        "ast_branch": 0.79,
+        "identifier_branch": 0.76
+      }
+    ]
   },
   "notes": [
-    "Lite code-model architecture demo over token-only versus syntax-aware branches."
+    "Code-model architecture demo over token, syntax, and identifier-aware branches."
   ]
 }

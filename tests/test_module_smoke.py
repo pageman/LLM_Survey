@@ -588,6 +588,7 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreaterEqual(transfer["transfer_asymmetry"], 0.0)
         self.assertIn("transfer_rows", transfer)
         self.assertGreater(multilingual_prompt["native_prompt_score"], 0.0)
+        self.assertIn("prompt_rows", multilingual_prompt)
         self.assertGreater(code_risk["risk_score"], 0.0)
         self.assertLess(safety_tradeoff["tradeoff_correlation"], 1.0)
         self.assertIn("settings", safety_tradeoff)
@@ -602,6 +603,7 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(inference_batching["latency_amortization"], 1.0)
         self.assertGreater(speculative["speedup"], 1.0)
         self.assertGreater(kv_fragmentation["mean_fragmentation_penalty"], 0.0)
+        self.assertIn("allocation_map", kv_fragmentation)
         self.assertGreater(program_synthesis["execution_success"], 0.0)
         self.assertGreater(nlp_as_code["structuring_gain"], 0.0)
 

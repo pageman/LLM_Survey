@@ -24,9 +24,10 @@ def main() -> None:
             "best_loss": result["best_loss"],
             "loss_spread": result["loss_spread"],
             "best_stability_is_adamw": float(result["best_stability"] == "adamw"),
+            "fastest_optimizer_is_adamw": float(result["fastest_optimizer"] == "adamw"),
         },
         artifacts=result,
-        notes=["Trajectory-level optimizer ablation comparing convergence and stability across variants."],
+        notes=["Trajectory-level optimizer ablation comparing convergence speed, stability, and final loss."],
     )
     write_report(report, generated / "optimizer_ablation_dashboard_demo.json")
     print(json.dumps(report, indent=2))

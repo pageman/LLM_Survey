@@ -20,7 +20,7 @@ def main() -> None:
         module="architecture.multilingual_architecture_demo",
         metrics={"parameter_sharing_score": result["parameter_sharing_score"], "transfer_score": result["transfer_score"]},
         artifacts=result,
-        notes=["Lite multilingual architecture demo over shared-parameter transfer behavior."],
+        notes=["Multilingual architecture demo with sharing configuration rows and vocabulary-split effects."],
     )
     write_report(report, output_dir / "multilingual_architecture_demo.json")
     print(json.dumps(report, indent=2))

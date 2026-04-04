@@ -20,7 +20,7 @@ def main() -> None:
         module="multilingual.prompting_demo",
         metrics={"native_prompt_score": result["native_prompt_score"], "translation_gap": result["translation_gap"]},
         artifacts=result,
-        notes=["Lite multilingual prompting demo over native versus translated prompts."],
+        notes=["Multilingual prompting demo with native-versus-translated prompt rows and language-specific drift."],
     )
     write_report(report, output_dir / "multilingual_prompting_demo.json")
     print(json.dumps(report, indent=2))

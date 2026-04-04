@@ -31,6 +31,7 @@ class OptimizerAblationDashboard:
                     "best_step": int(np.argmin(curve)),
                     "mean_step_improvement": float(improvements.mean()),
                     "stability_score": float(1.0 / (1.0 + np.std(improvements))),
+                    "convergence_speed": float((curve[0] - curve[-1]) / len(curve)),
                 }
             )
         return {
@@ -39,5 +40,6 @@ class OptimizerAblationDashboard:
             "best_loss": float(final_losses[best_name]),
             "loss_spread": float(losses.max() - losses.min()),
             "best_stability": max(variants, key=lambda item: item["stability_score"])["optimizer"],
+            "fastest_optimizer": max(variants, key=lambda item: item["convergence_speed"])["optimizer"],
             "variants": variants,
         }

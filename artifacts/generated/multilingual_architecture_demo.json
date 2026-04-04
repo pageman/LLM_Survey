@@ -15,9 +15,35 @@
       0.67
     ],
     "parameter_sharing_score": 0.725,
-    "transfer_score": 0.8481012658227848
+    "transfer_score": 0.8481012658227848,
+    "configurations": [
+      {
+        "configuration": "fully_shared",
+        "language_pair": "en-es",
+        "transfer": 0.79,
+        "vocab_split": 0.1
+      },
+      {
+        "configuration": "fully_shared",
+        "language_pair": "en-de",
+        "transfer": 0.74,
+        "vocab_split": 0.18
+      },
+      {
+        "configuration": "partially_shared",
+        "language_pair": "en-tl",
+        "transfer": 0.7,
+        "vocab_split": 0.26
+      },
+      {
+        "configuration": "language_specific_heads",
+        "language_pair": "en-ar",
+        "transfer": 0.67,
+        "vocab_split": 0.31
+      }
+    ]
   },
   "notes": [
-    "Lite multilingual architecture demo over shared-parameter transfer behavior."
+    "Multilingual architecture demo with sharing configuration rows and vocabulary-split effects."
   ]
 }

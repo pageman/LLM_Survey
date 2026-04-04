@@ -25,7 +25,7 @@ def main() -> None:
             "bucket_count": result["bucket_count"],
         },
         artifacts=result,
-        notes=["Dedicated KV-cache fragmentation demo over heterogeneous sequence lengths."],
+        notes=["KV-cache fragmentation demo with allocation-map rows across heterogeneous batch shapes."],
     )
     write_report(report, generated / "kv_cache_fragmentation_demo.json")
     print(json.dumps(report, indent=2))

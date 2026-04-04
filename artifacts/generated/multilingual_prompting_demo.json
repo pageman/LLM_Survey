@@ -19,9 +19,41 @@
       0.63
     ],
     "native_prompt_score": 0.75,
-    "translation_gap": 0.08333333333333333
+    "translation_gap": 0.08333333333333333,
+    "prompt_rows": [
+      {
+        "language": "es",
+        "prompt_format": "native",
+        "score": 0.78
+      },
+      {
+        "language": "de",
+        "prompt_format": "native",
+        "score": 0.75
+      },
+      {
+        "language": "tl",
+        "prompt_format": "native",
+        "score": 0.72
+      },
+      {
+        "language": "es",
+        "prompt_format": "translated",
+        "score": 0.7
+      },
+      {
+        "language": "de",
+        "prompt_format": "translated",
+        "score": 0.67
+      },
+      {
+        "language": "tl",
+        "prompt_format": "translated",
+        "score": 0.63
+      }
+    ]
   },
   "notes": [
-    "Lite multilingual prompting demo over native versus translated prompts."
+    "Multilingual prompting demo with native-versus-translated prompt rows and language-specific drift."
   ]
 }

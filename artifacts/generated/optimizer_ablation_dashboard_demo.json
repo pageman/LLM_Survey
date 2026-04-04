@@ -7,7 +7,8 @@
     "variant_count": 4,
     "best_loss": 1.31,
     "loss_spread": 0.6599999999999999,
-    "best_stability_is_adamw": 0.0
+    "best_stability_is_adamw": 0.0,
+    "fastest_optimizer_is_adamw": 1.0
   },
   "artifacts": {
     "variant_count": 4,
@@ -15,6 +16,7 @@
     "best_loss": 1.31,
     "loss_spread": 0.6599999999999999,
     "best_stability": "sgd",
+    "fastest_optimizer": "adamw",
     "variants": [
       {
         "optimizer": "sgd",
@@ -28,7 +30,8 @@
         "final_loss": 1.97,
         "best_step": 4,
         "mean_step_improvement": 0.1275,
-        "stability_score": 0.9698147590528605
+        "stability_score": 0.9698147590528605,
+        "convergence_speed": 0.10200000000000001
       },
       {
         "optimizer": "adam",
@@ -42,7 +45,8 @@
         "final_loss": 1.42,
         "best_step": 4,
         "mean_step_improvement": 0.22250000000000003,
-        "stability_score": 0.9143763334724968
+        "stability_score": 0.9143763334724968,
+        "convergence_speed": 0.17800000000000002
       },
       {
         "optimizer": "adamw",
@@ -56,7 +60,8 @@
         "final_loss": 1.31,
         "best_step": 4,
         "mean_step_improvement": 0.245,
-        "stability_score": 0.8951319407481688
+        "stability_score": 0.8951319407481688,
+        "convergence_speed": 0.196
       },
       {
         "optimizer": "lion",
@@ -70,11 +75,12 @@
         "final_loss": 1.37,
         "best_step": 4,
         "mean_step_improvement": 0.24249999999999994,
-        "stability_score": 0.8946419078260233
+        "stability_score": 0.8946419078260233,
+        "convergence_speed": 0.19399999999999995
       }
     ]
   },
   "notes": [
-    "Trajectory-level optimizer ablation comparing convergence and stability across variants."
+    "Trajectory-level optimizer ablation comparing convergence speed, stability, and final loss."
   ]
 }

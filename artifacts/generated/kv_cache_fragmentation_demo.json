@@ -29,9 +29,35 @@
       0.77,
       0.69,
       0.58
+    ],
+    "allocation_map": [
+      {
+        "batch_shape": "8x128",
+        "ideal": 0.96,
+        "fragmented": 0.84,
+        "penalty": 0.12
+      },
+      {
+        "batch_shape": "4x256",
+        "ideal": 0.93,
+        "fragmented": 0.77,
+        "penalty": 0.16
+      },
+      {
+        "batch_shape": "2x512",
+        "ideal": 0.9,
+        "fragmented": 0.69,
+        "penalty": 0.21
+      },
+      {
+        "batch_shape": "1x1024",
+        "ideal": 0.88,
+        "fragmented": 0.58,
+        "penalty": 0.3
+      }
     ]
   },
   "notes": [
-    "Dedicated KV-cache fragmentation demo over heterogeneous sequence lengths."
+    "KV-cache fragmentation demo with allocation-map rows across heterogeneous batch shapes."
   ]
 }

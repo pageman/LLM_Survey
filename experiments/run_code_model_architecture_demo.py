@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="code_model_architecture_demo",
         module="architecture.code_model_architecture_demo",
-        metrics={"syntax_bias_gain": result["syntax_bias_gain"], "code_structure_score": result["code_structure_score"]},
+        metrics={
+            "syntax_bias_gain": result["syntax_bias_gain"],
+            "code_structure_score": result["code_structure_score"],
+            "identifier_bias_score": result["identifier_bias_score"],
+        },
         artifacts=result,
-        notes=["Lite code-model architecture demo over token-only versus syntax-aware branches."],
+        notes=["Code-model architecture demo over token, syntax, and identifier-aware branches."],
     )
     write_report(report, output_dir / "code_model_architecture_demo.json")
     print(json.dumps(report, indent=2))
