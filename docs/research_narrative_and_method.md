@@ -110,16 +110,20 @@ This is the fidelity-hardening phase. The repo’s later evolution is therefore 
 The final narrative move is to package the repo so it can be read as a research instrument:
 
 - publication-facing docs first
+- package-facing install surface for reusable code
 - confidence summaries visible before matrices
 - figures paired with callout boards
 - stale artifacts reconciled
 - provenance separated into mechanism, survey-map, and resource/reporting layers
+- versioned release packaging for reproducible snapshots
 
 At this point the project stops looking like a pile of demos and starts looking like an educational observatory of the survey.
 
 > **Story Box 3: The intended user is not only a coder**
 >
 > The intended user is also a reader who wants to understand how LLM ideas connect, where the evidence comes from, and which parts of the repo are stronger or weaker representations of the literature.
+>
+> That is why the repo now has two surfaces: a publication/research surface in the repository and a smaller package surface for reusable imports. The tag and release boundary make that distinction legible.
 
 ## Methodological Arc
 
@@ -259,13 +263,19 @@ Then those were tightened further into narrower families and family groups. The 
 The last major methodological stage was publication packaging:
 
 - build docs index and figure pages
+- expose a clean installable package surface
 - surface confidence summaries early
 - generate matrices automatically
 - reconcile stale artifacts
 - produce SVG panels and callout boards
 - separate mechanism provenance from survey-map provenance
+- align tags, release notes, and package metadata with the same repository milestone
 
 Packaging is methodological here because it determines how readers infer credibility. A polished repo that hides uncertainty is less useful than a polished repo that exposes confidence and limitations.
+
+> **Method Box 6: Packaging Has Two Audiences**
+>
+> The repository package is for readers who want the full research instrument: docs, figures, provenance, and generated artifacts. The Python package is for users who want the reusable code surface. Treating those as distinct outputs avoids bloated installs while keeping the full research record intact.
 
 ## Research Logic By Layer
 
@@ -324,7 +334,7 @@ Examples:
 - fidelity matrices
 - publication assets
 
-> **Method Box 6: Not Every Module Is Supposed To Be Equally Mechanistic**
+> **Method Box 7: Not Every Module Is Supposed To Be Equally Mechanistic**
 >
 > The repo is strongest when readers know which layer they are in. Mechanism modules explain behavior. Survey-map modules explain coverage. Resource/reporting modules explain organization and trust.
 
@@ -337,6 +347,7 @@ This project can legitimately claim that it provides:
 - zero active generic fallback coverage
 - provenance-aware separation between donor-derived, repo-authored, and computed-summary artifacts
 - a publication-facing research surface with figures, matrices, and evidence tables
+- a versioned package/release surface where `v0.3.0` aligns repository docs, release notes, and the `llm-survey` package metadata
 
 It cannot legitimately claim:
 

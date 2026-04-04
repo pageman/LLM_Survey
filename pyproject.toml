@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-survey"
+version = "0.3.0"
+description = "NumPy-only educational re-implementations of major technical areas covered by A Survey of Large Language Models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Paul \"The Pageman\" Pajo", email = "pageman@gmail.com" },
+]
+keywords = [
+  "llm",
+  "numpy",
+  "education",
+  "transformers",
+  "alignment",
+  "retrieval",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Education",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.26",
+]
+
+[project.urls]
+Homepage = "https://github.com/pageman/LLM_Survey"
+Repository = "https://github.com/pageman/LLM_Survey"
+Issues = "https://github.com/pageman/LLM_Survey/issues"
+Documentation = "https://github.com/pageman/LLM_Survey/blob/main/README.md"
+Changelog = "https://github.com/pageman/LLM_Survey/blob/main/docs/release_notes.md"
+
+[project.optional-dependencies]
+packaging = [
+  "build>=1.2",
+  "twine>=5.0",
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*", "llm_survey"]
+exclude = ["tests", "tests.*", "artifacts", "artifacts.*", "docs", "docs.*", "experiments", "experiments.*", "notebooks", "notebooks.*", "third_party", "third_party.*"]

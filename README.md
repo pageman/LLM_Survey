@@ -5,6 +5,7 @@ NumPy-only educational re-implementations of the major technical areas covered b
 This repository turns the survey into runnable, local-first artifacts:
 
 - importable toy modules
+- an installable Python package surface
 - executable local demos
 - machine-readable JSON reports
 - human-readable scoreboards, provenance tables, and publication assets
@@ -36,6 +37,8 @@ The full long-form narrative and methodological arc is in [`docs/research_narrat
 This repository treats the survey as a target surface, not just a reading list. The research move is to translate survey breadth into a local implementation program with three separable layers: mechanism-level demos that preserve specific technical claims, survey-map modules that explain coverage and bundle comparisons, and resource/reporting modules that make provenance and confidence visible. The point is not benchmark-scale reproduction. The point is to make the logic of modern LLM systems inspectable end to end.
 
 Methodologically, the repo moves in a strict sequence: explicit scope definition, donor-aware primitive extraction, dedicated module construction, canonical report emission, family-local comparison, provenance hardening, and publication packaging. That sequence matters because it prevents the usual failure modes of educational LLM repos: shallow topic coverage, opaque derivation, metric over-comparison, and polished dashboards that hide weak evidence. In this repo, coverage, fidelity, and provenance are intentionally separate research axes.
+
+The current release surface reflects that same sequence. The repository now has a versioned research snapshot at `v0.3.0`, a GitHub release, and an installable `llm_survey` package that exposes the reusable code without bundling the full publication artifact tree into the wheel. The repo remains the canonical research surface; the package is the reusable code surface.
 
 ## Confidence Summary
 
@@ -145,6 +148,44 @@ Refresh publication-facing figures, tables, and provenance docs:
 ```bash
 python3 experiments/run_publication_assets_demo.py
 ```
+
+## Packaging
+
+The installable Python package is intended to expose the reusable code surface, not the full research artifact tree.
+
+Current package/release surface:
+
+- package name: `llm-survey`
+- import name: `llm_survey`
+- current tag: `v0.3.0`
+- GitHub release: `v0.3.0`
+
+Install locally in editable mode:
+
+```bash
+python3 -m pip install -e .
+```
+
+If you are packaging locally without network access, use:
+
+```bash
+python3 -m pip install --no-build-isolation -e .
+```
+
+Run the minimal package smoke test:
+
+```bash
+python3 scripts/package_smoke_test.py
+```
+
+Build release artifacts:
+
+```bash
+python3 -m build
+python3 -m twine check dist/*
+```
+
+The published package surface is `llm_survey`, which wraps the repo's reusable `src` code while keeping docs, experiments, tests, and generated artifacts out of the wheel.
 
 ## Key Docs
 
