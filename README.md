@@ -120,6 +120,8 @@ LLM_Survey/
 
 ## Quick Start
 
+Use a Python interpreter with `numpy` available in the active environment.
+
 Run the full local verification suite:
 
 ```bash

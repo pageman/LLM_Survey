@@ -4,7 +4,9 @@ title: "LLM_Survey"
 type: software
 license: "MIT"
 authors:
-  - family-names: "pageman"
+  - given-names: "Paul \"The Pageman\""
+    family-names: "Pajo"
+    email: "pageman@gmail.com"
 repository-code: "https://github.com/pageman/LLM_Survey"
 abstract: >
   NumPy-only educational re-implementations of the major technical areas

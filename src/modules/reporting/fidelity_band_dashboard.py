@@ -1,4 +1,4 @@
-"""Dedicated fidelity-band dashboard."""
+"""Dedicated fidelity-band dashboard with explicit methodology notes."""
 
 from __future__ import annotations
 
@@ -41,13 +41,29 @@ class FidelityBandDashboard:
             if name in mechanism_top_level or name.split(".", 1)[0] in mechanism_prefixes
         ]
         survey_map = [name for name in IMPLEMENTATION_TARGETS if name.split(".", 1)[0] in survey_map_prefixes]
+        band_rows = [
+            {
+                "band": "mechanism_level",
+                "count": len(mechanism),
+                "fraction": round(len(mechanism) / len(IMPLEMENTATION_TARGETS), 4),
+                "interpretation": "Implements a technique or mechanism directly, even if in lite form.",
+            },
+            {
+                "band": "survey_map",
+                "count": len(survey_map),
+                "fraction": round(len(survey_map) / len(IMPLEMENTATION_TARGETS), 4),
+                "interpretation": "Summarizes, indexes, or audits evidence rather than implementing the mechanism itself.",
+            },
+        ]
         return {
             "mechanism_level_count": len(mechanism),
             "survey_map_count": len(survey_map),
             "mechanism_level_fraction": round(len(mechanism) / len(IMPLEMENTATION_TARGETS), 4),
             "survey_map_fraction": round(len(survey_map) / len(IMPLEMENTATION_TARGETS), 4),
+            "band_rows": band_rows,
             "bands": {
                 "mechanism_level": mechanism,
                 "survey_map": survey_map,
             },
+            "methodology_note": "Band assignment is an interpretive publication aid, not a claim of equal evidentiary strength across all modules in the same band.",
         }

@@ -17,29 +17,38 @@
         "name": "Llama 3.1 8B",
         "family": "decoder",
         "license": "open",
-        "context": 128000
+        "context": 128000,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       },
       {
         "name": "Mistral 7B",
         "family": "decoder",
         "license": "open",
-        "context": 32768
+        "context": 32768,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       },
       {
         "name": "Qwen2.5 7B",
         "family": "decoder",
         "license": "open",
-        "context": 131072
+        "context": 131072,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       },
       {
         "name": "Flan-T5 XL",
         "family": "encoder-decoder",
         "license": "open",
-        "context": 2048
+        "context": 2048,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       }
-    ]
+    ],
+    "methodology_note": "Registry rows are publication-facing evidence tables, not exhaustive market coverage or canonical benchmarks."
   },
   "notes": [
-    "Dedicated public-model registry for open, inspectable model families."
+    "Public-model registry with evidence-linked rows for publication-facing comparison tables."
   ]
 }

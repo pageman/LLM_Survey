@@ -1,4 +1,4 @@
-"""Dedicated cross-section summary over generated reports."""
+"""Dedicated cross-section summary with explicit section evidence and caveats."""
 
 from __future__ import annotations
 
@@ -20,17 +20,39 @@ class CrossSectionSummary:
             "adaptation": ["finetuning_demo.json", "dpo_toy_demo.json", "peft_lora_demo.json"],
         }
         sections = {}
+        section_rows = []
         for section, filenames in section_scores.items():
             scores = []
+            evidence_rows = []
             for filename in filenames:
                 payload = json.loads((reports_dir / filename).read_text())
                 numeric_metrics = [float(value) for value in payload["metrics"].values() if isinstance(value, (int, float))]
-                scores.append(sum(numeric_metrics) / max(len(numeric_metrics), 1))
+                mean_metric = sum(numeric_metrics) / max(len(numeric_metrics), 1)
+                scores.append(mean_metric)
+                evidence_rows.append(
+                    {
+                        "report_file": filename,
+                        "experiment_id": payload["experiment_id"],
+                        "module": payload["module"],
+                        "metric_count": len(numeric_metrics),
+                        "mean_numeric_metric": round(mean_metric, 4),
+                    }
+                )
             sections[section] = round(sum(scores) / max(len(scores), 1), 4)
+            section_rows.append(
+                {
+                    "section": section,
+                    "score": sections[section],
+                    "reports": evidence_rows,
+                    "interpretation": "section-local summary only",
+                }
+            )
         best_section = max(sections, key=sections.get)
         return {
             "num_sections": len(sections),
             "best_section_score": sections[best_section],
             "best_section": best_section,
             "section_scores": sections,
+            "section_rows": section_rows,
+            "methodology_note": "Section scores average numeric metrics from a curated section-local report set and are not universal rankings across incompatible task families.",
         }

@@ -25,7 +25,7 @@ def main() -> None:
             "mechanism_level_fraction": result["mechanism_level_fraction"],
         },
         artifacts=result,
-        notes=["Dedicated fidelity-band dashboard splitting mechanism-level demos from survey-map dashboards."],
+        notes=["Fidelity-band dashboard with explicit interpretive methodology notes for publication use."],
     )
     write_report(report, generated / "fidelity_band_dashboard_demo.json")
     print(json.dumps(report, indent=2))

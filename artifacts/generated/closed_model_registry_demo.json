@@ -17,29 +17,38 @@
         "name": "GPT-4.1",
         "api_only": true,
         "tooling": true,
-        "multimodal": true
+        "multimodal": true,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       },
       {
         "name": "Claude 3.7 Sonnet",
         "api_only": true,
         "tooling": true,
-        "multimodal": true
+        "multimodal": true,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       },
       {
         "name": "Gemini 2.0 Pro",
         "api_only": true,
         "tooling": true,
-        "multimodal": true
+        "multimodal": true,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       },
       {
         "name": "Command R+",
         "api_only": true,
         "tooling": true,
-        "multimodal": false
+        "multimodal": false,
+        "evidence_source": "docs/resource_provenance.md",
+        "provenance_mode": "computed_summary"
       }
-    ]
+    ],
+    "methodology_note": "Registry rows summarize closed-model properties for repo documentation and are not a complete or continuously synced vendor index."
   },
   "notes": [
-    "Dedicated closed-model registry emphasizing API-only frontier systems."
+    "Closed-model registry with evidence-linked rows for publication-facing capability summaries."
   ]
 }

@@ -25,7 +25,7 @@ def main() -> None:
             "average_context_window": result["average_context_window"],
         },
         artifacts=result,
-        notes=["Dedicated public-model registry for open, inspectable model families."],
+        notes=["Public-model registry with evidence-linked rows for publication-facing comparison tables."],
     )
     write_report(report, generated / "public_model_registry_demo.json")
     print(json.dumps(report, indent=2))

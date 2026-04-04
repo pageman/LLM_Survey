@@ -13,12 +13,127 @@
     "best_section": "adaptation",
     "section_scores": {
       "pretraining": 0.6882,
-      "utilization": 1.361,
+      "utilization": 1.3429,
       "evaluation": 0.6759,
       "adaptation": 2.8465
-    }
+    },
+    "section_rows": [
+      {
+        "section": "pretraining",
+        "score": 0.6882,
+        "reports": [
+          {
+            "report_file": "scaling_laws_demo.json",
+            "experiment_id": "scaling_laws_demo",
+            "module": "pretraining.scaling_laws",
+            "metric_count": 3,
+            "mean_numeric_metric": 0.0518
+          },
+          {
+            "report_file": "data_mixture_toy_demo.json",
+            "experiment_id": "data_mixture_toy_demo",
+            "module": "pretraining.data_mixture_toy",
+            "metric_count": 1,
+            "mean_numeric_metric": 1.0128
+          },
+          {
+            "report_file": "masked_lm_demo.json",
+            "experiment_id": "masked_lm_demo",
+            "module": "pretraining.masked_lm_demo",
+            "metric_count": 1,
+            "mean_numeric_metric": 1.0
+          }
+        ],
+        "interpretation": "section-local summary only"
+      },
+      {
+        "section": "utilization",
+        "score": 1.3429,
+        "reports": [
+          {
+            "report_file": "retrieval_demo.json",
+            "experiment_id": "retrieval_demo",
+            "module": "utilization.retrieval",
+            "metric_count": 3,
+            "mean_numeric_metric": 0.9444
+          },
+          {
+            "report_file": "rag_demo.json",
+            "experiment_id": "rag_demo",
+            "module": "utilization.rag",
+            "metric_count": 1,
+            "mean_numeric_metric": 0.5009
+          },
+          {
+            "report_file": "react_demo.json",
+            "experiment_id": "react_demo",
+            "module": "utilization.react_demo",
+            "metric_count": 3,
+            "mean_numeric_metric": 2.5833
+          }
+        ],
+        "interpretation": "section-local summary only"
+      },
+      {
+        "section": "evaluation",
+        "score": 0.6759,
+        "reports": [
+          {
+            "report_file": "truthfulness_eval_demo.json",
+            "experiment_id": "truthfulness_eval_demo",
+            "module": "evaluation.truthfulness_eval",
+            "metric_count": 2,
+            "mean_numeric_metric": 1.0
+          },
+          {
+            "report_file": "robustness_eval_demo.json",
+            "experiment_id": "robustness_eval_demo",
+            "module": "evaluation.robustness_eval",
+            "metric_count": 2,
+            "mean_numeric_metric": 0.4067
+          },
+          {
+            "report_file": "capability_suite_demo.json",
+            "experiment_id": "capability_suite_demo",
+            "module": "evaluation.capability_suite_demo",
+            "metric_count": 2,
+            "mean_numeric_metric": 0.621
+          }
+        ],
+        "interpretation": "section-local summary only"
+      },
+      {
+        "section": "adaptation",
+        "score": 2.8465,
+        "reports": [
+          {
+            "report_file": "finetuning_demo.json",
+            "experiment_id": "finetuning_demo",
+            "module": "adaptation.finetuning",
+            "metric_count": 3,
+            "mean_numeric_metric": 6.8397
+          },
+          {
+            "report_file": "dpo_toy_demo.json",
+            "experiment_id": "dpo_toy_demo",
+            "module": "adaptation.dpo_toy",
+            "metric_count": 4,
+            "mean_numeric_metric": 0.3916
+          },
+          {
+            "report_file": "peft_lora_demo.json",
+            "experiment_id": "peft_lora_demo",
+            "module": "adaptation.peft_lora",
+            "metric_count": 4,
+            "mean_numeric_metric": 1.3082
+          }
+        ],
+        "interpretation": "section-local summary only"
+      }
+    ],
+    "methodology_note": "Section scores average numeric metrics from a curated section-local report set and are not universal rankings across incompatible task families."
   },
   "notes": [
-    "Dedicated cross-section summary comparing pretraining, utilization, evaluation, and adaptation slices."
+    "Cross-section summary with section-local evidence rows and an explicit non-universal-ranking caveat."
   ]
 }

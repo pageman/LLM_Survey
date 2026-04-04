@@ -24,7 +24,7 @@ def main() -> None:
             "best_section_score": result["best_section_score"],
         },
         artifacts=result,
-        notes=["Dedicated cross-section summary comparing pretraining, utilization, evaluation, and adaptation slices."],
+        notes=["Cross-section summary with section-local evidence rows and an explicit non-universal-ranking caveat."],
     )
     write_report(report, generated / "cross_section_summary_demo.json")
     print(json.dumps(report, indent=2))

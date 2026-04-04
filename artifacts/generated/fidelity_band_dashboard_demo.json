@@ -13,6 +13,20 @@
     "survey_map_count": 14,
     "mechanism_level_fraction": 0.8871,
     "survey_map_fraction": 0.1129,
+    "band_rows": [
+      {
+        "band": "mechanism_level",
+        "count": 110,
+        "fraction": 0.8871,
+        "interpretation": "Implements a technique or mechanism directly, even if in lite form."
+      },
+      {
+        "band": "survey_map",
+        "count": 14,
+        "fraction": 0.1129,
+        "interpretation": "Summarizes, indexes, or audits evidence rather than implementing the mechanism itself."
+      }
+    ],
     "bands": {
       "mechanism_level": [
         "foundations.seq2seq_basics",
@@ -142,9 +156,10 @@
         "benchmark.adaptation_bundle_summary",
         "benchmark.utilization_bundle_summary"
       ]
-    }
+    },
+    "methodology_note": "Band assignment is an interpretive publication aid, not a claim of equal evidentiary strength across all modules in the same band."
   },
   "notes": [
-    "Dedicated fidelity-band dashboard splitting mechanism-level demos from survey-map dashboards."
+    "Fidelity-band dashboard with explicit interpretive methodology notes for publication use."
   ]
 }

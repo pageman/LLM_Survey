@@ -25,7 +25,7 @@ def main() -> None:
             "multimodal_rate": result["multimodal_rate"],
         },
         artifacts=result,
-        notes=["Dedicated closed-model registry emphasizing API-only frontier systems."],
+        notes=["Closed-model registry with evidence-linked rows for publication-facing capability summaries."],
     )
     write_report(report, generated / "closed_model_registry_demo.json")
     print(json.dumps(report, indent=2))
