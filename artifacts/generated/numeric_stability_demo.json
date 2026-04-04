@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "numeric_stability_demo",
+  "module": "systems.numeric_stability_demo",
+  "status": "ok",
+  "metrics": {
+    "stable_online_gap": 0.0,
+    "welford_reference_gap": 4.440892098500626e-14,
+    "stable_softmax_finite_fraction": 1.0
+  },
+  "artifacts": {
+    "naive_softmax_finite_fraction": 1.0,
+    "stable_softmax_finite_fraction": 1.0,
+    "online_softmax_finite_fraction": 1.0,
+    "stable_online_gap": 0.0,
+    "naive_layer_norm_finite_fraction": 1.0,
+    "welford_layer_norm_finite_fraction": 1.0,
+    "welford_reference_gap": 4.440892098500626e-14
+  },
+  "notes": [
+    "Compares naive, stable, online, and Welford-style normalization behavior on numerically extreme inputs."
+  ]
+}

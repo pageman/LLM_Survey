@@ -114,10 +114,12 @@ from src.modules.systems import (
     KVCacheFragmentationDemo,
     KVCacheToy,
     LongContextFlashDemo,
+    NumericStabilityDemo,
     OptimizationStabilityDemo,
     PipelineParallelismDemo,
     QuantizationSimDemo,
     SlidingWindowKVDemo,
+    SparseDenseBenchmarkDemo,
     SparseAttentionDemo,
     SpeculativeDecodingDemo,
 )
@@ -554,10 +556,12 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         inference_batching = InferenceBatchingDemo().evaluate()
         flash_compare = FlashAttentionComparisonDemo().evaluate()
         long_flash = LongContextFlashDemo().evaluate()
+        numeric_stability = NumericStabilityDemo().evaluate()
         speculative = SpeculativeDecodingDemo().evaluate()
         kv_fragmentation = KVCacheFragmentationDemo().evaluate()
         quantization = QuantizationSimDemo().evaluate()
         sparse_attention = SparseAttentionDemo().evaluate()
+        sparse_benchmark = SparseDenseBenchmarkDemo().evaluate()
         sliding_window = SlidingWindowKVDemo().evaluate()
         program_synthesis = ProgramSynthesisDemo().evaluate()
         nlp_as_code = NLPAsCodeDemo().evaluate()
@@ -617,12 +621,16 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertLess(flash_compare["memory_ratio_per_block"], 1.0)
         self.assertLessEqual(long_flash["max_abs_error"], 1e-6)
         self.assertGreater(long_flash["dense_to_tiled_ratio"], 1.0)
+        self.assertGreaterEqual(numeric_stability["stable_softmax_finite_fraction"], 1.0)
+        self.assertLessEqual(numeric_stability["stable_online_gap"], 1e-8)
         self.assertGreater(speculative["speedup"], 1.0)
         self.assertGreater(kv_fragmentation["mean_fragmentation_penalty"], 0.0)
         self.assertIn("allocation_map", kv_fragmentation)
         self.assertGreater(quantization["int8_compression_ratio"], 1.0)
         self.assertGreaterEqual(sparse_attention["sparsity"], 0.0)
         self.assertGreaterEqual(sparse_attention["approximation_gap"], 0.0)
+        self.assertGreater(sparse_benchmark["variant_count"], 1)
+        self.assertGreaterEqual(sparse_benchmark["best_efficiency"], 0.0)
         self.assertGreater(sliding_window["cache_reduction"], 0.0)
         self.assertGreaterEqual(sliding_window["approximation_gap"], 0.0)
         self.assertGreater(program_synthesis["execution_success"], 0.0)

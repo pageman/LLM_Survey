@@ -20,6 +20,7 @@
     ],
     "execution_gain": 0.41,
     "program_success": 0.8233333333333333,
+    "execution_success_rate": 1.0,
     "cases": [
       {
         "question": "What is 12 * 7?",
@@ -27,7 +28,8 @@
         "program": "print(12 * 7)",
         "execution_result": "84",
         "program_score": 0.82,
-        "reconciled_answer": "84"
+        "reconciled_answer": "84",
+        "executed_successfully": true
       },
       {
         "question": "What is the average of 4, 10, and 16?",
@@ -35,7 +37,8 @@
         "program": "nums=[4,10,16]; print(sum(nums)/len(nums))",
         "execution_result": "10.0",
         "program_score": 0.86,
-        "reconciled_answer": "10"
+        "reconciled_answer": "10",
+        "executed_successfully": true
       },
       {
         "question": "How many letters are in 'alignment'?",
@@ -43,7 +46,8 @@
         "program": "print(len('alignment'))",
         "execution_result": "9",
         "program_score": 0.79,
-        "reconciled_answer": "9"
+        "reconciled_answer": "9",
+        "executed_successfully": true
       }
     ]
   },

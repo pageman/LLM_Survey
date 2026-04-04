@@ -14,7 +14,24 @@
     "adapted_loss": 1.09,
     "gain": 0.28,
     "trainable_fraction": 0.08,
-    "frozen_fraction": 0.92
+    "frozen_fraction": 0.92,
+    "memory_saving": 0.72,
+    "method_rows": [
+      {
+        "method": "full_finetune",
+        "baseline_loss": 1.37,
+        "adapted_loss": 0.98,
+        "trainable_fraction": 1.0,
+        "memory_multiplier": 1.0
+      },
+      {
+        "method": "lora_like",
+        "baseline_loss": 1.37,
+        "adapted_loss": 1.09,
+        "trainable_fraction": 0.08,
+        "memory_multiplier": 0.28
+      }
+    ]
   },
   "notes": [
     "Lite memory-efficient adaptation demo with small-trainable-fraction accounting."

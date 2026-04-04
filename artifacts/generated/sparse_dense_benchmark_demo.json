@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "sparse_dense_benchmark_demo",
+  "module": "systems.sparse_dense_benchmark_demo",
+  "status": "ok",
+  "metrics": {
+    "mean_efficiency": 0.5615798611111111,
+    "mean_approximation_gap": 0.1646342206881134,
+    "best_efficiency": 0.7673611111111112
+  },
+  "artifacts": {
+    "variant_count": 4,
+    "mean_efficiency": 0.5615798611111111,
+    "mean_approximation_gap": 0.1646342206881134,
+    "best_efficiency": 0.7673611111111112,
+    "best_gap": 0.06335602149238227,
+    "benchmark_rows": [
+      {
+        "family": "block_sparse",
+        "variant": "sparse_0",
+        "efficiency": 0.765625,
+        "approximation_gap": 0.23648808249576644
+      },
+      {
+        "family": "block_sparse",
+        "variant": "sparse_1",
+        "efficiency": 0.7673611111111112,
+        "approximation_gap": 0.20341019368696786
+      },
+      {
+        "family": "sliding_window",
+        "variant": "sliding_0",
+        "efficiency": 0.45333333333333337,
+        "approximation_gap": 0.15528258507733697
+      },
+      {
+        "family": "sliding_window",
+        "variant": "sliding_1",
+        "efficiency": 0.26,
+        "approximation_gap": 0.06335602149238227
+      }
+    ]
+  },
+  "notes": [
+    "Benchmark-style comparison across block-sparse and sliding-window sparse attention variants."
+  ]
+}

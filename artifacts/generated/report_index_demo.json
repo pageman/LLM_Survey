@@ -4,14 +4,14 @@
   "module": "evaluation.report_index",
   "status": "ok",
   "metrics": {
-    "num_reports": 136,
-    "num_modules": 136,
-    "raw_num_reports": 136,
+    "num_reports": 138,
+    "num_modules": 138,
+    "raw_num_reports": 138,
     "stale_report_count": 0
   },
   "artifacts": {
-    "raw_num_reports": 136,
-    "num_reports": 136,
+    "raw_num_reports": 138,
+    "num_reports": 138,
     "reports": [
       {
         "experiment_id": "adaptation_bundle_summary_demo",
@@ -464,6 +464,12 @@
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/nlp_as_code_demo.json"
       },
       {
+        "experiment_id": "numeric_stability_demo",
+        "module": "systems.numeric_stability_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/numeric_stability_demo.json"
+      },
+      {
         "experiment_id": "objective_mixture_demo",
         "module": "training.objective_mixture_demo",
         "status": "ok",
@@ -744,6 +750,12 @@
         "module": "systems.sparse_attention_demo",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/sparse_attention_demo.json"
+      },
+      {
+        "experiment_id": "sparse_dense_benchmark_demo",
+        "module": "systems.sparse_dense_benchmark_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/sparse_dense_benchmark_demo.json"
       },
       {
         "experiment_id": "speculative_decoding_demo",
@@ -1056,6 +1068,9 @@
       "code_pretraining.nlp_as_code_demo": [
         "nlp_as_code_demo"
       ],
+      "systems.numeric_stability_demo": [
+        "numeric_stability_demo"
+      ],
       "training.objective_mixture_demo": [
         "objective_mixture_demo"
       ],
@@ -1196,6 +1211,9 @@
       ],
       "systems.sparse_attention_demo": [
         "sparse_attention_demo"
+      ],
+      "systems.sparse_dense_benchmark_demo": [
+        "sparse_dense_benchmark_demo"
       ],
       "systems.speculative_decoding_demo": [
         "speculative_decoding_demo"

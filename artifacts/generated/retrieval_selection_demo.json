@@ -16,6 +16,36 @@
       0.5815,
       0.478,
       0.247
+    ],
+    "candidate_rows": [
+      {
+        "index": 0,
+        "bm25_score": 0.62,
+        "dense_score": 0.58,
+        "hybrid_score": 0.5980000000000001,
+        "selected": true
+      },
+      {
+        "index": 1,
+        "bm25_score": 0.51,
+        "dense_score": 0.64,
+        "hybrid_score": 0.5815,
+        "selected": false
+      },
+      {
+        "index": 2,
+        "bm25_score": 0.39,
+        "dense_score": 0.55,
+        "hybrid_score": 0.4780000000000001,
+        "selected": false
+      },
+      {
+        "index": 3,
+        "bm25_score": 0.28,
+        "dense_score": 0.22,
+        "hybrid_score": 0.24700000000000005,
+        "selected": false
+      }
     ]
   },
   "notes": [
