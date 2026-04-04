@@ -21,9 +21,10 @@ def main() -> None:
         metrics={
             "reward_factuality_correlation": result["reward_factuality_correlation"],
             "overoptimization_gap": result["overoptimization_gap"],
+            "max_proxy_gap": result["max_proxy_gap"],
         },
         artifacts=result,
-        notes=["Lite reward-model overoptimization demo over reward versus factuality behavior."],
+        notes=["Reward-model overoptimization demo with optimization trajectory and proxy-target divergence."],
     )
     write_report(report, output_dir / "reward_model_overoptimization_demo.json")
     print(json.dumps(report, indent=2))

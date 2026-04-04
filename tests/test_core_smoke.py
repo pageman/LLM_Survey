@@ -47,6 +47,11 @@ class AttentionSmokeTests(unittest.TestCase):
         self.assertEqual(out.shape, (5, 8))
         self.assertEqual(mha.attention_weights.shape, (2, 5, 5))
 
+    def test_multi_head_attention_rejects_bad_shapes(self):
+        mha = MultiHeadAttention(d_model=8, num_heads=2, rng=np.random.default_rng(22))
+        with self.assertRaises(ValueError):
+            mha.forward(np.ones((5, 7)), np.ones((5, 8)), np.ones((5, 8)))
+
     def test_bahdanau_attention_context_shape(self):
         rng = np.random.default_rng(3)
         attention = BahdanauAttention(decoder_hidden_size=6, annotation_size=8, rng=rng)
@@ -57,6 +62,16 @@ class AttentionSmokeTests(unittest.TestCase):
         self.assertEqual(context.shape, (8, 1))
         self.assertEqual(weights.shape, (4,))
         self.assertAlmostEqual(float(weights.sum()), 1.0, places=8)
+
+    def test_bahdanau_attention_accepts_matrix_annotations(self):
+        rng = np.random.default_rng(23)
+        attention = BahdanauAttention(decoder_hidden_size=6, annotation_size=8, rng=rng)
+        decoder_hidden = rng.standard_normal((6, 1))
+        annotations = rng.standard_normal((4, 8))
+        context, weights = attention.forward(decoder_hidden, annotations)
+
+        self.assertEqual(context.shape, (8, 1))
+        self.assertEqual(weights.shape, (4,))
 
 
 class SequenceModelSmokeTests(unittest.TestCase):
@@ -111,6 +126,11 @@ class TransformerSmokeTests(unittest.TestCase):
 
         self.assertEqual(out.shape, (5, 8))
         self.assertEqual(weights.shape, (2, 5, 5))
+
+    def test_transformer_block_rejects_bad_width(self):
+        block = TransformerBlock(d_model=8, num_heads=2, d_ff=16, rng=np.random.default_rng(24))
+        with self.assertRaises(ValueError):
+            block.forward(np.ones((5, 7)))
 
 
 if __name__ == "__main__":

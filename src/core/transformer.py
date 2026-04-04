@@ -9,10 +9,13 @@ from __future__ import annotations
 import numpy as np
 
 from .attention import MultiHeadAttention
+from .ops import feed_forward, glorot_scale, layer_norm
 
 
 def positional_encoding(seq_len: int, d_model: int) -> np.ndarray:
-    """Sinusoidal positional encoding."""
+    """Return sinusoidal positional encoding with shape ``(seq_len, d_model)``."""
+    if seq_len < 0 or d_model <= 0:
+        raise ValueError("seq_len must be non-negative and d_model must be positive")
     positions = np.arange(seq_len)[:, np.newaxis]
     dims = np.arange(d_model)[np.newaxis, :]
     angle_rates = 1.0 / np.power(10000.0, (2 * (dims // 2)) / np.maximum(d_model, 1))
@@ -24,25 +27,15 @@ def positional_encoding(seq_len: int, d_model: int) -> np.ndarray:
     return encoding
 
 
-def layer_norm(x: np.ndarray, eps: float = 1e-6) -> np.ndarray:
-    mean = np.mean(x, axis=-1, keepdims=True)
-    var = np.var(x, axis=-1, keepdims=True)
-    return (x - mean) / np.sqrt(var + eps)
-
-
-def feed_forward(
-    x: np.ndarray,
-    W1: np.ndarray,
-    b1: np.ndarray,
-    W2: np.ndarray,
-    b2: np.ndarray,
-) -> np.ndarray:
-    hidden = np.maximum(0.0, (x @ W1.T) + b1)
-    return (hidden @ W2.T) + b2
-
-
 class TransformerBlock:
-    """Pre-norm-style transformer block for educational experiments."""
+    """Pre-norm-style transformer block for educational experiments.
+
+    Args:
+        d_model: Model width.
+        num_heads: Number of attention heads.
+        d_ff: Hidden size of the feed-forward block.
+        rng: Optional NumPy random generator.
+    """
 
     def __init__(
         self,
@@ -51,19 +44,24 @@ class TransformerBlock:
         d_ff: int,
         rng: np.random.Generator | None = None,
     ):
+        if d_model <= 0 or num_heads <= 0 or d_ff <= 0:
+            raise ValueError("d_model, num_heads, and d_ff must be positive")
         self.d_model = d_model
         self.num_heads = num_heads
         self.d_ff = d_ff
         self.rng = rng or np.random.default_rng()
 
         self.attention = MultiHeadAttention(d_model=d_model, num_heads=num_heads, rng=self.rng)
-        scale = 0.1
+        scale = glorot_scale(d_model, d_ff)
         self.W1 = self.rng.standard_normal((d_ff, d_model)) * scale
         self.b1 = np.zeros((d_ff,), dtype=float)
         self.W2 = self.rng.standard_normal((d_model, d_ff)) * scale
         self.b2 = np.zeros((d_model,), dtype=float)
 
     def forward(self, x: np.ndarray, mask: np.ndarray | None = None) -> tuple[np.ndarray, np.ndarray]:
+        """Run one transformer block over ``x`` shaped ``(seq_len, d_model)``."""
+        if x.ndim != 2 or x.shape[-1] != self.d_model:
+            raise ValueError("x must have shape (seq_len, d_model)")
         normed = layer_norm(x)
         attn_out = self.attention.forward(normed, normed, normed, mask=mask)
         x = x + attn_out

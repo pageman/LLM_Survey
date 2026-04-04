@@ -21,9 +21,10 @@ def main() -> None:
         metrics={
             "privacy_risk": result["privacy_risk"],
             "max_exposure": result["max_exposure"],
+            "exact_secret_risk": result["exact_secret_risk"],
         },
         artifacts=result,
-        notes=["Lite privacy leakage demo with memorized-canary exposure accounting."],
+        notes=["Privacy leakage demo with attack-family labels and memorized-span risk structure."],
     )
     write_report(report, output_dir / "privacy_leakage_eval_demo.json")
     print(json.dumps(report, indent=2))

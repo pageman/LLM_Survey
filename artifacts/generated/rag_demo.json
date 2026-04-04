@@ -4,7 +4,7 @@
   "module": "utilization.rag",
   "status": "ok",
   "metrics": {
-    "rag_sequence_score": 0.499585889972161
+    "rag_sequence_score": 0.4997713889234763
   },
   "artifacts": {
     "score": {
@@ -13,14 +13,14 @@
         2
       ],
       "retrieval_probs": [
-        0.5462701325563885,
-        0.4537298674436116
+        0.5339682868481777,
+        0.46603171315182235
       ],
       "generation_probs": [
-        0.49552508275900853,
-        0.5044749172409916
+        0.4966349336729058,
+        0.5033650663270942
       ],
-      "rag_sequence_score": 0.499585889972161
+      "rag_sequence_score": 0.4997713889234763
     },
     "answer": {
       "query": "what is the capital of france",
@@ -29,7 +29,7 @@
       "retrieval_probs": [
         1.0
       ],
-      "generated_text": "what is the capital of france paris is the capital of france what paris the"
+      "generated_text": "what is the capital of france paris is the capital of france capital capital capital"
     }
   },
   "notes": [

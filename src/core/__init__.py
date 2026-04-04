@@ -10,9 +10,10 @@ from .attention import (
 from .data import ToyTokenizer, hashed_bow_embedding, make_next_token_pairs, one_hot_sequence
 from .lstm import LSTMCell, LSTMSequenceModel, sigmoid
 from .metrics import compute_retrieval_metrics, cross_entropy_from_probs, perplexity_from_losses, top_k_accuracy
+from .ops import feed_forward, layer_norm, stable_softmax
 from .reporting import SCHEMA_VERSION, build_report, write_report
 from .rnn import VanillaRNNLanguageModel, one_hot
-from .transformer import TransformerBlock, feed_forward, layer_norm, positional_encoding
+from .transformer import TransformerBlock, positional_encoding
 
 __all__ = [
     "BahdanauAttention",
@@ -38,6 +39,7 @@ __all__ = [
     "scaled_dot_product_attention",
     "sigmoid",
     "softmax",
+    "stable_softmax",
     "top_k_accuracy",
     "write_report",
 ]

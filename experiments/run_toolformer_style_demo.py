@@ -21,9 +21,10 @@ def main() -> None:
         metrics={
             "tool_call_rate": result["tool_call_rate"],
             "tool_use_gain": result["tool_use_gain"],
+            "counterfactual_utility": result["counterfactual_utility"],
         },
         artifacts=result,
-        notes=["Lite Toolformer-style demo with self-inserted tool calls and answer-gain accounting."],
+        notes=["Toolformer-style demo with self-inserted calls, trace structure, and counterfactual utility."],
     )
     write_report(report, output_dir / "toolformer_style_demo.json")
     print(json.dumps(report, indent=2))

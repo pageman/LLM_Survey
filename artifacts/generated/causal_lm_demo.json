@@ -4,12 +4,12 @@
   "module": "pretraining.causal_lm",
   "status": "ok",
   "metrics": {
-    "mean_loss": 2.507782942921586,
-    "perplexity": 12.27767954735404
+    "mean_loss": 2.5180118413050243,
+    "perplexity": 12.4039111885068
   },
   "artifacts": {
     "prompt": "large language models",
-    "generated": "large language models models models models"
+    "generated": "large language models models transformers transformers"
   },
   "notes": [
     "Toy decoder-only next-token scoring and greedy generation demo."

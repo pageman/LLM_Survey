@@ -22,9 +22,10 @@ def main() -> None:
             "baseline_loss": result["baseline_loss"],
             "adapted_loss": result["adapted_loss"],
             "gain": result["gain"],
+            "acceptance_rate": result["acceptance_rate"],
         },
         artifacts=result,
-        notes=["Lite PPO-style RLHF demo with reward-vs-KL accounting."],
+        notes=["PPO-style RLHF toy demo with rollout traces, clipping, and KL-regularized policy updates."],
     )
     write_report(report, output_dir / "ppo_rlhf_toy_demo.json")
     print(json.dumps(report, indent=2))

@@ -5,39 +5,180 @@
   "status": "ok",
   "metrics": {
     "tool_call_rate": 0.75,
-    "tool_use_gain": 0.135
+    "tool_use_gain": 0.135,
+    "counterfactual_utility": 0.10499999999999998
   },
   "artifacts": {
     "tool_call_rate": 0.75,
     "tool_use_gain": 0.135,
+    "counterfactual_utility": 0.10499999999999998,
     "annotations": [
       {
         "query": "search for scaling laws",
         "inserted_call": "[TOOL:search_api]",
         "tool_called": true,
-        "answer_gain": 0.18
+        "answer_gain": 0.18,
+        "counterfactual_gain": 0.13999999999999999,
+        "selected_tool": "search_api",
+        "selection_reason": "grounded_tool",
+        "trace": [
+          {
+            "step": "infer_goal",
+            "content": "retrieve_external_information",
+            "constraints": [
+              "needs_retrieval"
+            ]
+          },
+          {
+            "step": "select_tool",
+            "content": "search_api",
+            "intent": "information_retrieval",
+            "rationale": "grounded_tool"
+          },
+          {
+            "step": "build_arguments",
+            "content": {
+              "topic": "scaling laws"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "search_results(scaling laws)",
+            "confidence": 0.75
+          },
+          {
+            "step": "finalize_answer",
+            "content": "search_results(scaling laws)",
+            "mode": "tool_grounded_answer"
+          }
+        ]
       },
       {
         "query": "what is the weather in manila",
         "inserted_call": "[TOOL:weather_api]",
         "tool_called": true,
-        "answer_gain": 0.18
+        "answer_gain": 0.18,
+        "counterfactual_gain": 0.13999999999999999,
+        "selected_tool": "weather_api",
+        "selection_reason": "grounded_tool",
+        "trace": [
+          {
+            "step": "infer_goal",
+            "content": "answer_weather_question",
+            "constraints": [
+              "needs_location_grounding"
+            ]
+          },
+          {
+            "step": "select_tool",
+            "content": "weather_api",
+            "intent": "weather_lookup",
+            "rationale": "grounded_tool"
+          },
+          {
+            "step": "build_arguments",
+            "content": {
+              "location": "manila"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "weather(manila)=sunny",
+            "confidence": 0.8
+          },
+          {
+            "step": "finalize_answer",
+            "content": "weather(manila)=sunny",
+            "mode": "tool_grounded_answer"
+          }
+        ]
       },
       {
         "query": "calculate 3 plus 4",
         "inserted_call": "[TOOL:calculator]",
         "tool_called": true,
-        "answer_gain": 0.18
+        "answer_gain": 0.18,
+        "counterfactual_gain": 0.13999999999999999,
+        "selected_tool": "calculator",
+        "selection_reason": "grounded_tool",
+        "trace": [
+          {
+            "step": "infer_goal",
+            "content": "perform_exact_computation",
+            "constraints": [
+              "needs_symbolic_execution"
+            ]
+          },
+          {
+            "step": "select_tool",
+            "content": "calculator",
+            "intent": "numeric_reasoning",
+            "rationale": "grounded_tool"
+          },
+          {
+            "step": "build_arguments",
+            "content": {
+              "numbers": [
+                3,
+                4
+              ],
+              "operator": "sum"
+            }
+          },
+          {
+            "step": "execute_tool",
+            "content": "calculator_result=7",
+            "confidence": 0.95
+          },
+          {
+            "step": "finalize_answer",
+            "content": "calculator_result=7",
+            "mode": "tool_grounded_answer"
+          }
+        ]
       },
       {
         "query": "write a poem",
         "inserted_call": "",
         "tool_called": false,
-        "answer_gain": 0.0
+        "answer_gain": 0.0,
+        "counterfactual_gain": 0.0,
+        "selected_tool": "none",
+        "selection_reason": "answer_directly",
+        "trace": [
+          {
+            "step": "infer_goal",
+            "content": "respond_directly",
+            "constraints": [
+              "safe_to_answer_directly",
+              "creative_format"
+            ]
+          },
+          {
+            "step": "select_tool",
+            "content": "none",
+            "intent": "direct_response",
+            "rationale": "answer_directly"
+          },
+          {
+            "step": "build_arguments",
+            "content": {}
+          },
+          {
+            "step": "execute_tool",
+            "content": "no_tool_used",
+            "confidence": 0.5
+          },
+          {
+            "step": "finalize_answer",
+            "content": "direct_response",
+            "mode": "direct_response"
+          }
+        ]
       }
     ]
   },
   "notes": [
-    "Lite Toolformer-style demo with self-inserted tool calls and answer-gain accounting."
+    "Toolformer-style demo with self-inserted calls, trace structure, and counterfactual utility."
   ]
 }
