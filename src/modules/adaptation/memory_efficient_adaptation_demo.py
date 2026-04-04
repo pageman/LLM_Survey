@@ -17,6 +17,12 @@ class AdaptationMethodRow(TypedDict):
 @dataclass
 class MemoryEfficientAdaptationDemo:
     def evaluate(self) -> dict[str, object]:
+        """Compare full fine-tuning against a memory-efficient adaptation row.
+
+        Returns:
+            Dict with the lite memory-efficient row as top-level metrics plus
+            `method_rows` for the full comparison table.
+        """
         method_rows: list[AdaptationMethodRow] = [
             {
                 "method": "full_finetune",

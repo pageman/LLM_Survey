@@ -19,6 +19,12 @@ class ExampleCandidate(TypedDict):
 @dataclass
 class ExampleSelectionDemo:
     def evaluate(self) -> dict[str, object]:
+        """Return similarity-based example selection with diversity adjustment.
+
+        Returns:
+            Dict with top-k similarity metrics plus `candidate_rows`, one row per
+            candidate example with raw and adjusted scores.
+        """
         similarities = np.array([0.93, 0.87, 0.74, 0.58, 0.41], dtype=float)
         diversity_penalty = np.array([0.00, 0.02, 0.06, 0.03, 0.01], dtype=float)
         adjusted = similarities - diversity_penalty

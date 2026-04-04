@@ -19,6 +19,12 @@ class RetrievalCandidate(TypedDict):
 @dataclass
 class RetrievalSelectionDemo:
     def evaluate(self) -> dict[str, object]:
+        """Return BM25/dense/hybrid retrieval-selection accounting.
+
+        Returns:
+            Dict with aggregate hybrid-selection metrics plus `candidate_rows`,
+            one row per candidate document.
+        """
         bm25_scores = np.array([0.62, 0.51, 0.39, 0.28], dtype=float)
         dense_scores = np.array([0.58, 0.64, 0.55, 0.22], dtype=float)
         hybrid_scores = 0.45 * bm25_scores + 0.55 * dense_scores

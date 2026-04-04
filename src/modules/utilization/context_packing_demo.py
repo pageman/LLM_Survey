@@ -18,6 +18,12 @@ class PackingWindow(TypedDict):
 @dataclass
 class ContextPackingDemo:
     def evaluate(self) -> dict[str, object]:
+        """Return packed-window accounting for a fixed set of example lengths.
+
+        Returns:
+            Dict with aggregate efficiency metrics plus `packing_windows`, where
+            each row describes one packed window in token space.
+        """
         examples = np.array([180, 220, 140, 260, 120], dtype=float)
         max_window = 512.0
         packed_tokens = examples[0] + examples[2] + examples[4]
