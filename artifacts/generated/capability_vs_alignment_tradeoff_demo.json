@@ -21,9 +21,36 @@
       0.69
     ],
     "integration_score": 0.6014499999999999,
-    "tradeoff_correlation": -0.9715750878059592
+    "tradeoff_correlation": -0.9715750878059592,
+    "frontiers": [
+      {
+        "setting": "base",
+        "capability": 0.63,
+        "alignment": 0.89,
+        "frontier_score": 0.5607
+      },
+      {
+        "setting": "helpful_tuned",
+        "capability": 0.74,
+        "alignment": 0.84,
+        "frontier_score": 0.6215999999999999
+      },
+      {
+        "setting": "capability_pushed",
+        "capability": 0.82,
+        "alignment": 0.76,
+        "frontier_score": 0.6232
+      },
+      {
+        "setting": "aggressive_optimization",
+        "capability": 0.87,
+        "alignment": 0.69,
+        "frontier_score": 0.6003
+      }
+    ],
+    "worst_alignment_setting": "aggressive_optimization"
   },
   "notes": [
-    "Lite capability-versus-alignment tradeoff demo."
+    "Capability-versus-alignment tradeoff demo with explicit frontier points and worst-alignment setting."
   ]
 }

@@ -153,7 +153,7 @@ def main() -> None:
 
     executed = []
     for script in SCRIPTS:
-        subprocess.run(["python3", script], cwd=repo_root, check=True, capture_output=True, text=True)
+        subprocess.run([sys.executable, script], cwd=repo_root, check=True, capture_output=True, text=True)
         executed.append(script)
 
     report = build_report(

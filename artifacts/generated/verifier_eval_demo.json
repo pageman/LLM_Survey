@@ -4,26 +4,50 @@
   "module": "evaluation.verifier_eval",
   "status": "ok",
   "metrics": {
-    "verifier_gain": 0.1425,
-    "verified_score": 0.7250000000000001
+    "verifier_gain": 0.16500000000000004,
+    "verified_score": 0.7474999999999999,
+    "acceptance_rate": 0.75,
+    "false_accept_rate": 0.0
   },
   "artifacts": {
-    "verifier_gain": 0.1425,
-    "verified_score": 0.7250000000000001,
-    "base_scores": [
-      0.58,
-      0.61,
-      0.54,
-      0.6
-    ],
-    "verifier_scores": [
-      0.71,
-      0.76,
-      0.69,
-      0.74
+    "verifier_gain": 0.16500000000000004,
+    "verified_score": 0.7474999999999999,
+    "acceptance_rate": 0.75,
+    "false_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "threshold": 0.7,
+    "proposals": [
+      {
+        "question": "2 + 2",
+        "candidate": "4",
+        "base_score": 0.61,
+        "verifier_score": 0.91,
+        "correct": true
+      },
+      {
+        "question": "capital of france",
+        "candidate": "Paris",
+        "base_score": 0.58,
+        "verifier_score": 0.89,
+        "correct": true
+      },
+      {
+        "question": "prime after 11",
+        "candidate": "12",
+        "base_score": 0.54,
+        "verifier_score": 0.33,
+        "correct": false
+      },
+      {
+        "question": "water formula",
+        "candidate": "H2O",
+        "base_score": 0.6,
+        "verifier_score": 0.86,
+        "correct": true
+      }
     ]
   },
   "notes": [
-    "Lite verifier-guided reasoning demo with base-vs-verified scoring."
+    "Verifier-guided reasoning demo with proposal-level acceptance, thresholding, and error accounting."
   ]
 }

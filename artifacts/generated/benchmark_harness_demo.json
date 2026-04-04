@@ -406,31 +406,31 @@
         "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
         "module": "evaluation.truthfulness_vs_helpfulness_eval",
         "metric": "helpfulness_score",
-        "value": 0.855,
+        "value": 0.8374999999999999,
         "goal": "max",
         "family": "evaluation_truth_grounding",
         "family_group": "evaluation",
-        "normalized_score": 0.855
+        "normalized_score": 0.8374999999999999
       },
       {
         "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
         "module": "evaluation.truthfulness_vs_helpfulness_eval",
         "metric": "truthfulness_score",
-        "value": 0.7874999999999999,
+        "value": 0.79,
         "goal": "max",
         "family": "evaluation_truth_grounding",
         "family_group": "evaluation",
-        "normalized_score": 0.7874999999999999
+        "normalized_score": 0.79
       },
       {
         "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
         "module": "evaluation.truthfulness_vs_helpfulness_eval",
         "metric": "mean_gap",
-        "value": 0.0675,
+        "value": 0.04749999999999999,
         "goal": "min",
         "family": "evaluation_truth_grounding",
         "family_group": "evaluation",
-        "normalized_score": 0.9325
+        "normalized_score": 0.9525
       },
       {
         "experiment_id": "safety_eval_demo",
@@ -516,11 +516,11 @@
         "experiment_id": "optimizer_ablation_dashboard_demo",
         "module": "training.optimizer_ablation_dashboard",
         "metric": "loss_spread",
-        "value": 0.8700000000000001,
+        "value": 0.6599999999999999,
         "goal": "min",
         "family": "training_optimization",
         "family_group": "training",
-        "normalized_score": 0.565
+        "normalized_score": 0.67
       },
       {
         "experiment_id": "warmup_decay_demo",
@@ -667,7 +667,7 @@
       {
         "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
         "module": "evaluation.truthfulness_vs_helpfulness_eval",
-        "normalized_score": 0.8583,
+        "normalized_score": 0.86,
         "num_metrics": 3
       },
       {
@@ -725,15 +725,15 @@
         "num_metrics": 3
       },
       {
-        "experiment_id": "context_packing_demo",
-        "module": "utilization.context_packing_demo",
-        "normalized_score": 0.5865,
+        "experiment_id": "optimizer_ablation_dashboard_demo",
+        "module": "training.optimizer_ablation_dashboard",
+        "normalized_score": 0.6167,
         "num_metrics": 2
       },
       {
-        "experiment_id": "optimizer_ablation_dashboard_demo",
-        "module": "training.optimizer_ablation_dashboard",
-        "normalized_score": 0.5642,
+        "experiment_id": "context_packing_demo",
+        "module": "utilization.context_packing_demo",
+        "normalized_score": 0.5865,
         "num_metrics": 2
       },
       {
@@ -813,7 +813,7 @@
       {
         "family": "evaluation_truth_grounding",
         "family_group": "evaluation",
-        "normalized_score": 0.8879,
+        "normalized_score": 0.8886,
         "num_metrics": 7
       },
       {
@@ -847,6 +847,12 @@
         "num_metrics": 1
       },
       {
+        "family": "training_optimization",
+        "family_group": "training",
+        "normalized_score": 0.7201,
+        "num_metrics": 3
+      },
+      {
         "family": "adaptation_parameter_efficient",
         "family_group": "adaptation",
         "normalized_score": 0.7024,
@@ -857,12 +863,6 @@
         "family_group": "evaluation",
         "normalized_score": 0.6873,
         "num_metrics": 5
-      },
-      {
-        "family": "training_optimization",
-        "family_group": "training",
-        "normalized_score": 0.6851,
-        "num_metrics": 3
       },
       {
         "family": "utilization_context",
@@ -913,12 +913,12 @@
       },
       {
         "family_group": "training",
-        "normalized_score": 0.6886,
+        "normalized_score": 0.7061,
         "num_metrics": 6
       },
       {
         "family_group": "evaluation",
-        "normalized_score": 0.6638,
+        "normalized_score": 0.664,
         "num_metrics": 21
       },
       {

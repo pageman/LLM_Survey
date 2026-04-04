@@ -4,24 +4,70 @@
   "module": "memorization_vs_generalization_demo",
   "status": "ok",
   "metrics": {
-    "generalization_gap": 0.2833333333333333,
-    "privacy_risk": 0.2833333333333333
+    "generalization_gap": 0.142,
+    "privacy_risk": 0.10999999999999993,
+    "transfer_score": 0.6733333333333333
   },
   "artifacts": {
+    "bucket_scores": [
+      {
+        "bucket": "exact_recall",
+        "train_score": 0.98,
+        "eval_score": 0.92,
+        "novelty": 0.05,
+        "gap": 0.05999999999999994
+      },
+      {
+        "bucket": "near_copy",
+        "train_score": 0.95,
+        "eval_score": 0.79,
+        "novelty": 0.18,
+        "gap": 0.15999999999999992
+      },
+      {
+        "bucket": "template_transfer",
+        "train_score": 0.89,
+        "eval_score": 0.73,
+        "novelty": 0.44,
+        "gap": 0.16000000000000003
+      },
+      {
+        "bucket": "paraphrase_transfer",
+        "train_score": 0.84,
+        "eval_score": 0.71,
+        "novelty": 0.63,
+        "gap": 0.13
+      },
+      {
+        "bucket": "novel_composition",
+        "train_score": 0.78,
+        "eval_score": 0.58,
+        "novelty": 0.91,
+        "gap": 0.20000000000000007
+      }
+    ],
     "train": [
       0.98,
-      0.97,
-      0.99
+      0.95,
+      0.89,
+      0.84,
+      0.78
     ],
     "test": [
+      0.92,
+      0.79,
       0.73,
-      0.69,
-      0.67
+      0.71,
+      0.58
     ],
-    "generalization_gap": 0.2833333333333333,
-    "privacy_risk": 0.2833333333333333
+    "generalization_gap": 0.142,
+    "memorization_score": 0.965,
+    "transfer_score": 0.6733333333333333,
+    "novelty_correlation": -0.9601803302688299,
+    "privacy_risk": 0.10999999999999993,
+    "worst_bucket": "novel_composition"
   },
   "notes": [
-    "Lite memorization-versus-generalization demo."
+    "Bucketed memorization-versus-generalization demo with novelty-aware transfer behavior."
   ]
 }

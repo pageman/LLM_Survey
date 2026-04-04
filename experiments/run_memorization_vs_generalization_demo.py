@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="memorization_vs_generalization_demo",
         module="memorization_vs_generalization_demo",
-        metrics={"generalization_gap": result["generalization_gap"], "privacy_risk": result["privacy_risk"]},
+        metrics={
+            "generalization_gap": result["generalization_gap"],
+            "privacy_risk": result["privacy_risk"],
+            "transfer_score": result["transfer_score"],
+        },
         artifacts=result,
-        notes=["Lite memorization-versus-generalization demo."],
+        notes=["Bucketed memorization-versus-generalization demo with novelty-aware transfer behavior."],
     )
     write_report(report, output_dir / "memorization_vs_generalization_demo.json")
     print(json.dumps(report, indent=2))

@@ -9,7 +9,7 @@ calibration_eval_demo,evaluation.calibration_eval,0.902,1
 preference_tuning_demo,adaptation.preference_tuning,0.8942,3
 speculative_decoding_demo,systems.speculative_decoding_demo,0.8851,1
 safety_eval_demo,evaluation.safety_eval,0.88,2
-truthfulness_vs_helpfulness_eval_demo,evaluation.truthfulness_vs_helpfulness_eval,0.8583,3
+truthfulness_vs_helpfulness_eval_demo,evaluation.truthfulness_vs_helpfulness_eval,0.86,3
 hallucination_checks_demo,evaluation.hallucination_checks,0.82,2
 bias_eval_demo,evaluation.bias_eval,0.775,2
 kv_cache_fragmentation_demo,systems.kv_cache_fragmentation_demo,0.7512,2
@@ -19,8 +19,8 @@ peft_lora_demo,adaptation.peft_lora,0.7024,4
 contamination_demo,pretraining.contamination_demo,0.6855,1
 memory_partitioning_demo,training.memory_partitioning_demo,0.6464,1
 finetuning_demo,adaptation.finetuning,0.6361,3
+optimizer_ablation_dashboard_demo,training.optimizer_ablation_dashboard,0.6167,2
 context_packing_demo,utilization.context_packing_demo,0.5865,2
-optimizer_ablation_dashboard_demo,training.optimizer_ablation_dashboard,0.5642,2
 jailbreak_transfer_eval_demo,evaluation.jailbreak_transfer_eval,0.5589,3
 instruction_tuning_demo,adaptation.instruction_tuning,0.4402,3
 gradient_checkpointing_demo,training.gradient_checkpointing_demo,0.43,1

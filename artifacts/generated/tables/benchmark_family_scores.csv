@@ -4,15 +4,15 @@ retrieval_ranking,retrieval,1.0,3
 training_scaling,training,1.0,1
 evaluation_reliability,evaluation,0.902,1
 adaptation_preference,adaptation,0.8942,3
-evaluation_truth_grounding,evaluation,0.8879,7
+evaluation_truth_grounding,evaluation,0.8886,7
 pretraining_curation,pretraining,0.8591,3
 systems_serving,systems,0.7988,2
 evaluation_fairness,evaluation,0.775,2
 systems_memory,systems,0.7512,2
 utilization_tool_use,utilization,0.75,1
+training_optimization,training,0.7201,3
 adaptation_parameter_efficient,adaptation,0.7024,4
 evaluation_safety,evaluation,0.6873,5
-training_optimization,training,0.6851,3
 utilization_context,utilization,0.5865,2
 training_memory,training,0.5382,2
 adaptation_supervised,adaptation,0.4243,9

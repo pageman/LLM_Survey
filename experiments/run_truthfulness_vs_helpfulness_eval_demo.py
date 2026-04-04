@@ -23,9 +23,10 @@ def main() -> None:
             "helpfulness_score": result["helpfulness_score"],
             "truthfulness_score": result["truthfulness_score"],
             "mean_gap": result["mean_gap"],
+            "max_gap": result["max_gap"],
         },
         artifacts=result,
-        notes=["Dedicated evaluation of helpfulness against truthfulness retention."],
+        notes=["Truthfulness-versus-helpfulness evaluation with item-level conflict cases and largest-gap reporting."],
     )
     write_report(report, generated / "truthfulness_vs_helpfulness_eval_demo.json")
     print(json.dumps(report, indent=2))

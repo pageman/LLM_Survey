@@ -18,9 +18,12 @@ def main() -> None:
     report = build_report(
         experiment_id="capability_vs_alignment_tradeoff_demo",
         module="capability_vs_alignment_tradeoff_demo",
-        metrics={"integration_score": result["integration_score"], "tradeoff_correlation": result["tradeoff_correlation"]},
+        metrics={
+            "integration_score": result["integration_score"],
+            "tradeoff_correlation": result["tradeoff_correlation"],
+        },
         artifacts=result,
-        notes=["Lite capability-versus-alignment tradeoff demo."],
+        notes=["Capability-versus-alignment tradeoff demo with explicit frontier points and worst-alignment setting."],
     )
     write_report(report, output_dir / "capability_vs_alignment_tradeoff_demo.json")
     print(json.dumps(report, indent=2))

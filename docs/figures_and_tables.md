@@ -32,15 +32,15 @@
 | `training_scaling` | 1.0000 | 1 |
 | `evaluation_reliability` | 0.9020 | 1 |
 | `adaptation_preference` | 0.8942 | 3 |
-| `evaluation_truth_grounding` | 0.8879 | 7 |
+| `evaluation_truth_grounding` | 0.8886 | 7 |
 | `pretraining_curation` | 0.8591 | 3 |
 | `systems_serving` | 0.7988 | 2 |
 | `evaluation_fairness` | 0.7750 | 2 |
 | `systems_memory` | 0.7512 | 2 |
 | `utilization_tool_use` | 0.7500 | 1 |
+| `training_optimization` | 0.7201 | 3 |
 | `adaptation_parameter_efficient` | 0.7024 | 4 |
 | `evaluation_safety` | 0.6873 | 5 |
-| `training_optimization` | 0.6851 | 3 |
 | `utilization_context` | 0.5865 | 2 |
 | `training_memory` | 0.5382 | 2 |
 | `adaptation_supervised` | 0.4243 | 9 |
@@ -54,8 +54,8 @@
 | `pretraining` | 0.8943 | 4 |
 | `systems` | 0.7750 | 4 |
 | `retrieval` | 0.7252 | 5 |
-| `training` | 0.6886 | 6 |
-| `evaluation` | 0.6638 | 21 |
+| `training` | 0.7061 | 6 |
+| `evaluation` | 0.6640 | 21 |
 | `utilization` | 0.6410 | 3 |
 | `adaptation` | 0.5819 | 16 |
 

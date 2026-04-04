@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="domain_coverage_demo",
         module="pretraining.domain_coverage_demo",
-        metrics={"tail_coverage": result["tail_coverage"], "domain_entropy": result["domain_entropy"]},
+        metrics={
+            "tail_coverage": result["tail_coverage"],
+            "domain_entropy": result["domain_entropy"],
+            "cross_domain_gap": result["cross_domain_gap"],
+        },
         artifacts=result,
-        notes=["Lite domain-coverage demo over head and tail domain mass."],
+        notes=["Domain-coverage demo with head-tail mixture mass and held-out transfer gaps."],
     )
     write_report(report, output_dir / "domain_coverage_demo.json")
     print(json.dumps(report, indent=2))

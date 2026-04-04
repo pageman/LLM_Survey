@@ -23,9 +23,10 @@ def main() -> None:
             "variant_count": result["variant_count"],
             "best_loss": result["best_loss"],
             "loss_spread": result["loss_spread"],
+            "best_stability_is_adamw": float(result["best_stability"] == "adamw"),
         },
         artifacts=result,
-        notes=["Dedicated optimizer ablation comparing SGD-family alternatives."],
+        notes=["Trajectory-level optimizer ablation comparing convergence and stability across variants."],
     )
     write_report(report, generated / "optimizer_ablation_dashboard_demo.json")
     print(json.dumps(report, indent=2))

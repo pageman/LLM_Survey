@@ -1,5 +1,6 @@
 import json
 import subprocess
+import sys
 import unittest
 from pathlib import Path
 
@@ -525,6 +526,7 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         safety_tradeoff = SafetyReasoningTradeoffDemo().evaluate()
         capability_align = CapabilityAlignmentTradeoffDemo().evaluate()
         memorization = MemorizationGeneralizationDemo().evaluate()
+        domain_coverage = DomainCoverageDemo().evaluate()
         inference_batching = InferenceBatchingDemo().evaluate()
         speculative = SpeculativeDecodingDemo().evaluate()
         kv_fragmentation = KVCacheFragmentationDemo().evaluate()
@@ -548,8 +550,11 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(ood["ood_gap"], 0.0)
         self.assertGreater(truth["truthfulness_score"], 0.0)
         self.assertGreater(truth_help["helpfulness_score"], truth_help["truthfulness_score"])
+        self.assertIn("largest_gap_case", truth_help)
         self.assertGreater(truth["imitation_gap"], 0.0)
         self.assertGreater(verifier["verifier_gain"], 0.0)
+        self.assertGreaterEqual(verifier["acceptance_rate"], 0.0)
+        self.assertIn("proposals", verifier)
         self.assertLess(jailbreak["transfer_ratio"], 1.0)
         self.assertGreater(privacy["privacy_risk"], 0.0)
         self.assertGreater(faithfulness["faithfulness_gap"], 0.0)
@@ -560,7 +565,13 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(code_risk["risk_score"], 0.0)
         self.assertLess(safety_tradeoff["tradeoff_correlation"], 1.0)
         self.assertGreater(capability_align["integration_score"], 0.0)
+        self.assertIn("frontiers", capability_align)
         self.assertGreater(memorization["generalization_gap"], 0.0)
+        self.assertIn("worst_bucket", memorization)
+        self.assertGreater(optimizer_ablation["variant_count"], 1)
+        self.assertIn("best_stability", optimizer_ablation)
+        self.assertGreater(domain_coverage["cross_domain_gap"], 0.0)
+        self.assertIn("worst_domain", domain_coverage)
         self.assertGreater(inference_batching["latency_amortization"], 1.0)
         self.assertGreater(speculative["speedup"], 1.0)
         self.assertGreater(kv_fragmentation["mean_fragmentation_penalty"], 0.0)
@@ -705,7 +716,7 @@ class LocalExperimentSmokeTests(unittest.TestCase):
 
         for script in scripts:
             completed = subprocess.run(
-                ["python3", script],
+                [sys.executable, script],
                 cwd=repo_root,
                 check=True,
                 capture_output=True,

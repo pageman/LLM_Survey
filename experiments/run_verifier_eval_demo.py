@@ -21,9 +21,11 @@ def main() -> None:
         metrics={
             "verifier_gain": result["verifier_gain"],
             "verified_score": result["verified_score"],
+            "acceptance_rate": result["acceptance_rate"],
+            "false_accept_rate": result["false_accept_rate"],
         },
         artifacts=result,
-        notes=["Lite verifier-guided reasoning demo with base-vs-verified scoring."],
+        notes=["Verifier-guided reasoning demo with proposal-level acceptance, thresholding, and error accounting."],
     )
     write_report(report, output_dir / "verifier_eval_demo.json")
     print(json.dumps(report, indent=2))

@@ -4,22 +4,71 @@
   "module": "pretraining.domain_coverage_demo",
   "status": "ok",
   "metrics": {
-    "tail_coverage": 0.22999999999999998,
-    "domain_entropy": 1.5768612675877298
+    "tail_coverage": 0.28,
+    "domain_entropy": 1.6546900570189347,
+    "cross_domain_gap": 0.16166666666666665
   },
   "artifacts": {
-    "domain_share": [
-      0.38,
-      0.24,
-      0.15,
-      0.1,
-      0.08,
-      0.05
+    "domains": [
+      {
+        "domain": "web_general",
+        "share": 0.34,
+        "in_domain_score": 0.86,
+        "heldout_score": 0.74,
+        "transfer_gap": 0.12
+      },
+      {
+        "domain": "reference",
+        "share": 0.22,
+        "in_domain_score": 0.83,
+        "heldout_score": 0.71,
+        "transfer_gap": 0.12
+      },
+      {
+        "domain": "code",
+        "share": 0.16,
+        "in_domain_score": 0.88,
+        "heldout_score": 0.68,
+        "transfer_gap": 0.19999999999999996
+      },
+      {
+        "domain": "science",
+        "share": 0.11,
+        "in_domain_score": 0.79,
+        "heldout_score": 0.63,
+        "transfer_gap": 0.16000000000000003
+      },
+      {
+        "domain": "legal",
+        "share": 0.09,
+        "in_domain_score": 0.74,
+        "heldout_score": 0.56,
+        "transfer_gap": 0.17999999999999994
+      },
+      {
+        "domain": "multilingual",
+        "share": 0.08,
+        "in_domain_score": 0.71,
+        "heldout_score": 0.52,
+        "transfer_gap": 0.18999999999999995
+      }
     ],
-    "tail_coverage": 0.22999999999999998,
-    "domain_entropy": 1.5768612675877298
+    "domain_share": [
+      0.34,
+      0.22,
+      0.16,
+      0.11,
+      0.09,
+      0.08
+    ],
+    "tail_coverage": 0.28,
+    "domain_entropy": 1.6546900570189347,
+    "head_domain_score": 0.8566666666666666,
+    "tail_domain_score": 0.57,
+    "cross_domain_gap": 0.16166666666666665,
+    "worst_domain": "code"
   },
   "notes": [
-    "Lite domain-coverage demo over head and tail domain mass."
+    "Domain-coverage demo with head-tail mixture mass and held-out transfer gaps."
   ]
 }
