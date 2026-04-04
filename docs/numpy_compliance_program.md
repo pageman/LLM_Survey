@@ -37,6 +37,15 @@ Status note:
 - the Stage 3 pass is intentionally selective; once only `@`-clear sites remain,
   the stage should be frozen as complete rather than extended for style alone
 
+Stage 3 completion decision:
+- complete
+- the final audit reviewed the remaining tensor-heavy `@` sites in core and
+  module code
+- the remaining uses are intentional in places where `@` is clearer than
+  `einsum`, including simple feed-forward products, RNN/LSTM affine steps,
+  retrieval similarity, and lightweight aggregation helpers
+- no further ceremonial `einsum` rewrites should be added
+
 ### Stage 4: Algorithmic Interventions
 
 - add advanced educational mechanisms as explicit modules or experiments

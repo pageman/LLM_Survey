@@ -1,7 +1,7 @@
 family,family_group,normalized_score,num_metrics
 pretraining_mixture,pretraining,1.0,1
-retrieval_ranking,retrieval,1.0,3
 training_scaling,training,1.0,1
+retrieval_ranking,retrieval,0.9444,3
 evaluation_reliability,evaluation,0.902,1
 adaptation_preference,adaptation,0.8942,3
 evaluation_truth_grounding,evaluation,0.8886,7
