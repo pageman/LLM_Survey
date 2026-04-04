@@ -45,15 +45,30 @@ class PreferenceTuningExperiment:
     ) -> dict[str, object]:
         baseline_margin = self.preference_margin(*eval_preference)
         history = []
+        pair_traces = []
 
         for _ in range(epochs):
             epoch_signal = 0.0
             for prompt, chosen, rejected in preferences:
+                chosen_loss_before = self.loss_on_response(prompt, chosen)
+                rejected_loss_before = self.loss_on_response(prompt, rejected)
                 chosen_ids = self.tokenizer.encode(self.serialize(prompt, chosen))
                 chosen_inputs, chosen_targets = make_next_token_pairs(chosen_ids)
                 epoch_signal += self.model.train_step(chosen_inputs, chosen_targets)
-                # Penalize rejected completions indirectly by not training them and
-                # tracking the margin on the chosen trajectory only.
+                chosen_loss_after = self.loss_on_response(prompt, chosen)
+                rejected_loss_after = self.loss_on_response(prompt, rejected)
+                pair_traces.append(
+                    {
+                        "prompt": prompt,
+                        "chosen": chosen,
+                        "rejected": rejected,
+                        "chosen_loss_before": chosen_loss_before,
+                        "rejected_loss_before": rejected_loss_before,
+                        "chosen_loss_after": chosen_loss_after,
+                        "rejected_loss_after": rejected_loss_after,
+                        "margin_after": rejected_loss_after - chosen_loss_after,
+                    }
+                )
             history.append(epoch_signal / max(len(preferences), 1))
 
         adapted_margin = self.preference_margin(*eval_preference)
@@ -67,4 +82,5 @@ class PreferenceTuningExperiment:
             "baseline_margin": baseline_margin,
             "adapted_margin": adapted_margin,
             "train_loss_history": history,
+            "pair_traces": pair_traces[-len(preferences) :],
         }

@@ -5,14 +5,44 @@
   "status": "ok",
   "metrics": {
     "supported_rate": 0.82,
-    "hallucination_rate": 0.18
+    "hallucination_rate": 0.18,
+    "failure_mode_count": 3
   },
   "artifacts": {
     "supported_rate": 0.82,
     "hallucination_rate": 0.18,
-    "citation_match_rate": 0.76
+    "citation_match_rate": 0.76,
+    "failure_mode_count": 3,
+    "category_breakdown": {
+      "evidence_missing": 1,
+      "supported": 1,
+      "unsupported_generation": 1,
+      "evidence_conflict": 1
+    },
+    "cases": [
+      {
+        "case": "answer grounded in cited paragraph",
+        "category": "supported",
+        "score": 0.92
+      },
+      {
+        "case": "missing evidence but plausible",
+        "category": "evidence_missing",
+        "score": 0.18
+      },
+      {
+        "case": "citation contradicts answer",
+        "category": "evidence_conflict",
+        "score": 0.11
+      },
+      {
+        "case": "fabricated unsupported detail",
+        "category": "unsupported_generation",
+        "score": 0.25
+      }
+    ]
   },
   "notes": [
-    "Toy supported-vs-hallucinated answer quality probe."
+    "Hallucination checks with supported answers and categorized unsupported failure modes."
   ]
 }

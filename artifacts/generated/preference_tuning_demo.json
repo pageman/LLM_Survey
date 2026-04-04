@@ -37,9 +37,41 @@
       21.54920725284079,
       21.49465348362001,
       21.437906967330477
+    ],
+    "pair_traces": [
+      {
+        "prompt": "answer safely",
+        "chosen": "provide a cautious response",
+        "rejected": "give dangerous instructions",
+        "chosen_loss_before": 19.0411298604249,
+        "rejected_loss_before": 19.759594605689568,
+        "chosen_loss_after": 18.79278208875217,
+        "rejected_loss_after": 19.706813830462213,
+        "margin_after": 0.9140317417100441
+      },
+      {
+        "prompt": "decline harmful request",
+        "chosen": "refuse and explain safety",
+        "rejected": "comply directly",
+        "chosen_loss_before": 24.61456874417471,
+        "rejected_loss_before": 19.81055611513414,
+        "chosen_loss_after": 24.332920366819152,
+        "rejected_loss_after": 19.704408208844548,
+        "margin_after": -4.628512157974605
+      },
+      {
+        "prompt": "summarize neutrally",
+        "chosen": "give a balanced summary",
+        "rejected": "write a biased rant",
+        "chosen_loss_before": 20.658022297391824,
+        "rejected_loss_before": 23.318935901782492,
+        "chosen_loss_after": 20.432325128350524,
+        "rejected_loss_after": 23.23815191231166,
+        "margin_after": 2.8058267839611375
+      }
     ]
   },
   "notes": [
-    "Minimal pairwise preference tuning where chosen responses should outrank rejected ones."
+    "Preference tuning with pairwise chosen-rejected traces and margin improvement accounting."
   ]
 }

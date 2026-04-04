@@ -5,19 +5,72 @@
   "status": "ok",
   "metrics": {
     "plan_success": 1.0,
-    "state_value_gain": 0.79
+    "state_value_gain": 0.75,
+    "replanning_rate": 0.25
   },
   "artifacts": {
     "state_values": [
-      0.21,
-      0.47,
-      0.69,
+      0.25,
+      0.44,
+      0.71,
       1.0
     ],
     "plan_success": 1.0,
-    "state_value_gain": 0.79
+    "state_value_gain": 0.75,
+    "replanning_rate": 0.25,
+    "mean_prediction_error": 0.0225,
+    "rollout": [
+      {
+        "step": 0,
+        "latent_state": "observe_room",
+        "candidate_actions": [
+          "scan_doors",
+          "move_forward"
+        ],
+        "chosen_action": "scan_doors",
+        "predicted_next_value": 0.21,
+        "realized_value": 0.25,
+        "replanned": false
+      },
+      {
+        "step": 1,
+        "latent_state": "mapped_exit_candidates",
+        "candidate_actions": [
+          "open_left",
+          "open_right"
+        ],
+        "chosen_action": "open_right",
+        "predicted_next_value": 0.47,
+        "realized_value": 0.44,
+        "replanned": true
+      },
+      {
+        "step": 2,
+        "latent_state": "corridor_progress",
+        "candidate_actions": [
+          "continue",
+          "inspect_side_path"
+        ],
+        "chosen_action": "continue",
+        "predicted_next_value": 0.69,
+        "realized_value": 0.71,
+        "replanned": false
+      },
+      {
+        "step": 3,
+        "latent_state": "goal_visible",
+        "candidate_actions": [
+          "exit",
+          "search_bonus"
+        ],
+        "chosen_action": "exit",
+        "predicted_next_value": 1.0,
+        "realized_value": 1.0,
+        "replanned": false
+      }
+    ]
   },
   "notes": [
-    "Lite world-model planning demo over state-value improvement."
+    "World-model planning demo with latent state rollout, prediction error, and replanning."
   ]
 }

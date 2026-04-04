@@ -4,7 +4,8 @@
   "module": "evaluation.calibration_eval",
   "status": "ok",
   "metrics": {
-    "ece": 0.09799999999999998
+    "ece": 0.09799999999999998,
+    "max_bin_gap": 0.25
   },
   "artifacts": {
     "confidences": [
@@ -21,9 +22,48 @@
       0.72,
       0.7
     ],
-    "ece": 0.09799999999999998
+    "ece": 0.09799999999999998,
+    "max_bin_gap": 0.25,
+    "reliability_bins": [
+      {
+        "confidence_bin": "0.50-0.60",
+        "confidence": 0.55,
+        "accuracy": 0.58,
+        "count": 18,
+        "gap": 0.029999999999999916
+      },
+      {
+        "confidence_bin": "0.60-0.70",
+        "confidence": 0.65,
+        "accuracy": 0.64,
+        "count": 24,
+        "gap": 0.010000000000000009
+      },
+      {
+        "confidence_bin": "0.70-0.80",
+        "confidence": 0.75,
+        "accuracy": 0.68,
+        "count": 22,
+        "gap": 0.06999999999999995
+      },
+      {
+        "confidence_bin": "0.80-0.90",
+        "confidence": 0.85,
+        "accuracy": 0.72,
+        "count": 16,
+        "gap": 0.13
+      },
+      {
+        "confidence_bin": "0.90-1.00",
+        "confidence": 0.95,
+        "accuracy": 0.7,
+        "count": 10,
+        "gap": 0.25
+      }
+    ],
+    "sample_count": 90
   },
   "notes": [
-    "Toy expected-calibration-error probe."
+    "Calibration evaluation with reliability bins and residual-gap reporting."
   ]
 }

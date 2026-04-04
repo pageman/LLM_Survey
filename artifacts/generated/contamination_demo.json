@@ -35,9 +35,46 @@
       0.1677380658672767,
       0.3144617716357595
     ],
-    "max_inflation": 0.3144617716357595
+    "max_inflation": 0.3144617716357595,
+    "contamination_rows": [
+      {
+        "contamination_type": "exact_overlap",
+        "leakage_rate": 0.0,
+        "reported_score": 0.5466630494031279,
+        "true_score": 0.5518905338179354,
+        "inflation": -0.005227484414807471
+      },
+      {
+        "contamination_type": "near_overlap",
+        "leakage_rate": 0.05,
+        "reported_score": 0.5614546907396827,
+        "true_score": 0.5458693645660811,
+        "inflation": 0.015585326173601532
+      },
+      {
+        "contamination_type": "template_overlap",
+        "leakage_rate": 0.1,
+        "reported_score": 0.6594387325475815,
+        "true_score": 0.5679970738272091,
+        "inflation": 0.09144165872037235
+      },
+      {
+        "contamination_type": "benchmark_hint",
+        "leakage_rate": 0.2,
+        "reported_score": 0.7144838374985985,
+        "true_score": 0.5467457716313218,
+        "inflation": 0.1677380658672767
+      },
+      {
+        "contamination_type": "evaluation_leak",
+        "leakage_rate": 0.4,
+        "reported_score": 0.867273878333736,
+        "true_score": 0.5528121066979765,
+        "inflation": 0.3144617716357595
+      }
+    ]
   },
   "notes": [
-    "Toy train-test leakage demo showing inflated reported scores."
+    "Contamination demo with leakage-type rows and reported-vs-true score inflation."
   ]
 }

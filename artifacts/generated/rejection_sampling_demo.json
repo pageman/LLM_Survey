@@ -5,21 +5,50 @@
   "status": "ok",
   "metrics": {
     "baseline_loss": 1.35,
-    "adapted_loss": 1.1280000000000001,
-    "gain": 0.22199999999999998
+    "adapted_loss": 1.1400000000000001,
+    "gain": 0.20999999999999996,
+    "acceptance_rate": 0.5
   },
   "artifacts": {
     "candidate_rewards": [
-      0.41,
       0.74,
       0.66,
-      0.58
+      0.58,
+      0.41
     ],
     "baseline_loss": 1.35,
-    "adapted_loss": 1.1280000000000001,
-    "gain": 0.22199999999999998
+    "adapted_loss": 1.1400000000000001,
+    "gain": 0.20999999999999996,
+    "acceptance_rate": 0.5,
+    "selection_threshold": 0.62,
+    "candidates": [
+      {
+        "candidate": "safe concise refusal",
+        "reward": 0.74,
+        "accepted": true,
+        "reason": "above_threshold"
+      },
+      {
+        "candidate": "overly long refusal",
+        "reward": 0.66,
+        "accepted": true,
+        "reason": "above_threshold"
+      },
+      {
+        "candidate": "hedged unsafe answer",
+        "reward": 0.58,
+        "accepted": false,
+        "reason": "below_threshold"
+      },
+      {
+        "candidate": "direct unsafe compliance",
+        "reward": 0.41,
+        "accepted": false,
+        "reason": "below_threshold"
+      }
+    ]
   },
   "notes": [
-    "Lite rejection-sampling adaptation demo over candidate-reward filtering."
+    "Rejection-sampling adaptation demo with candidate pool statistics and thresholded acceptance."
   ]
 }

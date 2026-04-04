@@ -255,11 +255,14 @@ class PretrainingModuleSmokeTests(unittest.TestCase):
         self.assertGreater(domain["tail_coverage"], 0.0)
         self.assertGreater(multilingual["cross_lingual_transfer"], 0.0)
         self.assertGreater(toxicity["toxicity_reduction"], 0.0)
+        self.assertTrue(toxicity["threshold_sweep"])
         self.assertGreater(code_corpus["syntax_density"], 0.0)
         self.assertGreater(curriculum["final_gain"], 0.0)
         self.assertGreater(quality["quality_gain"], 0.0)
         self.assertIn("quality_scores", dedup)
+        self.assertIn("duplicate_modes", dedup)
         self.assertGreater(contamination["max_inflation"], 0.0)
+        self.assertIn("contamination_rows", contamination)
         self.assertGreater(tokenizer_result["char_token_count"], tokenizer_result["word_token_count"])
         self.assertIn("combined", prefix_result)
         self.assertEqual(len(multi_result["predicted_tokens"]), 2)
@@ -295,6 +298,8 @@ class AdaptationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(ppo["acceptance_rate"], 0.0)
         self.assertIn("rollouts", ppo)
         self.assertGreater(rejection["gain"], 0.0)
+        self.assertGreater(rejection["acceptance_rate"], 0.0)
+        self.assertIn("candidates", rejection)
         self.assertGreater(red["gain"], 0.0)
         self.assertGreater(constitution_sweep["best_gain"], 0.0)
 
@@ -358,6 +363,7 @@ class AdaptationModuleSmokeTests(unittest.TestCase):
         result = experiment.adapt(preferences=preferences, eval_preference=preferences[0], epochs=20)
         self.assertGreater(result["adapted_margin"], result["baseline_margin"])
         self.assertGreater(result["gain"], 0.0)
+        self.assertTrue(result["pair_traces"])
 
     def test_reward_model_toy_margin_positive(self):
         result = RewardModelToy().evaluate()
@@ -494,8 +500,12 @@ class RetrievalAndRAGSmokeTests(unittest.TestCase):
         self.assertGreater(toolformer["tool_call_rate"], 0.0)
         self.assertGreater(toolformer["counterfactual_utility"], 0.0)
         self.assertIn("trace", toolformer["annotations"][0])
-        self.assertGreater(ProgramAidedReasoningDemo().evaluate()["execution_gain"], 0.0)
-        self.assertGreater(WorldModelPlanningDemo().evaluate()["state_value_gain"], 0.0)
+        program_aided = ProgramAidedReasoningDemo().evaluate()
+        self.assertGreater(program_aided["execution_gain"], 0.0)
+        self.assertTrue(program_aided["cases"])
+        world_model = WorldModelPlanningDemo().evaluate()
+        self.assertGreater(world_model["state_value_gain"], 0.0)
+        self.assertIn("rollout", world_model)
         self.assertGreater(ScratchpadDemo().evaluate()["scratchpad_gain"], 0.0)
 
 
@@ -561,6 +571,8 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreaterEqual(verifier["acceptance_rate"], 0.0)
         self.assertIn("proposals", verifier)
         self.assertLess(jailbreak["transfer_ratio"], 1.0)
+        self.assertGreater(jailbreak["attack_family_count"], 1)
+        self.assertIn("transfer_matrix", jailbreak)
         self.assertGreater(privacy["privacy_risk"], 0.0)
         self.assertGreater(privacy["attack_family_count"], 1)
         self.assertIn("probes", privacy)
@@ -648,7 +660,10 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         bias = BiasEvaluator().evaluate()
 
         self.assertGreaterEqual(calibration["ece"], 0.0)
+        self.assertIn("reliability_bins", calibration)
         self.assertGreaterEqual(hallucination["hallucination_rate"], 0.0)
+        self.assertGreater(hallucination["failure_mode_count"], 0)
+        self.assertIn("cases", hallucination)
         self.assertGreaterEqual(safety["refusal_rate"], 0.0)
         self.assertGreaterEqual(bias["fairness_score"], 0.0)
 

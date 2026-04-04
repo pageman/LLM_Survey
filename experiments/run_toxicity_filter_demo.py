@@ -20,7 +20,7 @@ def main() -> None:
         module="pretraining.toxicity_filter_demo",
         metrics={"retention_rate": result["retention_rate"], "toxicity_reduction": result["toxicity_reduction"]},
         artifacts=result,
-        notes=["Lite toxicity filtering demo over raw versus retained samples."],
+        notes=["Toxicity filtering demo with threshold sweep and retention-quality tradeoffs."],
     )
     write_report(report, output_dir / "toxicity_filter_demo.json")
     print(json.dumps(report, indent=2))

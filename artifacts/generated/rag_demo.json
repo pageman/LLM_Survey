@@ -4,23 +4,23 @@
   "module": "utilization.rag",
   "status": "ok",
   "metrics": {
-    "rag_sequence_score": 0.4997713889234763
+    "rag_sequence_score": 0.5012779686166595
   },
   "artifacts": {
     "score": {
       "doc_indices": [
         0,
-        2
+        1
       ],
       "retrieval_probs": [
-        0.5339682868481777,
-        0.46603171315182235
+        0.5621765008857981,
+        0.4378234991142019
       ],
       "generation_probs": [
-        0.4966349336729058,
-        0.5033650663270942
+        0.5102769422406619,
+        0.48972305775933805
       ],
-      "rag_sequence_score": 0.4997713889234763
+      "rag_sequence_score": 0.5012779686166595
     },
     "answer": {
       "query": "what is the capital of france",

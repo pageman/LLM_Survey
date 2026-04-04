@@ -18,9 +18,9 @@ def main() -> None:
     report = build_report(
         experiment_id="calibration_eval_demo",
         module="evaluation.calibration_eval",
-        metrics={"ece": result["ece"]},
+        metrics={"ece": result["ece"], "max_bin_gap": result["max_bin_gap"]},
         artifacts=result,
-        notes=["Toy expected-calibration-error probe."],
+        notes=["Calibration evaluation with reliability bins and residual-gap reporting."],
     )
     write_report(report, output_dir / "calibration_eval_demo.json")
     print(json.dumps(report, indent=2))

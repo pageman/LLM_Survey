@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="world_model_planning_demo",
         module="utilization.world_model_planning_demo",
-        metrics={"plan_success": result["plan_success"], "state_value_gain": result["state_value_gain"]},
+        metrics={
+            "plan_success": result["plan_success"],
+            "state_value_gain": result["state_value_gain"],
+            "replanning_rate": result["replanning_rate"],
+        },
         artifacts=result,
-        notes=["Lite world-model planning demo over state-value improvement."],
+        notes=["World-model planning demo with latent state rollout, prediction error, and replanning."],
     )
     write_report(report, output_dir / "world_model_planning_demo.json")
     print(json.dumps(report, indent=2))

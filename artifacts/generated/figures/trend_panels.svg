@@ -73,8 +73,8 @@
 <text x="20" y="526.5" font-family="Courier New, monospace" font-size="11" fill="#555">0.75</text>
 <line x1="86" y1="478.0" x2="980" y2="478.0" stroke="#ddd" stroke-width="1"/>
 <text x="20" y="482.0" font-family="Courier New, monospace" font-size="11" fill="#555">1.00</text>
-<polyline fill="none" stroke="#1d4e89" stroke-width="2.5" points="90.0,478.0 535.0,478.0 980.0,478.0"/>
-<circle cx="90.0" cy="478.0" r="3.5" fill="#1d4e89"/>
+<polyline fill="none" stroke="#1d4e89" stroke-width="2.5" points="90.0,507.7 535.0,478.0 980.0,478.0"/>
+<circle cx="90.0" cy="507.7" r="3.5" fill="#1d4e89"/>
 <circle cx="535.0" cy="478.0" r="3.5" fill="#1d4e89"/>
 <circle cx="980.0" cy="478.0" r="3.5" fill="#1d4e89"/>
 <rect x="1000" y="446" width="12" height="3" fill="#1d4e89"/>

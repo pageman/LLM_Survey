@@ -5,7 +5,8 @@
   "status": "ok",
   "metrics": {
     "best_quality_score": 1.0034558419206479,
-    "best_privacy_risk": 0.10821618143501159
+    "best_privacy_risk": 0.10821618143501159,
+    "best_quality_rate": 0.0
   },
   "artifacts": {
     "duplicate_rates": [
@@ -29,9 +30,51 @@
       0.5558111810419636,
       0.7779413249665553
     ],
-    "best_quality_rate": 0.0
+    "best_quality_rate": 0.0,
+    "duplicate_modes": [
+      {
+        "duplicate_rate": 0.0,
+        "exact_duplicates": 0,
+        "near_duplicates": 0,
+        "semantic_duplicates": 0,
+        "quality_score": 1.0034558419206479,
+        "privacy_risk": 0.10821618143501159
+      },
+      {
+        "duplicate_rate": 0.1,
+        "exact_duplicates": 45,
+        "near_duplicates": 35,
+        "semantic_duplicates": 20,
+        "quality_score": 0.9433043707618338,
+        "privacy_risk": 0.1769684276839564
+      },
+      {
+        "duplicate_rate": 0.25,
+        "exact_duplicates": 112,
+        "near_duplicates": 87,
+        "semantic_duplicates": 50,
+        "quality_score": 0.8590535586667312,
+        "privacy_risk": 0.3294637457236401
+      },
+      {
+        "duplicate_rate": 0.5,
+        "exact_duplicates": 225,
+        "near_duplicates": 175,
+        "semantic_duplicates": 100,
+        "quality_score": 0.6946304676463971,
+        "privacy_risk": 0.5558111810419636
+      },
+      {
+        "duplicate_rate": 0.75,
+        "exact_duplicates": 337,
+        "near_duplicates": 262,
+        "semantic_duplicates": 150,
+        "quality_score": 0.5536457239618608,
+        "privacy_risk": 0.7779413249665553
+      }
+    ]
   },
   "notes": [
-    "Toy repeated-data study for quality and privacy tradeoffs."
+    "Deduplication study with exact, near, and semantic duplicate accounting."
   ]
 }

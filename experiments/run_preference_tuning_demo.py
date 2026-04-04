@@ -41,8 +41,9 @@ def main() -> None:
             "baseline_margin": result["baseline_margin"],
             "adapted_margin": result["adapted_margin"],
             "train_loss_history": result["train_loss_history"],
+            "pair_traces": result["pair_traces"],
         },
-        notes=["Minimal pairwise preference tuning where chosen responses should outrank rejected ones."],
+        notes=["Preference tuning with pairwise chosen-rejected traces and margin improvement accounting."],
     )
     write_report(report, output_dir / "preference_tuning_demo.json")
     print(json.dumps(report, indent=2))

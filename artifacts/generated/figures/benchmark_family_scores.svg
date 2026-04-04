@@ -5,14 +5,14 @@
 <rect x="240" y="62" width="620" height="18" fill="#e6e1d8"/>
 <rect x="240" y="62" width="620.00" height="18" fill="#2d6a4f"/>
 <text x="872" y="76" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
-<text x="24" y="108" font-family="Courier New, monospace" font-size="13" fill="#333">retrieval_ranking</text>
+<text x="24" y="108" font-family="Courier New, monospace" font-size="13" fill="#333">training_scaling</text>
 <rect x="240" y="94" width="620" height="18" fill="#e6e1d8"/>
 <rect x="240" y="94" width="620.00" height="18" fill="#2d6a4f"/>
 <text x="872" y="108" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
-<text x="24" y="140" font-family="Courier New, monospace" font-size="13" fill="#333">training_scaling</text>
+<text x="24" y="140" font-family="Courier New, monospace" font-size="13" fill="#333">retrieval_ranking</text>
 <rect x="240" y="126" width="620" height="18" fill="#e6e1d8"/>
-<rect x="240" y="126" width="620.00" height="18" fill="#2d6a4f"/>
-<text x="872" y="140" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<rect x="240" y="126" width="585.53" height="18" fill="#2d6a4f"/>
+<text x="872" y="140" font-family="Courier New, monospace" font-size="12" fill="#333">0.944</text>
 <text x="24" y="172" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_reliability</text>
 <rect x="240" y="158" width="620" height="18" fill="#e6e1d8"/>
 <rect x="240" y="158" width="559.24" height="18" fill="#2d6a4f"/>
@@ -55,8 +55,8 @@
 <text x="872" y="460" font-family="Courier New, monospace" font-size="12" fill="#333">0.702</text>
 <text x="24" y="492" font-family="Courier New, monospace" font-size="13" fill="#333">evaluation_safety</text>
 <rect x="240" y="478" width="620" height="18" fill="#e6e1d8"/>
-<rect x="240" y="478" width="426.13" height="18" fill="#2d6a4f"/>
-<text x="872" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">0.687</text>
+<rect x="240" y="478" width="424.27" height="18" fill="#2d6a4f"/>
+<text x="872" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">0.684</text>
 <text x="24" y="524" font-family="Courier New, monospace" font-size="13" fill="#333">utilization_context</text>
 <rect x="240" y="510" width="620" height="18" fill="#e6e1d8"/>
 <rect x="240" y="510" width="363.63" height="18" fill="#2d6a4f"/>

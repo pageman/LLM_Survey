@@ -1,9 +1,9 @@
 experiment_id,module,normalized_score,num_metrics
 data_mixture_toy_demo,pretraining.data_mixture_toy,1.0,1
-retrieval_demo,utilization.retrieval,1.0,3
 truthfulness_eval_demo,evaluation.truthfulness_eval,1.0,2
 batch_scaling_demo,training.batch_scaling_demo,1.0,1
 dedup_demo,pretraining.dedup_demo,0.9459,2
+retrieval_demo,utilization.retrieval,0.9444,3
 warmup_decay_demo,training.warmup_decay_demo,0.9271,1
 calibration_eval_demo,evaluation.calibration_eval,0.902,1
 preference_tuning_demo,adaptation.preference_tuning,0.8942,3
@@ -21,7 +21,7 @@ memory_partitioning_demo,training.memory_partitioning_demo,0.6464,1
 finetuning_demo,adaptation.finetuning,0.6361,3
 optimizer_ablation_dashboard_demo,training.optimizer_ablation_dashboard,0.6167,2
 context_packing_demo,utilization.context_packing_demo,0.5865,2
-jailbreak_transfer_eval_demo,evaluation.jailbreak_transfer_eval,0.5589,3
+jailbreak_transfer_eval_demo,evaluation.jailbreak_transfer_eval,0.5538,3
 instruction_tuning_demo,adaptation.instruction_tuning,0.4402,3
 gradient_checkpointing_demo,training.gradient_checkpointing_demo,0.43,1
 long_context_demo,evaluation.long_context,0.3667,3

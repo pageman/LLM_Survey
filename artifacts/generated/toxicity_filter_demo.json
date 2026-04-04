@@ -25,9 +25,32 @@
       1
     ],
     "retention_rate": 0.6666666666666666,
-    "toxicity_reduction": 0.22916666666666663
+    "toxicity_reduction": 0.22916666666666663,
+    "threshold_sweep": [
+      {
+        "threshold": 0.2,
+        "retention_rate": 0.5,
+        "toxicity_reduction": 0.285,
+        "proxy_precision": 0.75,
+        "proxy_recall": 0.69
+      },
+      {
+        "threshold": 0.35,
+        "retention_rate": 0.6666666666666666,
+        "toxicity_reduction": 0.22916666666666663,
+        "proxy_precision": 0.6975,
+        "proxy_recall": 0.7725
+      },
+      {
+        "threshold": 0.5,
+        "retention_rate": 0.6666666666666666,
+        "toxicity_reduction": 0.22916666666666663,
+        "proxy_precision": 0.645,
+        "proxy_recall": 0.855
+      }
+    ]
   },
   "notes": [
-    "Lite toxicity filtering demo over raw versus retained samples."
+    "Toxicity filtering demo with threshold sweep and retention-quality tradeoffs."
   ]
 }

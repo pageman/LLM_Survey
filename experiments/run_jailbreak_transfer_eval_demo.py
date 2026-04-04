@@ -23,9 +23,10 @@ def main() -> None:
             "source_attack_rate": result["source_attack_rate"],
             "transfer_attack_rate": result["transfer_attack_rate"],
             "transfer_ratio": result["transfer_ratio"],
+            "attack_family_count": result["attack_family_count"],
         },
         artifacts=result,
-        notes=["Dedicated jailbreak-transfer evaluation across related attack families."],
+        notes=["Jailbreak-transfer evaluation with attack-family transfer rows and defense-gap accounting."],
     )
     write_report(report, generated / "jailbreak_transfer_eval_demo.json")
     print(json.dumps(report, indent=2))

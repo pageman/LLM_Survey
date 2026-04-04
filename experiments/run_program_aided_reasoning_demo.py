@@ -18,9 +18,12 @@ def main() -> None:
     report = build_report(
         experiment_id="program_aided_reasoning_demo",
         module="utilization.program_aided_reasoning_demo",
-        metrics={"execution_gain": result["execution_gain"], "program_success": result["program_success"]},
+        metrics={
+            "execution_gain": result["execution_gain"],
+            "program_success": result["program_success"],
+        },
         artifacts=result,
-        notes=["Lite program-aided reasoning demo with direct-vs-executed comparison."],
+        notes=["Program-aided reasoning demo with synthesis, execution, and answer-reconciliation traces."],
     )
     write_report(report, output_dir / "program_aided_reasoning_demo.json")
     print(json.dumps(report, indent=2))

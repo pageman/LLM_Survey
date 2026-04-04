@@ -21,9 +21,10 @@ def main() -> None:
         metrics={
             "best_quality_score": max(result["quality_scores"]),
             "best_privacy_risk": min(result["privacy_risks"]),
+            "best_quality_rate": result["best_quality_rate"],
         },
         artifacts=result,
-        notes=["Toy repeated-data study for quality and privacy tradeoffs."],
+        notes=["Deduplication study with exact, near, and semantic duplicate accounting."],
     )
     write_report(report, output_dir / "dedup_demo.json")
     print(json.dumps(report, indent=2))

@@ -22,9 +22,10 @@ def main() -> None:
             "baseline_loss": result["baseline_loss"],
             "adapted_loss": result["adapted_loss"],
             "gain": result["gain"],
+            "acceptance_rate": result["acceptance_rate"],
         },
         artifacts=result,
-        notes=["Lite rejection-sampling adaptation demo over candidate-reward filtering."],
+        notes=["Rejection-sampling adaptation demo with candidate pool statistics and thresholded acceptance."],
     )
     write_report(report, output_dir / "rejection_sampling_demo.json")
     print(json.dumps(report, indent=2))

@@ -21,9 +21,10 @@ def main() -> None:
         metrics={
             "supported_rate": result["supported_rate"],
             "hallucination_rate": result["hallucination_rate"],
+            "failure_mode_count": result["failure_mode_count"],
         },
         artifacts=result,
-        notes=["Toy supported-vs-hallucinated answer quality probe."],
+        notes=["Hallucination checks with supported answers and categorized unsupported failure modes."],
     )
     write_report(report, output_dir / "hallucination_checks_demo.json")
     print(json.dumps(report, indent=2))

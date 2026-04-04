@@ -20,7 +20,7 @@ def main() -> None:
         module="pretraining.contamination_demo",
         metrics={"max_inflation": result["max_inflation"]},
         artifacts=result,
-        notes=["Toy train-test leakage demo showing inflated reported scores."],
+        notes=["Contamination demo with leakage-type rows and reported-vs-true score inflation."],
     )
     write_report(report, output_dir / "contamination_demo.json")
     print(json.dumps(report, indent=2))
