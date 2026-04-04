@@ -12,8 +12,8 @@
     "best_utilization_demo": "react",
     "best_utilization_score": 7.75,
     "bundle_rows": {
-      "retrieval": 2.8333,
-      "rag": 0.4997,
+      "retrieval": 3.0,
+      "rag": 0.5006,
       "react": 7.75,
       "toolformer_style": 0.99,
       "program_aided_reasoning": 1.2333

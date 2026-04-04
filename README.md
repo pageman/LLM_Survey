@@ -160,16 +160,30 @@ Current package/release surface:
 - current tag: `v0.3.0`
 - GitHub release: `v0.3.0`
 
+Both `pip` and `uv` use the same package metadata in [`pyproject.toml`](/Users/hifi/Downloads/LLM_Survey/pyproject.toml). You do not need a separate package for `uv`.
+
 Install locally in editable mode:
 
 ```bash
 python3 -m pip install -e .
 ```
 
+Install locally with `uv`:
+
+```bash
+uv pip install -e .
+```
+
 If you are packaging locally without network access, use:
 
 ```bash
 python3 -m pip install --no-build-isolation -e .
+```
+
+Or with `uv`:
+
+```bash
+uv build --no-build-isolation --offline
 ```
 
 Run the minimal package smoke test:
@@ -183,6 +197,29 @@ Build release artifacts:
 ```bash
 python3 -m build
 python3 -m twine check dist/*
+```
+
+Equivalent `uv` build flow:
+
+```bash
+uv build
+```
+
+Recommended publication flow:
+
+```bash
+python3 -m build
+python3 -m twine check dist/*
+python3 -m twine upload --repository testpypi dist/*
+python3 -m twine upload dist/*
+```
+
+If you prefer `uv`, the equivalent check/upload tooling can be run with:
+
+```bash
+uvx twine check dist/*
+uvx twine upload --repository testpypi dist/*
+uvx twine upload dist/*
 ```
 
 The published package surface is `llm_survey`, which wraps the repo's reusable `src` code while keeping docs, experiments, tests, and generated artifacts out of the wheel.
