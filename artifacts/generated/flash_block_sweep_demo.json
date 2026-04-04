@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "flash_block_sweep_demo",
+  "module": "systems.flash_block_sweep_demo",
+  "status": "ok",
+  "metrics": {
+    "best_dense_to_tiled_ratio": 16.0,
+    "best_mean_abs_error": 6.314842380017623e-17
+  },
+  "artifacts": {
+    "seq_len": 32,
+    "d_model": 16,
+    "best_dense_to_tiled_ratio": 16.0,
+    "best_mean_abs_error": 6.314842380017623e-17,
+    "rows": [
+      {
+        "block_size": 2,
+        "mean_abs_error": 7.389192500535375e-17,
+        "max_abs_error": 5.551115123125783e-16,
+        "peak_materialized": 64,
+        "dense_to_tiled_ratio": 16.0
+      },
+      {
+        "block_size": 4,
+        "mean_abs_error": 6.358671041082112e-17,
+        "max_abs_error": 3.3306690738754696e-16,
+        "peak_materialized": 128,
+        "dense_to_tiled_ratio": 8.0
+      },
+      {
+        "block_size": 8,
+        "mean_abs_error": 6.314842380017623e-17,
+        "max_abs_error": 4.440892098500626e-16,
+        "peak_materialized": 256,
+        "dense_to_tiled_ratio": 4.0
+      },
+      {
+        "block_size": 16,
+        "mean_abs_error": 6.55736644166225e-17,
+        "max_abs_error": 3.3306690738754696e-16,
+        "peak_materialized": 512,
+        "dense_to_tiled_ratio": 2.0
+      }
+    ]
+  },
+  "notes": [
+    "Sweeps block sizes for flash_attention_lite against dense attention to expose the error-vs-memory tradeoff."
+  ]
+}

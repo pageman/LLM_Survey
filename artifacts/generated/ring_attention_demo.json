@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "ring_attention_demo",
+  "module": "systems.ring_attention_demo",
+  "status": "ok",
+  "metrics": {
+    "mean_visible_tokens": 8.0,
+    "approximation_gap": 0.1262333792625621,
+    "visibility_density": 0.3333333333333333
+  },
+  "artifacts": {
+    "shard_size": 6,
+    "mean_visible_tokens": 8.0,
+    "approximation_gap": 0.1262333792625621,
+    "visibility_density": 0.3333333333333333,
+    "row_visibility": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "first_row_weights": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "notes": [
+    "Ring-attention style sparse masking demo over shard-local and previous-shard visibility."
+  ]
+}

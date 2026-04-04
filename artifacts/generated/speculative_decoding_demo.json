@@ -27,7 +27,37 @@
       1.48
     ],
     "acceptance_rate": 0.8208333333333333,
-    "speedup": 2.77027027027027
+    "speedup": 2.77027027027027,
+    "step_rows": [
+      {
+        "draft_length": 1,
+        "accepted_tokens": 1.0,
+        "verification_cost": 1.0,
+        "acceptance_rate": 1.0,
+        "step_speedup": 1.0
+      },
+      {
+        "draft_length": 2,
+        "accepted_tokens": 1.7,
+        "verification_cost": 1.15,
+        "acceptance_rate": 0.85,
+        "step_speedup": 1.4782608695652175
+      },
+      {
+        "draft_length": 4,
+        "accepted_tokens": 3.0,
+        "verification_cost": 1.3,
+        "acceptance_rate": 0.75,
+        "step_speedup": 2.3076923076923075
+      },
+      {
+        "draft_length": 6,
+        "accepted_tokens": 4.1,
+        "verification_cost": 1.48,
+        "acceptance_rate": 0.6833333333333332,
+        "step_speedup": 2.77027027027027
+      }
+    ]
   },
   "notes": [
     "Lite speculative decoding demo with draft acceptance and verification cost accounting."

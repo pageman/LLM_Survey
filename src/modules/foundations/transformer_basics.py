@@ -48,7 +48,7 @@ class DecoderOnlyTransformerDemo:
         for block in self.blocks:
             x, weights = block.forward(x, mask=mask)
             attention_maps.append(weights)
-        logits = x @ self.output_projection.T
+        logits = np.einsum("sd,vd->sv", x, self.output_projection, optimize=True)
         return logits, attention_maps
 
     def predict_next_distribution(self, tokens: list[int]) -> np.ndarray:

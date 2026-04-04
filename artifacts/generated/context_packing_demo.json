@@ -21,6 +21,27 @@
       140,
       260,
       120
+    ],
+    "packing_windows": [
+      {
+        "window_id": 0,
+        "example_indices": [
+          0,
+          2,
+          4
+        ],
+        "used_tokens": 440,
+        "slack_tokens": 72
+      },
+      {
+        "window_id": 1,
+        "example_indices": [
+          1,
+          3
+        ],
+        "used_tokens": 480,
+        "slack_tokens": 32
+      }
     ]
   },
   "notes": [

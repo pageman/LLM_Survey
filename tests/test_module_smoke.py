@@ -109,6 +109,7 @@ from src.modules.resources import (
     PublicModelRegistry,
 )
 from src.modules.systems import (
+    FlashBlockSweepDemo,
     FlashAttentionComparisonDemo,
     InferenceBatchingDemo,
     KVCacheFragmentationDemo,
@@ -118,6 +119,7 @@ from src.modules.systems import (
     OptimizationStabilityDemo,
     PipelineParallelismDemo,
     QuantizationSimDemo,
+    RingAttentionDemo,
     SlidingWindowKVDemo,
     SparseDenseBenchmarkDemo,
     SparseAttentionDemo,
@@ -555,8 +557,10 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         domain_coverage = DomainCoverageDemo().evaluate()
         inference_batching = InferenceBatchingDemo().evaluate()
         flash_compare = FlashAttentionComparisonDemo().evaluate()
+        flash_sweep = FlashBlockSweepDemo().evaluate()
         long_flash = LongContextFlashDemo().evaluate()
         numeric_stability = NumericStabilityDemo().evaluate()
+        ring_attention = RingAttentionDemo().evaluate()
         speculative = SpeculativeDecodingDemo().evaluate()
         kv_fragmentation = KVCacheFragmentationDemo().evaluate()
         quantization = QuantizationSimDemo().evaluate()
@@ -619,10 +623,12 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(inference_batching["latency_amortization"], 1.0)
         self.assertLessEqual(flash_compare["max_abs_error"], 1e-6)
         self.assertLess(flash_compare["memory_ratio_per_block"], 1.0)
+        self.assertGreater(flash_sweep["best_dense_to_tiled_ratio"], 1.0)
         self.assertLessEqual(long_flash["max_abs_error"], 1e-6)
         self.assertGreater(long_flash["dense_to_tiled_ratio"], 1.0)
         self.assertGreaterEqual(numeric_stability["stable_softmax_finite_fraction"], 1.0)
         self.assertLessEqual(numeric_stability["stable_online_gap"], 1e-8)
+        self.assertGreater(ring_attention["mean_visible_tokens"], 0.0)
         self.assertGreater(speculative["speedup"], 1.0)
         self.assertGreater(kv_fragmentation["mean_fragmentation_penalty"], 0.0)
         self.assertIn("allocation_map", kv_fragmentation)
