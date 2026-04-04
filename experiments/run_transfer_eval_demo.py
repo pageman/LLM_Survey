@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="transfer_eval_demo",
         module="multilingual.transfer_eval",
-        metrics={"transfer_score": result["transfer_score"], "few_shot_gain": result["few_shot_gain"]},
+        metrics={
+            "transfer_score": result["transfer_score"],
+            "few_shot_gain": result["few_shot_gain"],
+            "transfer_asymmetry": result["transfer_asymmetry"],
+        },
         artifacts=result,
-        notes=["Lite multilingual transfer demo over zero-shot and few-shot settings."],
+        notes=["Multilingual transfer demo with source-target rows and asymmetry-aware few-shot gains."],
     )
     write_report(report, output_dir / "transfer_eval_demo.json")
     print(json.dumps(report, indent=2))

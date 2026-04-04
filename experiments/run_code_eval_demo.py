@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="code_eval_demo",
         module="evaluation.code_eval_demo",
-        metrics={"pass_at_1": result["pass_at_1"], "pass_at_10": result["pass_at_10"]},
+        metrics={
+            "pass_at_1": result["pass_at_1"],
+            "pass_at_10": result["pass_at_10"],
+            "semantic_correctness": result["semantic_correctness"],
+        },
         artifacts=result,
-        notes=["Lite code-eval style capability demo with pass@k metrics."],
+        notes=["Code-eval style capability demo with pass@k, syntax validity, semantic correctness, and repairability."],
     )
     write_report(report, output_dir / "code_eval_demo.json")
     print(json.dumps(report, indent=2))

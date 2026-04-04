@@ -13,7 +13,13 @@ from src.modules.adaptation import RewardModelToy
 def main() -> None:
     output_dir = Path("artifacts/generated")
     result = RewardModelToy().evaluate()
-    report = build_report("reward_model_toy_demo", "adaptation.reward_model_toy", {"margin": result["margin"]}, result, ["Toy chosen-vs-rejected reward model demo."])
+    report = build_report(
+        "reward_model_toy_demo",
+        "adaptation.reward_model_toy",
+        {"margin": result["margin"]},
+        result,
+        ["Reward-model demo with token-weight lineage and pairwise chosen-vs-rejected traces."],
+    )
     write_report(report, output_dir / "reward_model_toy_demo.json")
     print(json.dumps(report, indent=2))
 

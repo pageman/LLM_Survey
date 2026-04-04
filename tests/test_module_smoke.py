@@ -338,6 +338,7 @@ class AdaptationModuleSmokeTests(unittest.TestCase):
         experiment = InstructionTuningExperiment(tokenizer=tokenizer, hidden_size=12, learning_rate=0.05, seed=8)
         result = experiment.adapt(train_pairs=pairs, eval_pair=pairs[0], epochs=20)
         self.assertGreater(result["gain"], 0.0)
+        self.assertTrue(result["instruction_traces"])
 
     def test_peft_lora_reduces_loss_with_small_trainable_fraction(self):
         rng = np.random.default_rng(9)
@@ -368,6 +369,7 @@ class AdaptationModuleSmokeTests(unittest.TestCase):
     def test_reward_model_toy_margin_positive(self):
         result = RewardModelToy().evaluate()
         self.assertGreater(result["margin"], 0.0)
+        self.assertTrue(result["pair_traces"])
 
 
 class SharedHelperSmokeTests(unittest.TestCase):
@@ -556,6 +558,7 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(partitioning["memory_saving"], 0.0)
         self.assertGreater(capability["suite_average"], 0.0)
         self.assertGreater(code_eval["pass_at_10"], code_eval["pass_at_1"])
+        self.assertGreater(code_eval["semantic_correctness"], 0.0)
         self.assertGreater(embodied["success_rate"], 0.0)
         self.assertGreater(math_eval["accuracy"], 0.0)
         self.assertGreater(formal["proof_validity"], 0.0)
@@ -582,9 +585,12 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(reward_overopt["max_proxy_gap"], 0.0)
         self.assertGreater(retrieval_grounding["grounding_score"], 0.0)
         self.assertGreater(transfer["few_shot_gain"], 0.0)
+        self.assertGreaterEqual(transfer["transfer_asymmetry"], 0.0)
+        self.assertIn("transfer_rows", transfer)
         self.assertGreater(multilingual_prompt["native_prompt_score"], 0.0)
         self.assertGreater(code_risk["risk_score"], 0.0)
         self.assertLess(safety_tradeoff["tradeoff_correlation"], 1.0)
+        self.assertIn("settings", safety_tradeoff)
         self.assertGreater(capability_align["integration_score"], 0.0)
         self.assertIn("frontiers", capability_align)
         self.assertGreater(memorization["generalization_gap"], 0.0)

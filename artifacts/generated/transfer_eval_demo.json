@@ -5,23 +5,53 @@
   "status": "ok",
   "metrics": {
     "transfer_score": 0.71,
-    "few_shot_gain": 0.08000000000000003
+    "few_shot_gain": 0.07750000000000001,
+    "transfer_asymmetry": 0.01000000000000012
   },
   "artifacts": {
     "zero_shot": [
       0.69,
       0.62,
-      0.58
+      0.58,
+      0.64
     ],
     "few_shot": [
       0.77,
       0.7,
-      0.66
+      0.66,
+      0.71
     ],
     "transfer_score": 0.71,
-    "few_shot_gain": 0.08000000000000003
+    "few_shot_gain": 0.07750000000000001,
+    "transfer_asymmetry": 0.01000000000000012,
+    "transfer_rows": [
+      {
+        "source_language": "en",
+        "target_language": "es",
+        "zero_shot": 0.69,
+        "few_shot": 0.77
+      },
+      {
+        "source_language": "en",
+        "target_language": "de",
+        "zero_shot": 0.62,
+        "few_shot": 0.7
+      },
+      {
+        "source_language": "en",
+        "target_language": "tl",
+        "zero_shot": 0.58,
+        "few_shot": 0.66
+      },
+      {
+        "source_language": "es",
+        "target_language": "en",
+        "zero_shot": 0.64,
+        "few_shot": 0.71
+      }
+    ]
   },
   "notes": [
-    "Lite multilingual transfer demo over zero-shot and few-shot settings."
+    "Multilingual transfer demo with source-target rows and asymmetry-aware few-shot gains."
   ]
 }

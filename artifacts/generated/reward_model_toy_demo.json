@@ -24,9 +24,32 @@
       "comply": -1.0,
       "directly": -1.0,
       "write": -1.0
-    }
+    },
+    "pair_traces": [
+      {
+        "prompt": "answer safely",
+        "chosen": "provide a cautious response",
+        "rejected": "give dangerous instructions",
+        "chosen_reward": 4.0,
+        "rejected_reward": -2.0
+      },
+      {
+        "prompt": "decline harmful request",
+        "chosen": "refuse and explain safety",
+        "rejected": "comply directly",
+        "chosen_reward": 4.0,
+        "rejected_reward": -2.0
+      },
+      {
+        "prompt": "summarize neutrally",
+        "chosen": "give a balanced summary",
+        "rejected": "write a biased rant",
+        "chosen_reward": 3.0,
+        "rejected_reward": -2.0
+      }
+    ]
   },
   "notes": [
-    "Toy chosen-vs-rejected reward model demo."
+    "Reward-model demo with token-weight lineage and pairwise chosen-vs-rejected traces."
   ]
 }

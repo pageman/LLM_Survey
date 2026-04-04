@@ -40,13 +40,25 @@ class InstructionTuningExperiment:
     ) -> dict[str, object]:
         baseline_loss = self.loss_on_example(*eval_pair)
         history = []
+        instruction_traces = []
 
         for _ in range(epochs):
             epoch_loss = 0.0
             for instruction, response in train_pairs:
+                loss_before = self.loss_on_example(instruction, response)
                 token_ids = self.tokenizer.encode(self.serialize_example(instruction, response))
                 inputs, targets = make_next_token_pairs(token_ids)
                 epoch_loss += self.model.train_step(inputs, targets)
+                loss_after = self.loss_on_example(instruction, response)
+                instruction_traces.append(
+                    {
+                        "instruction": instruction,
+                        "response": response,
+                        "loss_before": loss_before,
+                        "loss_after": loss_after,
+                        "instruction_source": "toy_supervision_set",
+                    }
+                )
             history.append(epoch_loss / max(len(train_pairs), 1))
 
         adapted_loss = self.loss_on_example(*eval_pair)
@@ -55,4 +67,5 @@ class InstructionTuningExperiment:
             "adapted_loss": adapted_loss,
             "gain": baseline_loss - adapted_loss,
             "train_loss_history": history,
+            "instruction_traces": instruction_traces[-len(train_pairs) :],
         }

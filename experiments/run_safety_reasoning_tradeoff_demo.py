@@ -18,9 +18,13 @@ def main() -> None:
     report = build_report(
         experiment_id="safety_reasoning_tradeoff_demo",
         module="safety_reasoning_tradeoff_demo",
-        metrics={"risk_score": result["risk_score"], "tradeoff_correlation": result["tradeoff_correlation"]},
+        metrics={
+            "risk_score": result["risk_score"],
+            "tradeoff_correlation": result["tradeoff_correlation"],
+            "reasoning_drop": result["reasoning_drop"],
+        },
         artifacts=result,
-        notes=["Lite safety-versus-reasoning tradeoff demo over capability and safety trends."],
+        notes=["Safety-versus-reasoning tradeoff demo with trajectory-level settings and refusal-risk behavior."],
     )
     write_report(report, output_dir / "safety_reasoning_tradeoff_demo.json")
     print(json.dumps(report, indent=2))

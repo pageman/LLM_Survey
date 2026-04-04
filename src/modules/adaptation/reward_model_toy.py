@@ -47,4 +47,14 @@ class RewardModelToy:
             "margin": margin,
             "top_positive_tokens": dict(self.token_weights.most_common(5)),
             "top_negative_tokens": dict(sorted(self.token_weights.items(), key=lambda item: item[1])[:5]),
+            "pair_traces": [
+                {
+                    "prompt": prompt,
+                    "chosen": chosen,
+                    "rejected": rejected,
+                    "chosen_reward": self.score_response(chosen),
+                    "rejected_reward": self.score_response(rejected),
+                }
+                for prompt, chosen, rejected in self.preference_pairs
+            ],
         }

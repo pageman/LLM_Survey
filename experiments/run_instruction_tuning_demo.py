@@ -35,8 +35,12 @@ def main() -> None:
             "adapted_loss": result["adapted_loss"],
             "gain": result["gain"],
         },
-        artifacts={"train_loss_history": result["train_loss_history"], "eval_example": list(eval_pair)},
-        notes=["Toy instruction tuning over serialized instruction-response examples."],
+        artifacts={
+            "train_loss_history": result["train_loss_history"],
+            "eval_example": list(eval_pair),
+            "instruction_traces": result["instruction_traces"],
+        },
+        notes=["Instruction tuning with source-tagged instruction traces and before-after loss behavior."],
     )
     write_report(report, output_dir / "instruction_tuning_demo.json")
     print(json.dumps(report, indent=2))

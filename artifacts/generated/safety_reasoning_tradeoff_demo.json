@@ -5,7 +5,8 @@
   "status": "ok",
   "metrics": {
     "risk_score": 0.2666666666666666,
-    "tradeoff_correlation": -0.9996850889545595
+    "tradeoff_correlation": -0.9996850889545595,
+    "reasoning_drop": 0.12
   },
   "artifacts": {
     "capability": [
@@ -19,9 +20,30 @@
       0.85
     ],
     "risk_score": 0.2666666666666666,
-    "tradeoff_correlation": -0.9996850889545595
+    "tradeoff_correlation": -0.9996850889545595,
+    "reasoning_drop": 0.12,
+    "settings": [
+      {
+        "setting": "capability_first",
+        "reasoning_quality": 0.84,
+        "safety_refusal": 0.62,
+        "unsafe_compliance": 0.19
+      },
+      {
+        "setting": "balanced",
+        "reasoning_quality": 0.78,
+        "safety_refusal": 0.73,
+        "unsafe_compliance": 0.11
+      },
+      {
+        "setting": "safety_first",
+        "reasoning_quality": 0.72,
+        "safety_refusal": 0.85,
+        "unsafe_compliance": 0.05
+      }
+    ]
   },
   "notes": [
-    "Lite safety-versus-reasoning tradeoff demo over capability and safety trends."
+    "Safety-versus-reasoning tradeoff demo with trajectory-level settings and refusal-risk behavior."
   ]
 }

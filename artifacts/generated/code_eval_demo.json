@@ -5,7 +5,8 @@
   "status": "ok",
   "metrics": {
     "pass_at_1": 0.31,
-    "pass_at_10": 0.68
+    "pass_at_10": 0.68,
+    "semantic_correctness": 0.73
   },
   "artifacts": {
     "k_values": [
@@ -19,9 +20,32 @@
       0.68
     ],
     "pass_at_1": 0.31,
-    "pass_at_10": 0.68
+    "pass_at_10": 0.68,
+    "syntax_validity": 0.9366666666666666,
+    "semantic_correctness": 0.73,
+    "repairability": 0.8333333333333334,
+    "tasks": [
+      {
+        "task": "two_sum",
+        "syntax_valid": 0.96,
+        "semantic_correct": 0.72,
+        "repairable": 0.83
+      },
+      {
+        "task": "fizz_buzz",
+        "syntax_valid": 0.94,
+        "semantic_correct": 0.81,
+        "repairable": 0.89
+      },
+      {
+        "task": "balanced_parentheses",
+        "syntax_valid": 0.91,
+        "semantic_correct": 0.66,
+        "repairable": 0.78
+      }
+    ]
   },
   "notes": [
-    "Lite code-eval style capability demo with pass@k metrics."
+    "Code-eval style capability demo with pass@k, syntax validity, semantic correctness, and repairability."
   ]
 }
