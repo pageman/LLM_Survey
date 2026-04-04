@@ -113,9 +113,11 @@ from src.modules.systems import (
     InferenceBatchingDemo,
     KVCacheFragmentationDemo,
     KVCacheToy,
+    LongContextFlashDemo,
     OptimizationStabilityDemo,
     PipelineParallelismDemo,
     QuantizationSimDemo,
+    SlidingWindowKVDemo,
     SparseAttentionDemo,
     SpeculativeDecodingDemo,
 )
@@ -551,10 +553,12 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         domain_coverage = DomainCoverageDemo().evaluate()
         inference_batching = InferenceBatchingDemo().evaluate()
         flash_compare = FlashAttentionComparisonDemo().evaluate()
+        long_flash = LongContextFlashDemo().evaluate()
         speculative = SpeculativeDecodingDemo().evaluate()
         kv_fragmentation = KVCacheFragmentationDemo().evaluate()
         quantization = QuantizationSimDemo().evaluate()
         sparse_attention = SparseAttentionDemo().evaluate()
+        sliding_window = SlidingWindowKVDemo().evaluate()
         program_synthesis = ProgramSynthesisDemo().evaluate()
         nlp_as_code = NLPAsCodeDemo().evaluate()
         self.assertGreater(objective["mixture_gain"], 0.0)
@@ -611,12 +615,16 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(inference_batching["latency_amortization"], 1.0)
         self.assertLessEqual(flash_compare["max_abs_error"], 1e-6)
         self.assertLess(flash_compare["memory_ratio_per_block"], 1.0)
+        self.assertLessEqual(long_flash["max_abs_error"], 1e-6)
+        self.assertGreater(long_flash["dense_to_tiled_ratio"], 1.0)
         self.assertGreater(speculative["speedup"], 1.0)
         self.assertGreater(kv_fragmentation["mean_fragmentation_penalty"], 0.0)
         self.assertIn("allocation_map", kv_fragmentation)
         self.assertGreater(quantization["int8_compression_ratio"], 1.0)
         self.assertGreaterEqual(sparse_attention["sparsity"], 0.0)
         self.assertGreaterEqual(sparse_attention["approximation_gap"], 0.0)
+        self.assertGreater(sliding_window["cache_reduction"], 0.0)
+        self.assertGreaterEqual(sliding_window["approximation_gap"], 0.0)
         self.assertGreater(program_synthesis["execution_success"], 0.0)
         self.assertGreater(nlp_as_code["structuring_gain"], 0.0)
 

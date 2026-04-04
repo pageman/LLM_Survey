@@ -46,21 +46,24 @@
         "response": "short summary",
         "loss_before": 12.315892548773828,
         "loss_after": 12.161128299032708,
-        "instruction_source": "toy_supervision_set"
+        "instruction_source": "toy_supervision_set",
+        "epoch": 24
       },
       {
         "instruction": "translate hello",
         "response": "hola",
         "loss_before": 9.63541774628804,
         "loss_after": 9.50345038202756,
-        "instruction_source": "toy_supervision_set"
+        "instruction_source": "toy_supervision_set",
+        "epoch": 24
       },
       {
         "instruction": "classify sentiment positive",
         "response": "positive",
         "loss_before": 11.069263779117712,
         "loss_after": 10.863690768034216,
-        "instruction_source": "toy_supervision_set"
+        "instruction_source": "toy_supervision_set",
+        "epoch": 24
       }
     ]
   },

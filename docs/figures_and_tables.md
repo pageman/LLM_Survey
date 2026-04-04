@@ -28,8 +28,8 @@
 | Family | Score | Metrics |
 |---|---:|---:|
 | `pretraining_mixture` | 1.0000 | 1 |
+| `retrieval_ranking` | 1.0000 | 3 |
 | `training_scaling` | 1.0000 | 1 |
-| `retrieval_ranking` | 0.9444 | 3 |
 | `evaluation_reliability` | 0.9020 | 1 |
 | `adaptation_preference` | 0.8942 | 3 |
 | `evaluation_truth_grounding` | 0.8886 | 7 |
@@ -53,8 +53,8 @@
 |---|---:|---:|
 | `pretraining` | 0.8943 | 4 |
 | `systems` | 0.7750 | 4 |
+| `retrieval` | 0.7252 | 5 |
 | `training` | 0.7061 | 6 |
-| `retrieval` | 0.6919 | 5 |
 | `evaluation` | 0.6633 | 21 |
 | `utilization` | 0.6410 | 3 |
 | `adaptation` | 0.5819 | 16 |
@@ -94,10 +94,10 @@ Caption: Figure Set B mirrors the plotted slices with exact values so the callou
 | Experiment | Module | Score | Metrics |
 |---|---|---:|---:|
 | `data_mixture_toy_demo` | `pretraining.data_mixture_toy` | 1.0000 | 1 |
+| `retrieval_demo` | `utilization.retrieval` | 1.0000 | 3 |
 | `truthfulness_eval_demo` | `evaluation.truthfulness_eval` | 1.0000 | 2 |
 | `batch_scaling_demo` | `training.batch_scaling_demo` | 1.0000 | 1 |
 | `dedup_demo` | `pretraining.dedup_demo` | 0.9459 | 2 |
-| `retrieval_demo` | `utilization.retrieval` | 0.9444 | 3 |
 | `warmup_decay_demo` | `training.warmup_decay_demo` | 0.9271 | 1 |
 | `calibration_eval_demo` | `evaluation.calibration_eval` | 0.9020 | 1 |
 | `preference_tuning_demo` | `adaptation.preference_tuning` | 0.8942 | 3 |
