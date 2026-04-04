@@ -9,15 +9,17 @@ from __future__ import annotations
 
 import numpy as np
 
+from .protocols import AttentionModule
 from .ops import glorot_scale, stable_softmax
+from .types import Array1D, Array2D, Array3D, FloatArray, MaskArray
 
 
-def softmax(x: np.ndarray, axis: int = -1) -> np.ndarray:
+def softmax(x: FloatArray, axis: int = -1) -> FloatArray:
     """Numerically stable softmax."""
     return stable_softmax(x, axis=axis)
 
 
-def create_causal_mask(seq_len: int) -> np.ndarray:
+def create_causal_mask(seq_len: int) -> MaskArray:
     """Return an additive mask where 1 blocks attention to future positions."""
     if seq_len < 0:
         raise ValueError("seq_len must be non-negative")
@@ -25,11 +27,11 @@ def create_causal_mask(seq_len: int) -> np.ndarray:
 
 
 def scaled_dot_product_attention(
-    query: np.ndarray,
-    key: np.ndarray,
-    value: np.ndarray,
-    mask: np.ndarray | None = None,
-) -> tuple[np.ndarray, np.ndarray]:
+    query: Array2D | Array3D,
+    key: Array2D | Array3D,
+    value: Array2D | Array3D,
+    mask: MaskArray | None = None,
+) -> tuple[Array2D | Array3D, FloatArray]:
     """Compute scaled dot-product attention for 2D or batched 3D arrays.
 
     Args:
@@ -58,19 +60,24 @@ def scaled_dot_product_attention(
         raise ValueError("attention requires a non-empty key/value sequence")
 
     d_k = query.shape[-1]
-    key_t = np.swapaxes(key, -1, -2)
-    scores = (query @ key_t) / np.sqrt(d_k)
+    if query.ndim == 2:
+        scores = np.einsum("qd,kd->qk", query, key, optimize=True) / np.sqrt(d_k)
+    else:
+        scores = np.einsum("bqd,bkd->bqk", query, key, optimize=True) / np.sqrt(d_k)
 
     if mask is not None:
         mask = np.asarray(mask, dtype=float)
         scores = scores + (mask * -1e9)
 
     attention_weights = softmax(scores, axis=-1)
-    output = attention_weights @ value
+    if query.ndim == 2:
+        output = np.einsum("qk,kd->qd", attention_weights, value, optimize=True)
+    else:
+        output = np.einsum("bqk,bkd->bqd", attention_weights, value, optimize=True)
     return output, attention_weights
 
 
-class MultiHeadAttention:
+class MultiHeadAttention(AttentionModule):
     """Minimal NumPy multi-head attention.
 
     The API mirrors the donor notebook but standardizes storage and shapes.
@@ -93,25 +100,26 @@ class MultiHeadAttention:
         self.W_k = self.rng.standard_normal((d_model, d_model)) * scale
         self.W_v = self.rng.standard_normal((d_model, d_model)) * scale
         self.W_o = self.rng.standard_normal((d_model, d_model)) * scale
-        self.attention_weights: np.ndarray | None = None
+        self.attention_weights: FloatArray | None = None
 
-    def split_heads(self, x: np.ndarray) -> np.ndarray:
+    def split_heads(self, x: Array2D) -> Array3D:
         if x.ndim != 2 or x.shape[-1] != self.d_model:
             raise ValueError("expected x with shape (seq_len, d_model)")
         seq_len = x.shape[0]
         return x.reshape(seq_len, self.num_heads, self.d_k).transpose(1, 0, 2)
 
-    def combine_heads(self, x: np.ndarray) -> np.ndarray:
+    def combine_heads(self, x: Array3D) -> Array2D:
         seq_len = x.shape[1]
         return x.transpose(1, 0, 2).reshape(seq_len, self.d_model)
 
     def forward(
         self,
-        query: np.ndarray,
-        key: np.ndarray,
-        value: np.ndarray,
-        mask: np.ndarray | None = None,
-    ) -> np.ndarray:
+        query: Array2D,
+        key: Array2D,
+        value: Array2D,
+        mask: MaskArray | None = None,
+    ) -> Array2D:
+        """Apply sequence-major multi-head attention over ``(Seq, Dim)`` arrays."""
         if query.ndim != 2 or key.ndim != 2 or value.ndim != 2:
             raise ValueError("multi-head attention expects 2D arrays")
         if query.shape[-1] != self.d_model or key.shape[-1] != self.d_model or value.shape[-1] != self.d_model:
@@ -160,9 +168,9 @@ class BahdanauAttention:
 
     def forward(
         self,
-        decoder_hidden: np.ndarray,
-        encoder_annotations: list[np.ndarray] | np.ndarray,
-    ) -> tuple[np.ndarray, np.ndarray]:
+        decoder_hidden: Array2D,
+        encoder_annotations: list[Array2D] | Array2D,
+    ) -> tuple[Array2D, Array1D]:
         decoder_hidden = np.asarray(decoder_hidden, dtype=float)
         if decoder_hidden.shape != (self.decoder_hidden_size, 1):
             raise ValueError("decoder_hidden must have shape (decoder_hidden_size, 1)")
@@ -177,10 +185,13 @@ class BahdanauAttention:
                 [np.asarray(annotation, dtype=float).reshape(1, self.annotation_size) for annotation in encoder_annotations],
                 axis=0,
             )
-        projected_decoder = (self.W_a @ decoder_hidden).reshape(1, self.decoder_hidden_size)
-        projected_annotations = annotations_matrix @ self.U_a.T
+        projected_decoder = np.einsum("hd,dn->nh", self.W_a, decoder_hidden, optimize=True)
+        projected_annotations = np.einsum("sa,ha->sh", annotations_matrix, self.U_a, optimize=True)
         energies = np.tanh(projected_annotations + projected_decoder)
-        scores = (energies @ self.v_a.T).reshape(-1)
+        scores = np.einsum("sh,oh->s", energies, self.v_a, optimize=True)
         attention_weights = softmax(scores, axis=-1)
-        context = (attention_weights[:, np.newaxis] * annotations_matrix).sum(axis=0).reshape(self.annotation_size, 1)
+        context = np.einsum("s,sa->a", attention_weights, annotations_matrix, optimize=True).reshape(
+            self.annotation_size,
+            1,
+        )
         return context, attention_weights

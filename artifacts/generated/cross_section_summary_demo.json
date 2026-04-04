@@ -13,7 +13,7 @@
     "best_section": "adaptation",
     "section_scores": {
       "pretraining": 0.6882,
-      "utilization": 1.3429,
+      "utilization": 1.361,
       "evaluation": 0.6759,
       "adaptation": 2.8465
     },
@@ -48,21 +48,21 @@
       },
       {
         "section": "utilization",
-        "score": 1.3429,
+        "score": 1.361,
         "reports": [
           {
             "report_file": "retrieval_demo.json",
             "experiment_id": "retrieval_demo",
             "module": "utilization.retrieval",
             "metric_count": 3,
-            "mean_numeric_metric": 0.9444
+            "mean_numeric_metric": 1.0
           },
           {
             "report_file": "rag_demo.json",
             "experiment_id": "rag_demo",
             "module": "utilization.rag",
             "metric_count": 1,
-            "mean_numeric_metric": 0.5009
+            "mean_numeric_metric": 0.4997
           },
           {
             "report_file": "react_demo.json",
