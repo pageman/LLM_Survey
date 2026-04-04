@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "scale_stability_demo",
+  "module": "systems.scale_stability_demo",
+  "status": "ok",
+  "metrics": {
+    "worst_naive_finite_fraction": 1.0,
+    "best_stable_finite_fraction": 1.0,
+    "max_stable_online_gap": 2.220446049250313e-16
+  },
+  "artifacts": {
+    "rows": [
+      {
+        "scale": 1.0,
+        "naive_finite_fraction": 1.0,
+        "stable_finite_fraction": 1.0,
+        "online_finite_fraction": 1.0,
+        "stable_online_gap": 5.551115123125783e-17,
+        "welford_finite_fraction": 1.0
+      },
+      {
+        "scale": 10.0,
+        "naive_finite_fraction": 1.0,
+        "stable_finite_fraction": 1.0,
+        "online_finite_fraction": 1.0,
+        "stable_online_gap": 2.220446049250313e-16,
+        "welford_finite_fraction": 1.0
+      },
+      {
+        "scale": 100.0,
+        "naive_finite_fraction": 1.0,
+        "stable_finite_fraction": 1.0,
+        "online_finite_fraction": 1.0,
+        "stable_online_gap": 0.0,
+        "welford_finite_fraction": 1.0
+      },
+      {
+        "scale": 300.0,
+        "naive_finite_fraction": 1.0,
+        "stable_finite_fraction": 1.0,
+        "online_finite_fraction": 1.0,
+        "stable_online_gap": 0.0,
+        "welford_finite_fraction": 1.0
+      }
+    ],
+    "worst_naive_finite_fraction": 1.0,
+    "best_stable_finite_fraction": 1.0,
+    "max_stable_online_gap": 2.220446049250313e-16
+  },
+  "notes": [
+    "Sweeps input scales to compare naive, stable, online, and Welford-style normalization behavior."
+  ]
+}

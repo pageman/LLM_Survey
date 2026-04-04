@@ -5,17 +5,17 @@
   "status": "ok",
   "metrics": {
     "num_reports": 5,
-    "mean_gain": 1.3091,
+    "mean_gain": NaN,
     "best_gain": 3.1521
   },
   "artifacts": {
     "num_reports": 5,
-    "mean_gain": 1.3091,
+    "mean_gain": NaN,
     "best_gain": 3.1521,
     "bundle_rows": {
       "finetuning": 3.1521,
       "instruction_tuning": 0.6889,
-      "peft_lora": 1.95,
+      "peft_lora": NaN,
       "dpo_toy": 0.5705,
       "ppo_rlhf_toy": 0.184
     }

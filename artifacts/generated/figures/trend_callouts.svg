@@ -12,26 +12,26 @@
 <text x="680" y="160" font-family="Courier New, monospace" font-size="12" fill="#333">Eff.</text>
 <text x="840" y="160" font-family="Courier New, monospace" font-size="12" fill="#333">Loss+</text>
 <line x1="24" y1="168" x2="1190" y2="168" stroke="#bbb" stroke-width="1"/>
-<text x="40" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">preference_tuning_demo</text>
-<text x="520" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
-<text x="680" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">0.903</text>
-<text x="840" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
-<text x="40" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">finetuning_demo</text>
-<text x="520" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.767</text>
-<text x="680" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.693</text>
-<text x="840" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.620</text>
+<text x="40" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">finetuning_demo</text>
+<text x="520" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">0.767</text>
+<text x="680" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">0.767</text>
+<text x="840" y="190" font-family="Courier New, monospace" font-size="12" fill="#333">0.620</text>
+<text x="40" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">instruction_tuning_demo</text>
+<text x="520" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.168</text>
+<text x="680" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.168</text>
+<text x="840" y="212" font-family="Courier New, monospace" font-size="12" fill="#333">0.502</text>
 <text x="40" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">peft_lora_demo</text>
-<text x="520" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">0.475</text>
-<text x="680" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
-<text x="840" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">0.939</text>
-<text x="40" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">alignment_sft_demo</text>
-<text x="520" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">0.307</text>
-<text x="680" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">0.277</text>
-<text x="840" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">0.000</text>
-<text x="40" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">instruction_tuning_demo</text>
-<text x="520" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.168</text>
-<text x="680" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.151</text>
-<text x="840" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.502</text>
+<text x="520" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">nan</text>
+<text x="680" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">nan</text>
+<text x="840" y="234" font-family="Courier New, monospace" font-size="12" fill="#333">nan</text>
+<text x="40" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">preference_tuning_demo</text>
+<text x="520" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="680" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="840" y="256" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="40" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">alignment_sft_demo</text>
+<text x="520" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.307</text>
+<text x="680" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.307</text>
+<text x="840" y="278" font-family="Courier New, monospace" font-size="12" fill="#333">0.000</text>
 <rect x="20" y="380" width="1190" height="240" rx="14" fill="#fffdfa" stroke="#e4ddd0" stroke-width="1"/>
 <text x="24" y="392" font-family="Georgia, serif" font-size="18" fill="#202124">B. Retrieval Callouts</text>
 <text x="48" y="412" font-family="Georgia, serif" font-size="12" fill="#5b5b5b">MRR and recall-at-max-k for dense, sparse, and hybrid retrieval.</text>
@@ -40,7 +40,7 @@
 <text x="700" y="440" font-family="Courier New, monospace" font-size="12" fill="#333">Recall@max_k</text>
 <line x1="24" y1="448" x2="1190" y2="448" stroke="#bbb" stroke-width="1"/>
 <text x="40" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">dense</text>
-<text x="520" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
+<text x="520" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">0.833</text>
 <text x="700" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
 <text x="40" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">bm25</text>
 <text x="520" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>

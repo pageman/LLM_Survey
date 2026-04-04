@@ -1,6 +1,8 @@
 """Systems and efficiency modules."""
 
 from .flash_attention_comparison_demo import FlashAttentionComparisonDemo
+from .block_sparse_attention_demo import BlockSparseAttentionDemo
+from .scale_stability_demo import ScaleStabilityDemo
 from .inference_batching_demo import InferenceBatchingDemo
 from .kv_cache_fragmentation_demo import KVCacheFragmentationDemo
 from .kv_cache_toy import KVCacheToy
@@ -12,11 +14,13 @@ from .pipeline_parallelism import PipelineParallelismDemo
 from .quantization_sim_demo import QuantizationSimDemo
 from .ring_attention_demo import RingAttentionDemo
 from .sliding_window_kv_demo import SlidingWindowKVDemo
+from .sparse_family_board_demo import SparseFamilyBoardDemo
 from .sparse_dense_benchmark_demo import SparseDenseBenchmarkDemo
 from .sparse_attention_demo import SparseAttentionDemo
 from .speculative_decoding_demo import SpeculativeDecodingDemo
 
 __all__ = [
+    "BlockSparseAttentionDemo",
     "FlashAttentionComparisonDemo",
     "FlashBlockSweepDemo",
     "InferenceBatchingDemo",
@@ -27,8 +31,10 @@ __all__ = [
     "OptimizationStabilityDemo",
     "PipelineParallelismDemo",
     "QuantizationSimDemo",
+    "ScaleStabilityDemo",
     "RingAttentionDemo",
     "SlidingWindowKVDemo",
+    "SparseFamilyBoardDemo",
     "SparseDenseBenchmarkDemo",
     "SparseAttentionDemo",
     "SpeculativeDecodingDemo",

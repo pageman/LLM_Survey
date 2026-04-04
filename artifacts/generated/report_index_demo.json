@@ -4,14 +4,14 @@
   "module": "evaluation.report_index",
   "status": "ok",
   "metrics": {
-    "num_reports": 140,
-    "num_modules": 140,
-    "raw_num_reports": 140,
+    "num_reports": 143,
+    "num_modules": 143,
+    "raw_num_reports": 143,
     "stale_report_count": 0
   },
   "artifacts": {
-    "raw_num_reports": 140,
-    "num_reports": 140,
+    "raw_num_reports": 143,
+    "num_reports": 143,
     "reports": [
       {
         "experiment_id": "adaptation_bundle_summary_demo",
@@ -72,6 +72,12 @@
         "module": "architecture.bidirectional_encoder_demo",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/bidirectional_encoder_demo.json"
+      },
+      {
+        "experiment_id": "block_sparse_attention_demo",
+        "module": "systems.block_sparse_attention_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/block_sparse_attention_demo.json"
       },
       {
         "experiment_id": "calibration_eval_demo",
@@ -722,6 +728,12 @@
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/safety_reasoning_tradeoff_demo.json"
       },
       {
+        "experiment_id": "scale_stability_demo",
+        "module": "systems.scale_stability_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/scale_stability_demo.json"
+      },
+      {
         "experiment_id": "scaling_laws_demo",
         "module": "pretraining.scaling_laws",
         "status": "ok",
@@ -768,6 +780,12 @@
         "module": "systems.sparse_dense_benchmark_demo",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/sparse_dense_benchmark_demo.json"
+      },
+      {
+        "experiment_id": "sparse_family_board_demo",
+        "module": "systems.sparse_family_board_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/sparse_family_board_demo.json"
       },
       {
         "experiment_id": "speculative_decoding_demo",
@@ -884,6 +902,9 @@
       ],
       "architecture.bidirectional_encoder_demo": [
         "bidirectional_encoder_demo"
+      ],
+      "systems.block_sparse_attention_demo": [
+        "block_sparse_attention_demo"
       ],
       "evaluation.calibration_eval": [
         "calibration_eval_demo"
@@ -1209,6 +1230,9 @@
       "safety_reasoning_tradeoff_demo": [
         "safety_reasoning_tradeoff_demo"
       ],
+      "systems.scale_stability_demo": [
+        "scale_stability_demo"
+      ],
       "pretraining.scaling_laws": [
         "scaling_laws_demo"
       ],
@@ -1232,6 +1256,9 @@
       ],
       "systems.sparse_dense_benchmark_demo": [
         "sparse_dense_benchmark_demo"
+      ],
+      "systems.sparse_family_board_demo": [
+        "sparse_family_board_demo"
       ],
       "systems.speculative_decoding_demo": [
         "speculative_decoding_demo"

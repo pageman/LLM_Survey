@@ -4,7 +4,7 @@
   "module": "evaluation.benchmark_harness",
   "status": "ok",
   "metrics": {
-    "num_reports": 140,
+    "num_reports": 143,
     "num_compared_metrics": 59,
     "num_ranked_experiments": 29,
     "num_families": 19,
@@ -156,21 +156,21 @@
         "experiment_id": "peft_lora_demo",
         "module": "adaptation.peft_lora",
         "metric": "adapted_loss",
-        "value": 0.4520740247140484,
+        "value": NaN,
         "goal": "min",
         "family": "adaptation_parameter_efficient",
         "family_group": "adaptation",
-        "normalized_score": 0.9441509990494598
+        "normalized_score": 1.0
       },
       {
         "experiment_id": "peft_lora_demo",
         "module": "adaptation.peft_lora",
         "metric": "gain",
-        "value": 1.9499701794934345,
+        "value": NaN,
         "goal": "max",
         "family": "adaptation_parameter_efficient",
         "family_group": "adaptation",
-        "normalized_score": 0.3899940358986869
+        "normalized_score": 1.0
       },
       {
         "experiment_id": "peft_lora_demo",
@@ -216,11 +216,11 @@
         "experiment_id": "retrieval_demo",
         "module": "utilization.retrieval",
         "metric": "dense_mrr",
-        "value": 1.0,
+        "value": 0.8333333333333334,
         "goal": "max",
         "family": "retrieval_ranking",
         "family_group": "retrieval",
-        "normalized_score": 1.0
+        "normalized_score": 0.8333333333333334
       },
       {
         "experiment_id": "retrieval_demo",
@@ -611,12 +611,6 @@
         "num_metrics": 1
       },
       {
-        "experiment_id": "retrieval_demo",
-        "module": "utilization.retrieval",
-        "normalized_score": 1.0,
-        "num_metrics": 3
-      },
-      {
         "experiment_id": "truthfulness_eval_demo",
         "module": "evaluation.truthfulness_eval",
         "normalized_score": 1.0,
@@ -633,6 +627,12 @@
         "module": "pretraining.dedup_demo",
         "normalized_score": 0.9459,
         "num_metrics": 2
+      },
+      {
+        "experiment_id": "retrieval_demo",
+        "module": "utilization.retrieval",
+        "normalized_score": 0.9444,
+        "num_metrics": 3
       },
       {
         "experiment_id": "warmup_decay_demo",
@@ -663,6 +663,12 @@
         "module": "evaluation.safety_eval",
         "normalized_score": 0.88,
         "num_metrics": 2
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "normalized_score": 0.8688,
+        "num_metrics": 4
       },
       {
         "experiment_id": "truthfulness_vs_helpfulness_eval_demo",
@@ -699,12 +705,6 @@
         "module": "systems.inference_batching_demo",
         "normalized_score": 0.7124,
         "num_metrics": 1
-      },
-      {
-        "experiment_id": "peft_lora_demo",
-        "module": "adaptation.peft_lora",
-        "normalized_score": 0.7024,
-        "num_metrics": 4
       },
       {
         "experiment_id": "contamination_demo",
@@ -787,16 +787,16 @@
         "num_metrics": 1
       },
       {
-        "family": "retrieval_ranking",
-        "family_group": "retrieval",
-        "normalized_score": 1.0,
-        "num_metrics": 3
-      },
-      {
         "family": "training_scaling",
         "family_group": "training",
         "normalized_score": 1.0,
         "num_metrics": 1
+      },
+      {
+        "family": "retrieval_ranking",
+        "family_group": "retrieval",
+        "normalized_score": 0.9444,
+        "num_metrics": 3
       },
       {
         "family": "evaluation_reliability",
@@ -815,6 +815,12 @@
         "family_group": "evaluation",
         "normalized_score": 0.8886,
         "num_metrics": 7
+      },
+      {
+        "family": "adaptation_parameter_efficient",
+        "family_group": "adaptation",
+        "normalized_score": 0.8688,
+        "num_metrics": 4
       },
       {
         "family": "pretraining_curation",
@@ -851,12 +857,6 @@
         "family_group": "training",
         "normalized_score": 0.7201,
         "num_metrics": 3
-      },
-      {
-        "family": "adaptation_parameter_efficient",
-        "family_group": "adaptation",
-        "normalized_score": 0.7024,
-        "num_metrics": 4
       },
       {
         "family": "evaluation_safety",
@@ -907,14 +907,14 @@
         "num_metrics": 4
       },
       {
-        "family_group": "retrieval",
-        "normalized_score": 0.7252,
-        "num_metrics": 5
-      },
-      {
         "family_group": "training",
         "normalized_score": 0.7061,
         "num_metrics": 6
+      },
+      {
+        "family_group": "retrieval",
+        "normalized_score": 0.6919,
+        "num_metrics": 5
       },
       {
         "family_group": "evaluation",
@@ -928,7 +928,7 @@
       },
       {
         "family_group": "adaptation",
-        "normalized_score": 0.5819,
+        "normalized_score": 0.6236,
         "num_metrics": 16
       }
     ]

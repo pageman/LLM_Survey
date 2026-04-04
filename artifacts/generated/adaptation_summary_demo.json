@@ -5,7 +5,7 @@
   "status": "ok",
   "metrics": {
     "num_adaptation_reports": 5,
-    "best_gain": 4.1089615294545005,
+    "best_gain": 3.1521097486499814,
     "best_adapted_loss": -0.8121145308492252
   },
   "artifacts": {
@@ -39,8 +39,8 @@
         "experiment_id": "peft_lora_demo",
         "module": "adaptation.peft_lora",
         "baseline_loss": 2.402044204207483,
-        "adapted_loss": 0.4520740247140484,
-        "gain": 1.9499701794934345,
+        "adapted_loss": NaN,
+        "gain": NaN,
         "trainable_fraction": 0.42857142857142855
       },
       {
@@ -54,14 +54,6 @@
     ],
     "ranked_by_gain": [
       {
-        "experiment_id": "preference_tuning_demo",
-        "module": "adaptation.preference_tuning",
-        "baseline_loss": 3.2968469986052753,
-        "adapted_loss": -0.8121145308492252,
-        "gain": 4.1089615294545005,
-        "trainable_fraction": null
-      },
-      {
         "experiment_id": "finetuning_demo",
         "module": "adaptation.finetuning",
         "baseline_loss": 10.259614135594376,
@@ -70,12 +62,28 @@
         "trainable_fraction": null
       },
       {
+        "experiment_id": "instruction_tuning_demo",
+        "module": "adaptation.instruction_tuning",
+        "baseline_loss": 10.261408609322052,
+        "adapted_loss": 9.572479058717004,
+        "gain": 0.6889295506050477,
+        "trainable_fraction": null
+      },
+      {
         "experiment_id": "peft_lora_demo",
         "module": "adaptation.peft_lora",
         "baseline_loss": 2.402044204207483,
-        "adapted_loss": 0.4520740247140484,
-        "gain": 1.9499701794934345,
+        "adapted_loss": NaN,
+        "gain": NaN,
         "trainable_fraction": 0.42857142857142855
+      },
+      {
+        "experiment_id": "preference_tuning_demo",
+        "module": "adaptation.preference_tuning",
+        "baseline_loss": 3.2968469986052753,
+        "adapted_loss": -0.8121145308492252,
+        "gain": 4.1089615294545005,
+        "trainable_fraction": null
       },
       {
         "experiment_id": "alignment_sft_demo",
@@ -83,14 +91,6 @@
         "baseline_loss": 21.311969093782416,
         "adapted_loss": 20.051440401544276,
         "gain": 1.2605286922381396,
-        "trainable_fraction": null
-      },
-      {
-        "experiment_id": "instruction_tuning_demo",
-        "module": "adaptation.instruction_tuning",
-        "baseline_loss": 10.261408609322052,
-        "adapted_loss": 9.572479058717004,
-        "gain": 0.6889295506050477,
         "trainable_fraction": null
       }
     ],
@@ -104,14 +104,6 @@
         "trainable_fraction": null
       },
       {
-        "experiment_id": "peft_lora_demo",
-        "module": "adaptation.peft_lora",
-        "baseline_loss": 2.402044204207483,
-        "adapted_loss": 0.4520740247140484,
-        "gain": 1.9499701794934345,
-        "trainable_fraction": 0.42857142857142855
-      },
-      {
         "experiment_id": "finetuning_demo",
         "module": "adaptation.finetuning",
         "baseline_loss": 10.259614135594376,
@@ -134,6 +126,14 @@
         "adapted_loss": 20.051440401544276,
         "gain": 1.2605286922381396,
         "trainable_fraction": null
+      },
+      {
+        "experiment_id": "peft_lora_demo",
+        "module": "adaptation.peft_lora",
+        "baseline_loss": 2.402044204207483,
+        "adapted_loss": NaN,
+        "gain": NaN,
+        "trainable_fraction": 0.42857142857142855
       }
     ]
   },

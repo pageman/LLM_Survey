@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "sparse_family_board_demo",
+  "module": "systems.sparse_family_board_demo",
+  "status": "ok",
+  "metrics": {
+    "family_count": 4,
+    "best_efficiency": 0.7569444444444444,
+    "mean_gap": 0.1691634803070609
+  },
+  "artifacts": {
+    "rows": [
+      {
+        "family": "block_sparse",
+        "efficiency": 0.7569444444444444,
+        "approximation_gap": 0.20481391257185919
+      },
+      {
+        "family": "ring",
+        "efficiency": 0.6666666666666667,
+        "approximation_gap": 0.10035012268830924
+      },
+      {
+        "family": "sliding_window",
+        "efficiency": 0.5681818181818181,
+        "approximation_gap": 0.1948964886996834
+      },
+      {
+        "family": "token_sparse",
+        "efficiency": 0.71484375,
+        "approximation_gap": 0.1765933972683918
+      }
+    ],
+    "family_count": 4,
+    "best_efficiency": 0.7569444444444444,
+    "best_gap": 0.10035012268830924,
+    "mean_efficiency": 0.6766591698232323,
+    "mean_gap": 0.1691634803070609
+  },
+  "notes": [
+    "Compares block-sparse, ring, sliding-window, and token-sparse families in one lightweight board."
+  ]
+}

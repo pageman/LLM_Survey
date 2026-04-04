@@ -3,7 +3,7 @@
 ## Progress
 
 - NumPy-only implementation progress: **124/124 (100.0%)**
-- Generated reports indexed: **140**
+- Generated reports indexed: **143**
 - Compared metrics in benchmark harness: **59**
 
 ## Adaptation Leaderboard
@@ -12,31 +12,31 @@
 
 | Experiment | Gain | Adapted Loss |
 |---|---:|---:|
-| preference_tuning_demo | 4.1090 | -0.8121 |
 | finetuning_demo | 3.1521 | 7.1075 |
-| peft_lora_demo | 1.9500 | 0.4521 |
-| alignment_sft_demo | 1.2605 | 20.0514 |
 | instruction_tuning_demo | 0.6889 | 9.5725 |
+| peft_lora_demo | nan | nan |
+| preference_tuning_demo | 4.1090 | -0.8121 |
+| alignment_sft_demo | 1.2605 | 20.0514 |
 
 ### Top By Efficiency
 
 | Experiment | Efficiency | Trainable Fraction |
 |---|---:|---:|
-| peft_lora_demo | 4.5499 | 0.4286 |
-| preference_tuning_demo | 4.1090 | n/a |
 | finetuning_demo | 3.1521 | n/a |
-| alignment_sft_demo | 1.2605 | n/a |
 | instruction_tuning_demo | 0.6889 | n/a |
+| peft_lora_demo | nan | 0.4286 |
+| preference_tuning_demo | 4.1090 | n/a |
+| alignment_sft_demo | 1.2605 | n/a |
 
 ### Top By Lowest Adapted Loss
 
 | Experiment | Adapted Loss | Gain |
 |---|---:|---:|
 | preference_tuning_demo | -0.8121 | 4.1090 |
-| peft_lora_demo | 0.4521 | 1.9500 |
 | finetuning_demo | 7.1075 | 3.1521 |
 | instruction_tuning_demo | 9.5725 | 0.6889 |
 | alignment_sft_demo | 20.0514 | 1.2605 |
+| peft_lora_demo | nan | nan |
 
 ## Implemented Modules
 

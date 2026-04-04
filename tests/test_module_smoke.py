@@ -109,6 +109,7 @@ from src.modules.resources import (
     PublicModelRegistry,
 )
 from src.modules.systems import (
+    BlockSparseAttentionDemo,
     FlashBlockSweepDemo,
     FlashAttentionComparisonDemo,
     InferenceBatchingDemo,
@@ -119,8 +120,10 @@ from src.modules.systems import (
     OptimizationStabilityDemo,
     PipelineParallelismDemo,
     QuantizationSimDemo,
+    ScaleStabilityDemo,
     RingAttentionDemo,
     SlidingWindowKVDemo,
+    SparseFamilyBoardDemo,
     SparseDenseBenchmarkDemo,
     SparseAttentionDemo,
     SpeculativeDecodingDemo,
@@ -556,14 +559,17 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         memorization = MemorizationGeneralizationDemo().evaluate()
         domain_coverage = DomainCoverageDemo().evaluate()
         inference_batching = InferenceBatchingDemo().evaluate()
+        block_sparse = BlockSparseAttentionDemo().evaluate()
         flash_compare = FlashAttentionComparisonDemo().evaluate()
         flash_sweep = FlashBlockSweepDemo().evaluate()
         long_flash = LongContextFlashDemo().evaluate()
         numeric_stability = NumericStabilityDemo().evaluate()
+        scale_stability = ScaleStabilityDemo().evaluate()
         ring_attention = RingAttentionDemo().evaluate()
         speculative = SpeculativeDecodingDemo().evaluate()
         kv_fragmentation = KVCacheFragmentationDemo().evaluate()
         quantization = QuantizationSimDemo().evaluate()
+        sparse_family_board = SparseFamilyBoardDemo().evaluate()
         sparse_attention = SparseAttentionDemo().evaluate()
         sparse_benchmark = SparseDenseBenchmarkDemo().evaluate()
         sliding_window = SlidingWindowKVDemo().evaluate()
@@ -621,18 +627,21 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(domain_coverage["cross_domain_gap"], 0.0)
         self.assertIn("worst_domain", domain_coverage)
         self.assertGreater(inference_batching["latency_amortization"], 1.0)
+        self.assertGreater(block_sparse["mask_density"], 0.0)
         self.assertLessEqual(flash_compare["max_abs_error"], 1e-6)
         self.assertLess(flash_compare["memory_ratio_per_block"], 1.0)
         self.assertGreater(flash_sweep["best_dense_to_tiled_ratio"], 1.0)
         self.assertLessEqual(long_flash["max_abs_error"], 1e-6)
         self.assertGreater(long_flash["dense_to_tiled_ratio"], 1.0)
         self.assertGreaterEqual(numeric_stability["stable_softmax_finite_fraction"], 1.0)
+        self.assertLessEqual(scale_stability["max_stable_online_gap"], 1e-8)
         self.assertLessEqual(numeric_stability["stable_online_gap"], 1e-8)
         self.assertGreater(ring_attention["mean_visible_tokens"], 0.0)
         self.assertGreater(speculative["speedup"], 1.0)
         self.assertGreater(kv_fragmentation["mean_fragmentation_penalty"], 0.0)
         self.assertIn("allocation_map", kv_fragmentation)
         self.assertGreater(quantization["int8_compression_ratio"], 1.0)
+        self.assertGreaterEqual(sparse_family_board["family_count"], 4)
         self.assertGreaterEqual(sparse_attention["sparsity"], 0.0)
         self.assertGreaterEqual(sparse_attention["approximation_gap"], 0.0)
         self.assertGreater(sparse_benchmark["variant_count"], 1)

@@ -39,12 +39,12 @@ class MoEDemo:
             ],
             dtype=float,
         )
-        logits = inputs @ self.router
+        logits = np.einsum("sd,de->se", inputs, self.router, optimize=True)
         logits = logits - logits.max(axis=1, keepdims=True)
         routing = np.exp(logits)
         routing /= routing.sum(axis=1, keepdims=True)
         top_expert = np.argmax(routing, axis=1)
-        outputs = routing @ self.experts
+        outputs = np.einsum("se,ed->sd", routing, self.experts, optimize=True)
         load = routing.mean(axis=0)
         normalized_entropy = float(-(routing * np.log(routing + 1e-9)).sum(axis=1).mean() / np.log(self.num_experts))
 

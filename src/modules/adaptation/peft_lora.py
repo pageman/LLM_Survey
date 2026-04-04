@@ -8,6 +8,7 @@ import numpy as np
 
 from src.core import Array1D, Array2D
 
+
 @dataclass
 class LoRALinearAdapterExperiment:
     input_dim: int
@@ -26,8 +27,8 @@ class LoRALinearAdapterExperiment:
         """Project one input vector through the frozen-plus-LoRA linear map."""
         if x.ndim != 1 or x.shape[0] != self.input_dim:
             raise ValueError("x must have shape (input_dim,)")
-        delta = self.B @ self.A
-        return (self.W_base + delta) @ x
+        delta = np.einsum("or,ri->oi", self.B, self.A, optimize=True)
+        return np.einsum("oi,i->o", self.W_base + delta, x, optimize=True)
 
     def mse(self, X: Array2D, Y: Array2D) -> float:
         """Return the mean squared error over a matrix of row-wise examples."""
@@ -52,9 +53,9 @@ class LoRALinearAdapterExperiment:
                 pred = self.forward(x)
                 error = (pred - y)[:, None]
                 x_col = x[:, None]
-                grad_delta = 2.0 * error @ x_col.T / max(len(X), 1)
-                grad_B += grad_delta @ self.A.T
-                grad_A += self.B.T @ grad_delta
+                grad_delta = 2.0 * np.einsum("oi,ji->oj", error, x_col.T, optimize=True) / max(len(X), 1)
+                grad_B += np.einsum("oi,ir->or", grad_delta, self.A.T, optimize=True)
+                grad_A += np.einsum("ro,oi->ri", self.B.T, grad_delta, optimize=True)
 
             self.A -= self.learning_rate * grad_A
             self.B -= self.learning_rate * grad_B
