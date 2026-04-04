@@ -109,12 +109,14 @@ from src.modules.resources import (
     PublicModelRegistry,
 )
 from src.modules.systems import (
+    AttentionLengthStabilityDemo,
     BlockSparseAttentionDemo,
     FlashBlockSweepDemo,
     FlashAttentionComparisonDemo,
     InferenceBatchingDemo,
     KVCacheFragmentationDemo,
     KVCacheToy,
+    KVLongContextBoardDemo,
     LongContextFlashDemo,
     NumericStabilityDemo,
     OptimizationStabilityDemo,
@@ -559,9 +561,11 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         memorization = MemorizationGeneralizationDemo().evaluate()
         domain_coverage = DomainCoverageDemo().evaluate()
         inference_batching = InferenceBatchingDemo().evaluate()
+        attention_length = AttentionLengthStabilityDemo().evaluate()
         block_sparse = BlockSparseAttentionDemo().evaluate()
         flash_compare = FlashAttentionComparisonDemo().evaluate()
         flash_sweep = FlashBlockSweepDemo().evaluate()
+        kv_long_context = KVLongContextBoardDemo().evaluate()
         long_flash = LongContextFlashDemo().evaluate()
         numeric_stability = NumericStabilityDemo().evaluate()
         scale_stability = ScaleStabilityDemo().evaluate()
@@ -627,10 +631,12 @@ class EvaluationModuleSmokeTests(unittest.TestCase):
         self.assertGreater(domain_coverage["cross_domain_gap"], 0.0)
         self.assertIn("worst_domain", domain_coverage)
         self.assertGreater(inference_batching["latency_amortization"], 1.0)
+        self.assertLessEqual(attention_length["max_online_dense_weight_gap"], 1e-8)
         self.assertGreater(block_sparse["mask_density"], 0.0)
         self.assertLessEqual(flash_compare["max_abs_error"], 1e-6)
         self.assertLess(flash_compare["memory_ratio_per_block"], 1.0)
         self.assertGreater(flash_sweep["best_dense_to_tiled_ratio"], 1.0)
+        self.assertGreaterEqual(kv_long_context["family_count"], 5)
         self.assertLessEqual(long_flash["max_abs_error"], 1e-6)
         self.assertGreater(long_flash["dense_to_tiled_ratio"], 1.0)
         self.assertGreaterEqual(numeric_stability["stable_softmax_finite_fraction"], 1.0)

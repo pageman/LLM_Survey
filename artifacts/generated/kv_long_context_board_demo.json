@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "kv_long_context_board_demo",
+  "module": "systems.kv_long_context_board_demo",
+  "status": "ok",
+  "metrics": {
+    "family_count": 5,
+    "best_efficiency": 0.875,
+    "mean_gap": 0.11038769318007266
+  },
+  "artifacts": {
+    "rows": [
+      {
+        "family": "flash_short",
+        "efficiency": 0.8333333333333334,
+        "approximation_gap": 6.522181928289687e-17
+      },
+      {
+        "family": "flash_long",
+        "efficiency": 0.875,
+        "approximation_gap": 7.027103120940903e-17
+      },
+      {
+        "family": "sliding_window",
+        "efficiency": 0.6301020408163265,
+        "approximation_gap": 0.21141154917441082
+      },
+      {
+        "family": "ring",
+        "efficiency": 0.7673611111111112,
+        "approximation_gap": 0.18039055618106384
+      },
+      {
+        "family": "block_sparse",
+        "efficiency": 0.7673611111111112,
+        "approximation_gap": 0.16013636054488858
+      }
+    ],
+    "family_count": 5,
+    "best_efficiency": 0.875,
+    "best_gap": 6.522181928289687e-17,
+    "mean_efficiency": 0.7746315192743765,
+    "mean_gap": 0.11038769318007266
+  },
+  "notes": [
+    "Compares flash, sliding-window, ring, and block-sparse families through a KV-aware long-context board."
+  ]
+}

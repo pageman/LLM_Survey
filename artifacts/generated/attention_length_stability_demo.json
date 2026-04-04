@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "attention_length_stability_demo",
+  "module": "systems.attention_length_stability_demo",
+  "status": "ok",
+  "metrics": {
+    "max_dense_flash_gap": 8.866529133621202e-17,
+    "max_online_dense_weight_gap": 1.1102230246251565e-16,
+    "best_memory_ratio": 8.0
+  },
+  "artifacts": {
+    "rows": [
+      {
+        "seq_len": 8,
+        "dense_flash_gap": 8.402566836762659e-17,
+        "online_dense_weight_gap": 5.551115123125783e-17,
+        "dense_peak_elements": 64,
+        "flash_peak_elements": 32
+      },
+      {
+        "seq_len": 16,
+        "dense_flash_gap": 5.026293509007018e-17,
+        "online_dense_weight_gap": 1.1102230246251565e-16,
+        "dense_peak_elements": 256,
+        "flash_peak_elements": 64
+      },
+      {
+        "seq_len": 32,
+        "dense_flash_gap": 8.866529133621202e-17,
+        "online_dense_weight_gap": 1.1102230246251565e-16,
+        "dense_peak_elements": 1024,
+        "flash_peak_elements": 128
+      },
+      {
+        "seq_len": 64,
+        "dense_flash_gap": 6.880837736306827e-17,
+        "online_dense_weight_gap": 1.1102230246251565e-16,
+        "dense_peak_elements": 4096,
+        "flash_peak_elements": 512
+      }
+    ],
+    "max_dense_flash_gap": 8.866529133621202e-17,
+    "max_online_dense_weight_gap": 1.1102230246251565e-16,
+    "best_memory_ratio": 8.0
+  },
+  "notes": [
+    "Compares dense, tiled, and online-softmax attention behavior across increasing sequence lengths."
+  ]
+}

@@ -30,7 +30,7 @@ class ObjectiveMixtureDemo:
             weight_grid.append([a, b, c])
         weights = np.array(weight_grid, dtype=float)
 
-        mixed_loss = candidate_losses.mean(axis=0)[None, :] @ weights.T
+        mixed_loss = np.einsum("o,wo->w", candidate_losses.mean(axis=0), weights, optimize=True)
         mixed_loss = mixed_loss.reshape(-1)
         best_idx = int(np.argmin(mixed_loss))
         best_weights = weights[best_idx]

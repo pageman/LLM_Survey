@@ -40,7 +40,7 @@
 <text x="700" y="440" font-family="Courier New, monospace" font-size="12" fill="#333">Recall@max_k</text>
 <line x1="24" y1="448" x2="1190" y2="448" stroke="#bbb" stroke-width="1"/>
 <text x="40" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">dense</text>
-<text x="520" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">0.833</text>
+<text x="520" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
 <text x="700" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>
 <text x="40" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">bm25</text>
 <text x="520" y="492" font-family="Courier New, monospace" font-size="12" fill="#333">1.000</text>

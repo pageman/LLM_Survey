@@ -15,8 +15,8 @@
     "failure_mode_count": 3,
     "category_breakdown": {
       "evidence_missing": 1,
-      "supported": 1,
       "evidence_conflict": 1,
+      "supported": 1,
       "unsupported_generation": 1
     },
     "cases": [

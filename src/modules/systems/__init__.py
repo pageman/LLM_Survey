@@ -1,5 +1,6 @@
 """Systems and efficiency modules."""
 
+from .attention_length_stability_demo import AttentionLengthStabilityDemo
 from .flash_attention_comparison_demo import FlashAttentionComparisonDemo
 from .block_sparse_attention_demo import BlockSparseAttentionDemo
 from .scale_stability_demo import ScaleStabilityDemo
@@ -7,6 +8,7 @@ from .inference_batching_demo import InferenceBatchingDemo
 from .kv_cache_fragmentation_demo import KVCacheFragmentationDemo
 from .kv_cache_toy import KVCacheToy
 from .flash_block_sweep_demo import FlashBlockSweepDemo
+from .kv_long_context_board_demo import KVLongContextBoardDemo
 from .long_context_flash_demo import LongContextFlashDemo
 from .numeric_stability_demo import NumericStabilityDemo
 from .optimization_stability_demo import OptimizationStabilityDemo
@@ -20,12 +22,14 @@ from .sparse_attention_demo import SparseAttentionDemo
 from .speculative_decoding_demo import SpeculativeDecodingDemo
 
 __all__ = [
+    "AttentionLengthStabilityDemo",
     "BlockSparseAttentionDemo",
     "FlashAttentionComparisonDemo",
     "FlashBlockSweepDemo",
     "InferenceBatchingDemo",
     "KVCacheFragmentationDemo",
     "KVCacheToy",
+    "KVLongContextBoardDemo",
     "LongContextFlashDemo",
     "NumericStabilityDemo",
     "OptimizationStabilityDemo",

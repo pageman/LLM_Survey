@@ -29,11 +29,11 @@ class EncoderDecoderDemo:
 
         encoder_states = self._embed(source_tokens)
         decoder_queries = self._embed(target_queries)
-        scores = decoder_queries @ encoder_states.T
+        scores = np.einsum("qd,kd->qk", decoder_queries, encoder_states, optimize=True)
         scores = scores - scores.max(axis=1, keepdims=True)
         cross_attention = np.exp(scores)
         cross_attention /= cross_attention.sum(axis=1, keepdims=True)
-        context = cross_attention @ encoder_states
+        context = np.einsum("qk,kd->qd", cross_attention, encoder_states, optimize=True)
 
         source_positions = np.argmax(encoder_states[:, 1:3], axis=1)
         target_positions = np.argmax(context[:, 1:3], axis=1)
