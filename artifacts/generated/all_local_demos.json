@@ -4,7 +4,7 @@
   "module": "experiments.runner",
   "status": "ok",
   "metrics": {
-    "num_executed": 130
+    "num_executed": 133
   },
   "artifacts": {
     "scripts": [
@@ -63,8 +63,11 @@
       "experiments/run_inference_batching_demo.py",
       "experiments/run_optimization_stability_demo.py",
       "experiments/run_kv_cache_toy_demo.py",
+      "experiments/run_flash_attention_comparison_demo.py",
       "experiments/run_speculative_decoding_demo.py",
       "experiments/run_kv_cache_fragmentation_demo.py",
+      "experiments/run_quantization_sim_demo.py",
+      "experiments/run_sparse_attention_demo.py",
       "experiments/run_encoder_decoder_demo.py",
       "experiments/run_bidirectional_encoder_demo.py",
       "experiments/run_prefix_lm_demo.py",

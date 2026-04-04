@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "sparse_attention_demo",
+  "module": "systems.sparse_attention_demo",
+  "status": "ok",
+  "metrics": {
+    "sparsity": 0.71484375,
+    "approximation_gap": 0.20673543263905247,
+    "mask_density": 0.28515625
+  },
+  "artifacts": {
+    "mask_density": 0.28515625,
+    "sparsity": 0.71484375,
+    "approximation_gap": 0.20673543263905247,
+    "local_window": 2,
+    "global_stride": 4,
+    "attended_per_row": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      6,
+      7
+    ],
+    "first_row_weights": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "notes": [
+    "Block-sparse local-plus-global masking demo for long-context intuition in pure NumPy."
+  ]
+}

@@ -124,9 +124,9 @@ class MultiHeadAttention(AttentionModule):
             raise ValueError("multi-head attention expects 2D arrays")
         if query.shape[-1] != self.d_model or key.shape[-1] != self.d_model or value.shape[-1] != self.d_model:
             raise ValueError("query, key, and value must all have trailing dimension d_model")
-        query_proj = query @ self.W_q.T
-        key_proj = key @ self.W_k.T
-        value_proj = value @ self.W_v.T
+        query_proj = np.einsum("sd,md->sm", query, self.W_q, optimize=True)
+        key_proj = np.einsum("sd,md->sm", key, self.W_k, optimize=True)
+        value_proj = np.einsum("sd,md->sm", value, self.W_v, optimize=True)
 
         query_heads = self.split_heads(query_proj)
         key_heads = self.split_heads(key_proj)
@@ -138,7 +138,8 @@ class MultiHeadAttention(AttentionModule):
             value_heads,
             mask=mask,
         )
-        return self.combine_heads(heads) @ self.W_o.T
+        combined = self.combine_heads(heads)
+        return np.einsum("sd,md->sm", combined, self.W_o, optimize=True)
 
 
 class BahdanauAttention:

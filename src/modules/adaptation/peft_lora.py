@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
+from src.core import Array1D, Array2D
 
 @dataclass
 class LoRALinearAdapterExperiment:
@@ -21,14 +22,26 @@ class LoRALinearAdapterExperiment:
         self.A = self.rng.standard_normal((self.rank, self.input_dim)) * 0.01
         self.B = self.rng.standard_normal((self.output_dim, self.rank)) * 0.01
 
-    def forward(self, x: np.ndarray) -> np.ndarray:
-        return (self.W_base + self.B @ self.A) @ x
+    def forward(self, x: Array1D) -> Array1D:
+        """Project one input vector through the frozen-plus-LoRA linear map."""
+        if x.ndim != 1 or x.shape[0] != self.input_dim:
+            raise ValueError("x must have shape (input_dim,)")
+        delta = self.B @ self.A
+        return (self.W_base + delta) @ x
 
-    def mse(self, X: np.ndarray, Y: np.ndarray) -> float:
+    def mse(self, X: Array2D, Y: Array2D) -> float:
+        """Return the mean squared error over a matrix of row-wise examples."""
         preds = np.stack([self.forward(x) for x in X], axis=0)
         return float(np.mean((preds - Y) ** 2))
 
-    def adapt(self, X: np.ndarray, Y: np.ndarray, steps: int = 80) -> dict[str, object]:
+    def adapt(self, X: Array2D, Y: Array2D, steps: int = 80) -> dict[str, object]:
+        """Fit the low-rank factors while keeping the base weight frozen."""
+        if X.ndim != 2 or Y.ndim != 2:
+            raise ValueError("X and Y must be rank-2 arrays")
+        if X.shape[0] != Y.shape[0]:
+            raise ValueError("X and Y must have the same number of rows")
+        if X.shape[1] != self.input_dim or Y.shape[1] != self.output_dim:
+            raise ValueError("X and Y must match the adapter input/output dimensions")
         baseline_loss = self.mse(X, Y)
         history = []
 

@@ -3,7 +3,7 @@
 ## Progress
 
 - NumPy-only implementation progress: **124/124 (100.0%)**
-- Generated reports indexed: **131**
+- Generated reports indexed: **134**
 - Compared metrics in benchmark harness: **59**
 
 ## Adaptation Leaderboard

@@ -4,14 +4,14 @@
   "module": "evaluation.report_index",
   "status": "ok",
   "metrics": {
-    "num_reports": 131,
-    "num_modules": 131,
-    "raw_num_reports": 131,
+    "num_reports": 134,
+    "num_modules": 134,
+    "raw_num_reports": 134,
     "stale_report_count": 0
   },
   "artifacts": {
-    "raw_num_reports": 131,
-    "num_reports": 131,
+    "raw_num_reports": 134,
+    "num_reports": 134,
     "reports": [
       {
         "experiment_id": "adaptation_bundle_summary_demo",
@@ -270,6 +270,12 @@
         "module": "adaptation.finetuning",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/finetuning_demo.json"
+      },
+      {
+        "experiment_id": "flash_attention_comparison_demo",
+        "module": "systems.flash_attention_comparison_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/flash_attention_comparison_demo.json"
       },
       {
         "experiment_id": "formal_reasoning_eval_demo",
@@ -584,6 +590,12 @@
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/publication_assets_demo.json"
       },
       {
+        "experiment_id": "quantization_sim_demo",
+        "module": "systems.quantization_sim_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/quantization_sim_demo.json"
+      },
+      {
         "experiment_id": "rag_demo",
         "module": "utilization.rag",
         "status": "ok",
@@ -714,6 +726,12 @@
         "module": "foundations.seq2seq_basics",
         "status": "ok",
         "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/seq2seq_basics_demo.json"
+      },
+      {
+        "experiment_id": "sparse_attention_demo",
+        "module": "systems.sparse_attention_demo",
+        "status": "ok",
+        "path": "/Users/hifi/Downloads/LLM_Survey/artifacts/generated/sparse_attention_demo.json"
       },
       {
         "experiment_id": "speculative_decoding_demo",
@@ -930,6 +948,9 @@
       "adaptation.finetuning": [
         "finetuning_demo"
       ],
+      "systems.flash_attention_comparison_demo": [
+        "flash_attention_comparison_demo"
+      ],
       "evaluation.formal_reasoning_eval": [
         "formal_reasoning_eval_demo"
       ],
@@ -1086,6 +1107,9 @@
       "reporting.publication_assets": [
         "publication_assets_demo"
       ],
+      "systems.quantization_sim_demo": [
+        "quantization_sim_demo"
+      ],
       "utilization.rag": [
         "rag_demo"
       ],
@@ -1151,6 +1175,9 @@
       ],
       "foundations.seq2seq_basics": [
         "seq2seq_basics_demo"
+      ],
+      "systems.sparse_attention_demo": [
+        "sparse_attention_demo"
       ],
       "systems.speculative_decoding_demo": [
         "speculative_decoding_demo"

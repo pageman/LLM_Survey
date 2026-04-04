@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "experiment_id": "quantization_sim_demo",
+  "module": "systems.quantization_sim_demo",
+  "status": "ok",
+  "metrics": {
+    "int8_mae": 0.004555765890346672,
+    "fp8_mae": 0.04041989671231224,
+    "int8_compression_ratio": 8.0
+  },
+  "artifacts": {
+    "int8_mae": 0.004555765890346672,
+    "fp8_mae": 0.04041989671231224,
+    "int8_bits_per_weight": 8,
+    "fp8_bits_per_weight": 8,
+    "float_bits_per_weight": 64,
+    "int8_compression_ratio": 8.0,
+    "fp8_compression_ratio": 8.0,
+    "sample_rows": {
+      "original": [
+        0.1257,
+        -0.1321,
+        0.6404,
+        0.1049,
+        -0.5357,
+        0.3616
+      ],
+      "int8": [
+        0.1322,
+        -0.1322,
+        0.642,
+        0.1133,
+        -0.5287,
+        0.3588
+      ],
+      "fp8": [
+        0.1599,
+        -0.1599,
+        0.6395,
+        0.1599,
+        -0.4796,
+        0.3198
+      ]
+    }
+  },
+  "notes": [
+    "Simulates int8 and fp8-style weight quantization in pure NumPy for educational comparison."
+  ]
+}

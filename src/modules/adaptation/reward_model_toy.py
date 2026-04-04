@@ -9,11 +9,15 @@ from __future__ import annotations
 
 from collections import Counter
 from dataclasses import dataclass
+from typing import TypeAlias
+
+
+PreferencePair: TypeAlias = tuple[str, str, str]
 
 
 @dataclass
 class RewardModelToy:
-    preference_pairs: list[tuple[str, str, str]] | None = None
+    preference_pairs: list[PreferencePair] | None = None
 
     def __post_init__(self) -> None:
         self.preference_pairs = self.preference_pairs or [

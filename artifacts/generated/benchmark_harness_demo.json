@@ -4,7 +4,7 @@
   "module": "evaluation.benchmark_harness",
   "status": "ok",
   "metrics": {
-    "num_reports": 131,
+    "num_reports": 134,
     "num_compared_metrics": 59,
     "num_ranked_experiments": 29,
     "num_families": 19,
